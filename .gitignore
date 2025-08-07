@@ -48,6 +48,12 @@ pids
 coverage/
 
 # MongoDB data
+
+# Archives and compressed files
+*.zip
+*.rar
+*.tar.gz
+*.7z
 data/
 
 # Temporary files
