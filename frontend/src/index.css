@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles de base pour l'application Coach Santé */
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-background-secondary text-text-primary font-sans antialiased;
+  }
+  
+  h1 {
+    @apply text-3xl font-bold text-text-primary;
+  }
+  
+  h2 {
+    @apply text-2xl font-semibold text-text-primary;
+  }
+  
+  h3 {
+    @apply text-xl font-medium text-text-primary;
+  }
+  
+  p {
+    @apply text-base text-text-secondary;
+  }
+  
+  button {
+    @apply transition-all duration-200 ease-in-out;
+  }
+}
+
+@layer components {
+  /* Cartes standardisées */
+  .card {
+    @apply bg-background-primary rounded-2xl shadow-card border border-gray-100 p-4;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-soft hover:scale-[1.02] transition-all duration-200;
+  }
+  
+  /* Boutons standardisés */
+  .btn-primary {
+    @apply bg-primary-500 text-white px-4 py-2 rounded-xl font-medium hover:bg-primary-600 hover:scale-105 transition-all duration-200 shadow-sm;
+  }
+  
+  .btn-secondary {
+    @apply bg-background-accent text-text-primary px-4 py-2 rounded-xl font-medium hover:bg-gray-200 hover:scale-105 transition-all duration-200 border border-gray-200;
+  }
+  
+  .btn-health-excellent {
+    @apply bg-health-excellent text-white px-4 py-2 rounded-xl font-medium hover:opacity-90 hover:scale-105 transition-all duration-200;
+  }
+  
+  .btn-health-good {
+    @apply bg-health-good text-white px-4 py-2 rounded-xl font-medium hover:opacity-90 hover:scale-105 transition-all duration-200;
+  }
+  
+  .btn-health-average {
+    @apply bg-health-average text-white px-4 py-2 rounded-xl font-medium hover:opacity-90 hover:scale-105 transition-all duration-200;
+  }
+  
+  .btn-health-poor {
+    @apply bg-health-poor text-white px-4 py-2 rounded-xl font-medium hover:opacity-90 hover:scale-105 transition-all duration-200;
+  }
+  
+  /* Métriques de santé */
+  .metric-excellent {
+    @apply bg-green-50 text-health-excellent border-green-200;
+  }
+  
+  .metric-good {
+    @apply bg-blue-50 text-health-good border-blue-200;
+  }
+  
+  .metric-average {
+    @apply bg-orange-50 text-health-average border-orange-200;
+  }
+  
+  .metric-poor {
+    @apply bg-red-50 text-health-poor border-red-200;
+  }
+  
+  /* Layout standardisé */
+  .container-app {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+  
+  .grid-responsive-2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-4;
+  }
+  
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* États de chargement */
+  .loading-spinner {
+    @apply animate-spin rounded-full border-2 border-gray-300 border-t-primary-500;
+  }
+}
+
+/* Styles personnalisés */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Couleurs personnalisées pour l'application Coach Santé */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #3b82f6;
+  --secondary: #10b981;
+  --light: #f8fafc;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.text-primary {
+  color: var(--primary);
+}
