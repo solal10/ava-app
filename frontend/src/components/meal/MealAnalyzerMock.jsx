@@ -1,6 +1,6 @@
 // Nouveau composant React : src/components/meal/MealAnalyzerMock.jsx
 import React, { useState, useEffect } from 'react';
-import ciqualData from '../../data/ciqual_sample.json';
+import ciqualData from '../../assets/ciqual.json';
 
 export default function MealAnalyzerMock() {
   const [selectedFood, setSelectedFood] = useState('');

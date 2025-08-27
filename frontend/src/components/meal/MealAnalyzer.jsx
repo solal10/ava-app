@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
-import ciqualData from '../../data/ciqual.json';
+import ciqualData from '../../assets/ciqual.json';
 import { addMeal } from '../../api/mealAPI';
 
 export default function MealAnalyzer() {

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
-import foodDB from '../../data/ciqual_sample.json';
+import foodDB from '../../assets/ciqual.json';
 import { labelToCiqualMap } from '../../utils/labelMap';
 
 // Fonction pour matcher les labels IA avec la base CIQUAL

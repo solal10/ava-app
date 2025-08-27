@@ -19,8 +19,7 @@ fi
 
 # Démarrer le backend
 echo "🖥️ Démarrage du backend..."
-cd backend
-npm start &
+node server.js &
 BACKEND_PID=$!
 echo "Backend PID: $BACKEND_PID"
 
@@ -40,7 +39,7 @@ done
 
 # Démarrer le frontend
 echo "🌐 Démarrage du frontend..."
-cd ../frontend
+cd frontend
 npm run dev &
 FRONTEND_PID=$!
 echo "Frontend PID: $FRONTEND_PID"
