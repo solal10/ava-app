@@ -4,13 +4,24 @@ class GarminController {
   constructor() {
     // Configuration OAuth immuable et sécurisée
     this.config = {
-      clientId: process.env.GARMIN_CLIENT_ID || '9efacb80-abc5-41f3-8a01-207f9197aaaf',
-      clientSecret: process.env.GARMIN_CLIENT_SECRET || 'As/Aomzxc2dm+Nwq83elmAHa/uOFmfbxP6TVsOz4LzI',
-      redirectUri: process.env.GARMIN_REDIRECT_URI || `${process.env.TUNNEL_URL || 'https://shortly-bind-careers-irish.trycloudflare.com'}/auth/garmin/rappel`,
+      clientId: process.env.GARMIN_CLIENT_ID,
+      clientSecret: process.env.GARMIN_CLIENT_SECRET,
+      redirectUri: process.env.GARMIN_REDIRECT_URI || `${process.env.TUNNEL_URL}/auth/garmin/rappel`,
       authUrl: 'https://connect.garmin.com/oauth2Confirm',
       tokenUrl: 'https://diauth.garmin.com/di-oauth2-service/oauth/token',
       scopes: process.env.GARMIN_SCOPES || 'activity_api,health_api'
     };
+
+    // Validation des variables d'environnement requises
+    if (!this.config.clientId) {
+      throw new Error('GARMIN_CLIENT_ID environment variable is required');
+    }
+    if (!this.config.clientSecret) {
+      throw new Error('GARMIN_CLIENT_SECRET environment variable is required');
+    }
+    if (!this.config.redirectUri) {
+      throw new Error('GARMIN_REDIRECT_URI or TUNNEL_URL environment variable is required');
+    }
     
     // Cache pour les code_verifier (TTL 15min)
     this.codeVerifierCache = new Map();
@@ -122,7 +133,7 @@ class GarminController {
     }
   }
 
-  // 🚨 FONCTION PURIFIÉE : Récupération des VRAIES données Garmin uniquement
+  // 🎯 FONCTION RÉELLE : Récupération des données Garmin via API officielle
   async getHealthData(req, res) {
     try {
       const accessToken = req.headers.authorization?.replace('Bearer ', '');
@@ -135,42 +146,64 @@ class GarminController {
         });
       }
 
-      console.log('🔄 RÉCUPÉRATION DONNÉES GARMIN AVEC WEBHOOK');
+      console.log('🔄 RÉCUPÉRATION DONNÉES GARMIN VIA API OFFICIELLE');
       console.log('🔑 Token OAuth valide:', accessToken.substring(0, 20) + '...');
       console.log('👤 User ID:', userId);
+
+      const garminAPIService = require('../../services/garmin-api.service');
       
-      // Générer des données réalistes pour le développement (APIs Garmin bloquées)
-      const today = new Date().toISOString().split('T')[0];
-      const steps = Math.floor(8000 + Math.random() * 4000); // 8000-12000 pas
-      const sleepHours = 7 + Math.random() * 2; // 7-9h de sommeil
-      const stressLevel = Math.floor(20 + Math.random() * 40); // stress 20-60
-      
-      console.log('✅ Données synchronisées avec succès (webhook + fallback)');
-      
-      return res.json({
-        success: true,
-        message: '🎯 Données Garmin synchronisées depuis webhook',
-        data: {
-          date: today,
-          userId: userId,
-          source: 'webhook_development',
-          current: {
-            steps: steps,
-            sleep: parseFloat(sleepHours.toFixed(1)),
-            stress: stressLevel,
-            energy: Math.floor(70 + Math.random() * 25),
-            heartRate: Math.floor(65 + Math.random() * 20)
-          },
-          healthScore: Math.floor(75 + Math.random() * 20),
-          history: Array.from({length: 7}, (_, i) => ({
-            date: new Date(Date.now() - (6-i) * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-            steps: Math.floor(7000 + Math.random() * 5000),
-            sleep: parseFloat((6.5 + Math.random() * 2.5).toFixed(1)),
-            stress: Math.floor(15 + Math.random() * 50)
-          })),
-          note: 'Garmin APIs nécessitent approbation commerciale - données réalistes basées sur webhook'
-        }
-      });
+      try {
+        // Tentative de récupération des données réelles via API Garmin
+        console.log('📡 Appel API Garmin en cours...');
+        
+        const realData = await garminAPIService.getComprehensiveHealthData(accessToken, {
+          includeSleep: true,
+          includeStress: true,
+          includeActivity: true,
+          dateRange: 7
+        });
+
+        console.log('✅ Données Garmin récupérées avec succès via API officielle');
+        
+        // Calculer le score de santé basé sur les vraies données
+        const healthScore = this.calculateRealHealthScore(realData.data);
+        
+        return res.json({
+          success: true,
+          message: '🎯 Données Garmin réelles synchronisées via API officielle',
+          data: {
+            date: realData.data.health?.date || new Date().toISOString().split('T')[0],
+            userId: userId,
+            source: 'garmin_official_api',
+            current: {
+              steps: realData.data.health?.steps || 0,
+              sleep: realData.data.sleep?.totalSleep || null,
+              stress: realData.data.stress?.averageStressLevel || null,
+              energy: realData.data.health?.bodyBattery || null,
+              heartRate: realData.data.health?.heartRate?.resting || null,
+              calories: realData.data.health?.calories || 0,
+              distance: realData.data.health?.distance || 0,
+              activeMinutes: realData.data.health?.activeMinutes || null
+            },
+            sleep: realData.data.sleep || null,
+            stress: realData.data.stress || null,
+            activities: realData.data.activities || [],
+            healthScore: healthScore,
+            sync: {
+              lastSync: realData.timestamp,
+              source: 'garmin_official_api',
+              dataQuality: 'high',
+              syncEnabled: true
+            }
+          }
+        });
+
+      } catch (apiError) {
+        console.warn('⚠️ API Garmin indisponible, basculement vers données simulées:', apiError.message);
+        
+        // Fallback vers données simulées réalistes
+        return await this.getFallbackHealthData(userId, res);
+      }
       
       // Essayer plusieurs endpoints possibles
       const endpoints = [
@@ -353,51 +386,169 @@ class GarminController {
     }
   }
 
-  // 🎯 WEBHOOK - Recevoir les vraies données Garmin push
+  // 🎯 WEBHOOK - Recevoir les vraies données Garmin push avec traitement avancé
   async receiveWebhookData(req, res) {
+    const garminWebhookService = require('../../services/garmin-webhook.service');
+    return await garminWebhookService.processWebhookData(req, res);
+  }
+
+  // Enregistrer un webhook pour un utilisateur
+  async registerUserWebhook(req, res) {
     try {
-      console.log('🎯 WEBHOOK GARMIN - Données reçues !');
-      console.log('📊 Headers:', JSON.stringify(req.headers, null, 2));
-      console.log('📦 Body:', JSON.stringify(req.body, null, 2));
-      console.log('📋 Query:', JSON.stringify(req.query, null, 2));
+      const { userId, callbackUrl, eventTypes } = req.body;
+      const garminWebhookService = require('../../services/garmin-webhook.service');
       
-      // Stocker les données webhook pour utilisation ultérieure
-      await this.processGarminWebhookData(req.body);
+      if (!userId || !callbackUrl) {
+        return res.status(400).json({
+          error: 'userId et callbackUrl sont requis'
+        });
+      }
+
+      garminWebhookService.registerWebhookEndpoint(userId, callbackUrl, eventTypes);
       
-      // Répondre à Garmin (requis)
-      return res.status(200).json({ 
-        status: 'received',
-        message: 'Données Garmin reçues avec succès',
-        timestamp: new Date().toISOString()
+      return res.status(200).json({
+        success: true,
+        message: 'Webhook enregistré avec succès',
+        userId: userId,
+        callbackUrl: callbackUrl,
+        eventTypes: eventTypes || ['health', 'activity', 'sleep']
       });
-      
+
     } catch (error) {
-      console.error('❌ Erreur webhook Garmin:', error);
-      return res.status(500).json({ error: 'Erreur traitement webhook' });
+      console.error('❌ Erreur enregistrement webhook:', error);
+      return res.status(500).json({
+        error: 'Erreur lors de l\'enregistrement du webhook'
+      });
     }
   }
 
-  // Traiter les données webhook Garmin
-  async processGarminWebhookData(data) {
+  // Obtenir le statut des webhooks pour un utilisateur
+  async getWebhookStatus(req, res) {
     try {
-      console.log('🔄 Traitement des données Garmin webhook...');
+      const userId = req.params.userId || req.userId;
+      const garminWebhookService = require('../../services/garmin-webhook.service');
       
-      if (data && data.length > 0) {
-        for (const item of data) {
-          console.log('📊 Données Garmin item:', {
-            type: item.summaryId ? 'Health Summary' : 'Activity',
-            userId: item.userId,
-            date: item.summaryDate || item.startTimeInSeconds,
-            data: Object.keys(item).join(', ')
-          });
-          
-          // TODO: Sauvegarder en MongoDB avec le bon userId
-        }
+      const webhookInfo = garminWebhookService.webhookEndpoints.get(userId);
+      
+      if (!webhookInfo) {
+        return res.status(404).json({
+          success: false,
+          message: 'Aucun webhook configuré pour cet utilisateur'
+        });
       }
-      
+
+      return res.status(200).json({
+        success: true,
+        webhook: {
+          userId: userId,
+          callbackUrl: webhookInfo.callbackUrl,
+          eventTypes: webhookInfo.eventTypes,
+          isActive: webhookInfo.isActive,
+          registeredAt: webhookInfo.registeredAt
+        }
+      });
+
     } catch (error) {
-      console.error('❌ Erreur traitement données Garmin:', error);
+      console.error('❌ Erreur récupération statut webhook:', error);
+      return res.status(500).json({
+        error: 'Erreur lors de la récupération du statut webhook'
+      });
     }
+  }
+
+  // Fallback vers données simulées quand API réelle indisponible
+  async getFallbackHealthData(userId, res) {
+    const today = new Date().toISOString().split('T')[0];
+    const steps = Math.floor(8000 + Math.random() * 4000); // 8000-12000 pas
+    const sleepHours = 7 + Math.random() * 2; // 7-9h de sommeil
+    const stressLevel = Math.floor(20 + Math.random() * 40); // stress 20-60
+    
+    console.log('🔄 Utilisation des données simulées réalistes');
+    
+    return res.json({
+      success: true,
+      message: '⚠️ Données simulées - API Garmin indisponible (nécessite partenariat commercial)',
+      data: {
+        date: today,
+        userId: userId,
+        source: 'simulated_fallback',
+        current: {
+          steps: steps,
+          sleep: parseFloat(sleepHours.toFixed(1)),
+          stress: stressLevel,
+          energy: Math.floor(70 + Math.random() * 25),
+          heartRate: Math.floor(65 + Math.random() * 20),
+          calories: Math.floor(1800 + Math.random() * 800),
+          distance: parseFloat((steps * 0.0007).toFixed(2)),
+          activeMinutes: {
+            vigorous: Math.floor(Math.random() * 30),
+            moderate: Math.floor(Math.random() * 60),
+            total: Math.floor(Math.random() * 90)
+          }
+        },
+        healthScore: Math.floor(75 + Math.random() * 20),
+        history: Array.from({length: 7}, (_, i) => ({
+          date: new Date(Date.now() - (6-i) * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+          steps: Math.floor(7000 + Math.random() * 5000),
+          sleep: parseFloat((6.5 + Math.random() * 2.5).toFixed(1)),
+          stress: Math.floor(15 + Math.random() * 50)
+        })),
+        sync: {
+          lastSync: new Date().toISOString(),
+          source: 'simulated_fallback',
+          dataQuality: 'simulated',
+          syncEnabled: false
+        },
+        note: 'Données simulées - Partenariat commercial Garmin requis pour accès API réel'
+      }
+    });
+  }
+
+  // Calculer le score de santé basé sur les vraies données Garmin
+  calculateRealHealthScore(data) {
+    if (!data || !data.health) return 75;
+    
+    let score = 0;
+    let factors = 0;
+    
+    // Score basé sur les pas (25%)
+    if (data.health.steps) {
+      const stepScore = Math.min(100, (data.health.steps / 10000) * 100);
+      score += stepScore * 0.25;
+      factors++;
+    }
+    
+    // Score basé sur le sommeil (25%)
+    if (data.sleep && data.sleep.totalSleep) {
+      const sleepHours = data.sleep.totalSleep;
+      const sleepScore = sleepHours >= 7 && sleepHours <= 9 ? 100 : 
+                       sleepHours >= 6 ? 80 : 60;
+      score += sleepScore * 0.25;
+      factors++;
+    }
+    
+    // Score basé sur le stress (25%)
+    if (data.stress && data.stress.averageStressLevel !== undefined) {
+      const stressScore = Math.max(0, 100 - data.stress.averageStressLevel);
+      score += stressScore * 0.25;
+      factors++;
+    }
+    
+    // Score basé sur l'activité (25%)
+    if (data.health.activeMinutes && data.health.activeMinutes.total) {
+      const activityScore = Math.min(100, (data.health.activeMinutes.total / 30) * 100);
+      score += activityScore * 0.25;
+      factors++;
+    }
+    
+    // Ajuster si on n'a pas tous les facteurs
+    if (factors > 0) {
+      score = (score / (factors * 0.25)) * 100;
+    } else {
+      score = 75; // Score par défaut
+    }
+    
+    return Math.round(Math.max(50, Math.min(100, score)));
   }
   
   // Calculer le score de santé basé sur les données Garmin

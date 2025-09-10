@@ -1,8 +1,22 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.model');
+const securityUtils = require('../utils/security.utils');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'secret-dev-only';
+// Obtenir le secret JWT sécurisé
+const JWT_SECRET = securityUtils.getJWTSecret();
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';
+
+// Validation du secret au démarrage
+const secretValidation = securityUtils.validateJWTSecret(JWT_SECRET);
+if (!secretValidation.valid) {
+  console.error('🚨 SÉCURITÉ COMPROMISE: Secret JWT non sécurisé -', secretValidation.reason);
+  console.error('⚠️  Utilisez un secret généré cryptographiquement ou laissez le système en générer un');
+  if (process.env.NODE_ENV === 'production') {
+    throw new Error('Secret JWT non sécurisé en production: ' + secretValidation.reason);
+  }
+} else {
+  console.log('✅ Secret JWT validé et sécurisé');
+}
 
 // Rate limiting simple en mémoire (pour production, utiliser Redis)
 const rateLimitStore = new Map();

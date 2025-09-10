@@ -12,6 +12,7 @@ const healthRoutes = require('./src/api/health/health.routes');
 const mealRoutes = require('./src/api/meal/meal.routes');
 const learnRoutes = require('./routes/learn.routes');
 const garminRoutes = require('./src/api/garmin/garmin.routes');
+const notificationRoutes = require('./src/api/notification/notification.routes');
 
 // Configuration
 const app = express();
@@ -21,8 +22,15 @@ const MAX_FILE_SIZE = process.env.MAX_FILE_SIZE || '50mb';
 
 // Import des middlewares
 const { rateLimit } = require('./src/middlewares/auth.middleware');
+const { sanitizeInput } = require('./src/middlewares/validation.middleware');
+const { helmetConfig, authLimiter, generalLimiter, securityMiddleware } = require('./src/middlewares/security.middleware');
 
-// Middlewares
+// Middlewares de sécurité (appliqués en premier)
+app.use(helmetConfig);
+app.use(securityMiddleware);
+app.use(sanitizeInput);
+
+// Middlewares de parsing
 app.use(express.json({ limit: MAX_FILE_SIZE }));
 app.use(express.urlencoded({ limit: MAX_FILE_SIZE, extended: true }));
 app.use(cors({
@@ -30,10 +38,10 @@ app.use(cors({
   credentials: true
 }));
 
-// Rate limiting ajusté pour développement
-app.use('/api/user/login', rateLimit(50, 15 * 60 * 1000)); // 50 tentatives par 15min (dev)
-app.use('/api/user/register', rateLimit(20, 60 * 60 * 1000)); // 20 inscriptions par heure (dev)
-app.use('/api', rateLimit(1000, 15 * 60 * 1000)); // 1000 requêtes par 15min (dev)
+// Rate limiting spécialisé
+app.use('/api/user/login', authLimiter);
+app.use('/api/user/register', authLimiter);
+app.use('/api', generalLimiter);
 
 // Routes
 app.use('/api/user', userRoutes);
@@ -45,6 +53,7 @@ app.use('/api/meal', mealRoutes);
 app.use('/api/learn', learnRoutes);
 app.use('/api/garmin', garminRoutes);
 app.use('/auth/garmin', garminRoutes);
+app.use('/api/notifications', notificationRoutes);
 
 // Route pour la page de résultat OAuth
 app.get('/auth/garmin/done', (req, res) => {
@@ -88,15 +97,28 @@ app.use('*', (req, res) => {
   });
 });
 
+// Initialisation des services IA
+const { foodRecognitionService } = require('./src/services/food-recognition.service');
+
 // Connexion à la base de données
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/ava-app';
 mongoose.connect(mongoUri)
-  .then(() => console.log('✅ MongoDB connecté'))
-  .catch(err => console.error('❌ Erreur MongoDB :', err));
+  .then(() => {
+    console.log('✅ MongoDB connecté');
+    // Initialiser le service de reconnaissance alimentaire après connexion DB
+    return foodRecognitionService.initialize();
+  })
+  .then(() => {
+    console.log('✅ Service de reconnaissance alimentaire initialisé');
+  })
+  .catch(err => {
+    console.error('❌ Erreur MongoDB ou reconnaissance alimentaire:', err);
+  });
 
 // Démarrage du serveur
 app.listen(PORT, () => {
   console.log(`Serveur en écoute sur le port ${PORT}`);
+  console.log(`🧠 TensorFlow.js: ${foodRecognitionService.isModelLoaded ? 'Activé' : 'En attente'}`);
 });
 
 module.exports = app;

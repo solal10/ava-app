@@ -13,8 +13,10 @@ router.get('/rappel', (req, res) => garminController.callback(req, res)); // ✅
 // Routes pour les données de santé
 router.get('/health-data', garminController.getHealthData);
 
-// 🎯 WEBHOOK ENDPOINT - Recevoir les vraies données Garmin
+// 🎯 WEBHOOK ENDPOINTS - Système temps réel
 router.post('/webhook', garminController.receiveWebhookData);
+router.post('/webhook/register', garminController.registerUserWebhook);
+router.get('/webhook/status/:userId', garminController.getWebhookStatus);
 
 // Legacy routes pour compatibilité
 router.post('/auth-url', (req, res) => garminController.login(req, res));

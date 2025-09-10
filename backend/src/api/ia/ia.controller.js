@@ -1,108 +1,260 @@
-// Base de connaissances simplifiée pour le coach IA
-const knowledgeTopics = [
-  'sport', 'santé', 'entraînement', 'motivation', 'alimentation', 
-  'récupération', 'psychologie sportive', 'musculation', 'cardio', 
-  'étirement', 'hydratation', 'sommeil', 'blessure', 'performance'
-];
+const User = require('../../models/user.model');
+const aiChatService = require('../../services/ai-chat.service');
 
-// Vérifier si une question est liée au domaine de compétence
-const isRelevantTopic = (question) => {
-  question = question.toLowerCase();
-  return knowledgeTopics.some(topic => question.includes(topic.toLowerCase()));
-};
-
-// Réponses simples par défaut (à remplacer par un vrai système IA plus tard)
-const getBasicResponse = (topic) => {
-  const responses = {
-    sport: "Pour progresser dans votre sport, la régularité et la progression graduelle sont essentielles.",
-    santé: "Une bonne santé repose sur l'équilibre entre activité physique, alimentation et repos.",
-    entraînement: "Variez vos entraînements pour stimuler différents groupes musculaires et éviter la routine.",
-    motivation: "Fixez-vous des objectifs SMART : Spécifiques, Mesurables, Atteignables, Réalistes et Temporels.",
-    alimentation: "Privilégiez les aliments non transformés et assurez-vous de consommer suffisamment de protéines.",
-    récupération: "La récupération est aussi importante que l'entraînement pour progresser.",
-    'psychologie sportive': "La visualisation positive peut améliorer significativement vos performances."
-  };
-
-  for (const key in responses) {
-    if (topic.includes(key)) {
-      return responses[key];
-    }
-  }
-
-  return "Pour atteindre vos objectifs, écoutez votre corps et restez constant dans vos efforts.";
-};
+// Modèle pour l'historique des conversations (simple cache en mémoire)
+const conversationHistory = new Map();
 
 // Compteur de requêtes par utilisateur (simulé - à remplacer par une base de données)
 const userRequestCounts = {};
 
 exports.askCoach = async (req, res) => {
   try {
-    const { userId, subscriptionLevel } = req;
-    const { question } = req.body;
+    const { userId, subscriptionLevel, user } = req;
+    const { question, context, responseType = 'health_coach' } = req.body;
 
     if (!question) {
       return res.status(400).json({ message: 'Question manquante' });
     }
 
-    // Vérifier si la question est dans le domaine de compétence
-    if (!isRelevantTopic(question)) {
-      return res.status(403).json({ 
-        message: 'Je suis un coach santé. Je ne peux pas t\'aider sur ce sujet.' 
-      });
-    }
+    console.log(`🤖 Question IA de ${user?.email}: "${question.substring(0, 100)}..."`);
 
     // Gestion des limites pour le niveau "explore"
     if (subscriptionLevel === 'explore') {
-      // Initialiser le compteur si nécessaire
       if (!userRequestCounts[userId]) {
         userRequestCounts[userId] = 0;
       }
 
-      // Vérifier si l'utilisateur a atteint sa limite
       if (userRequestCounts[userId] >= 3) {
         return res.status(403).json({
           message: 'Limite de 3 questions par semaine atteinte pour le niveau Explore',
-          upgrade: true
+          upgrade: true,
+          upgradeMessage: 'Passez à Perform pour un chat illimité !'
         });
       }
 
-      // Incrémenter le compteur
       userRequestCounts[userId]++;
     }
 
-    // Générer une réponse (simulée pour l'instant)
-    const response = getBasicResponse(question);
+    // Récupérer le profil utilisateur et les données de santé
+    const userProfile = await User.findById(userId).select('-password');
+    
+    // Obtenir l'historique de conversation
+    const chatHistory = conversationHistory.get(userId) || [];
+    
+    // Construire le contexte pour l'IA
+    const aiContext = {
+      userId,
+      userProfile,
+      healthData: userProfile?.stats || context?.healthData,
+      chatHistory,
+      responseType,
+      subscriptionLevel,
+      maxTokens: subscriptionLevel === 'explore' ? 150 : 300
+    };
 
+    // Générer la réponse avec l'IA
+    const aiResponse = await aiChatService.generateResponse(question, aiContext);
+
+    // Sauvegarder dans l'historique
+    const conversationEntry = {
+      timestamp: new Date(),
+      question,
+      response: aiResponse.response,
+      provider: aiResponse.provider,
+      intent: aiResponse.intent
+    };
+
+    // Limiter l'historique à 20 échanges
+    chatHistory.push(conversationEntry);
+    if (chatHistory.length > 20) {
+      chatHistory.shift();
+    }
+    conversationHistory.set(userId, chatHistory);
+
+    // Réponse complète
     res.status(200).json({
       question,
-      response,
-      requestCount: subscriptionLevel === 'explore' ? userRequestCounts[userId] : null,
-      maxRequests: subscriptionLevel === 'explore' ? 3 : null
+      response: aiResponse.response,
+      metadata: {
+        provider: aiResponse.provider,
+        model: aiResponse.model,
+        tokens: aiResponse.tokens,
+        cost: aiResponse.cost,
+        intent: aiResponse.intent,
+        confidence: aiResponse.confidence
+      },
+      subscription: {
+        level: subscriptionLevel,
+        requestCount: subscriptionLevel === 'explore' ? userRequestCounts[userId] : null,
+        maxRequests: subscriptionLevel === 'explore' ? 3 : 'unlimited',
+        gated: aiResponse.subscription_gated
+      },
+      conversationId: `${userId}_${Date.now()}`,
+      timestamp: new Date().toISOString()
     });
+
   } catch (error) {
-    res.status(500).json({ message: 'Erreur lors de la communication avec l\'IA', error: error.message });
+    console.error('❌ Erreur chat IA:', error);
+    res.status(500).json({ 
+      message: 'Erreur lors de la communication avec l\'IA', 
+      error: error.message 
+    });
   }
 };
 
-// Fonction d'apprentissage pour l'évolution future du système
-exports.learnFromUserInput = async (req, res) => {
+// Obtenir l'historique de conversation d'un utilisateur
+exports.getConversationHistory = async (req, res) => {
   try {
-    const { question, feedback, correctAnswer } = req.body;
-    
-    if (!question || !feedback) {
-      return res.status(400).json({ message: 'Données d\'apprentissage incomplètes' });
+    const { userId } = req;
+    const { limit = 10 } = req.query;
+
+    const history = conversationHistory.get(userId) || [];
+    const recentHistory = history.slice(-parseInt(limit));
+
+    res.status(200).json({
+      userId,
+      conversationCount: history.length,
+      recentConversations: recentHistory,
+      hasMore: history.length > parseInt(limit)
+    });
+
+  } catch (error) {
+    console.error('❌ Erreur récupération historique:', error);
+    res.status(500).json({ 
+      message: 'Erreur lors de la récupération de l\'historique',
+      error: error.message 
+    });
+  }
+};
+
+// Analyser les tendances de conversation
+exports.getConversationAnalytics = async (req, res) => {
+  try {
+    const { userId, subscriptionLevel } = req;
+
+    // Fonctionnalité premium
+    if (!['pro', 'elite'].includes(subscriptionLevel)) {
+      return res.status(403).json({
+        message: 'Fonctionnalité réservée aux abonnements Pro et Elite',
+        upgrade: true
+      });
     }
 
-    // Cette fonction est un placeholder pour l'implémentation future
-    // Elle pourrait être utilisée pour alimenter un modèle d'apprentissage
+    const analytics = await aiChatService.analyzeConversationTrends(userId, 30);
+
+    res.status(200).json({
+      userId,
+      period: '30 derniers jours',
+      analytics,
+      generatedAt: new Date().toISOString()
+    });
+
+  } catch (error) {
+    console.error('❌ Erreur analytics conversation:', error);
+    res.status(500).json({ 
+      message: 'Erreur lors de l\'analyse des conversations',
+      error: error.message 
+    });
+  }
+};
+
+// Fonction d'apprentissage et feedback
+exports.provideFeedback = async (req, res) => {
+  try {
+    const { userId } = req;
+    const { conversationId, rating, feedback, helpful } = req.body;
     
-    console.log('Données d\'apprentissage reçues:', { question, feedback, correctAnswer });
+    if (!conversationId || rating === undefined) {
+      return res.status(400).json({ message: 'ID de conversation et évaluation requis' });
+    }
+
+    // Enregistrer le feedback pour amélioration future
+    console.log('📝 Feedback reçu:', {
+      userId,
+      conversationId,
+      rating,
+      feedback,
+      helpful,
+      timestamp: new Date()
+    });
+
+    // TODO: Sauvegarder en base de données pour analyse
     
     res.status(200).json({ 
-      message: 'Merci pour votre retour, il nous aidera à améliorer le système',
-      recorded: true
+      message: 'Merci pour votre retour ! Il nous aide à améliorer AVA.',
+      recorded: true,
+      conversationId
     });
+
   } catch (error) {
-    res.status(500).json({ message: 'Erreur lors de l\'enregistrement du retour', error: error.message });
+    console.error('❌ Erreur feedback:', error);
+    res.status(500).json({ 
+      message: 'Erreur lors de l\'enregistrement du retour', 
+      error: error.message 
+    });
   }
+};
+
+// Réinitialiser l'historique de conversation
+exports.clearConversationHistory = async (req, res) => {
+  try {
+    const { userId } = req;
+
+    conversationHistory.delete(userId);
+
+    res.status(200).json({
+      message: 'Historique de conversation effacé',
+      userId,
+      clearedAt: new Date().toISOString()
+    });
+
+  } catch (error) {
+    console.error('❌ Erreur nettoyage historique:', error);
+    res.status(500).json({ 
+      message: 'Erreur lors du nettoyage de l\'historique',
+      error: error.message 
+    });
+  }
+};
+
+// Obtenir les limites d'utilisation
+exports.getUsageLimits = async (req, res) => {
+  try {
+    const { userId, subscriptionLevel } = req;
+
+    const limits = {
+      explore: { questionsPerWeek: 3, maxTokensPerResponse: 150 },
+      perform: { questionsPerWeek: 'unlimited', maxTokensPerResponse: 300 },
+      pro: { questionsPerWeek: 'unlimited', maxTokensPerResponse: 500 },
+      elite: { questionsPerWeek: 'unlimited', maxTokensPerResponse: 800 }
+    };
+
+    const currentLimits = limits[subscriptionLevel] || limits.explore;
+    const currentUsage = userRequestCounts[userId] || 0;
+
+    res.status(200).json({
+      subscriptionLevel,
+      limits: currentLimits,
+      currentUsage: {
+        questionsThisWeek: subscriptionLevel === 'explore' ? currentUsage : 'unlimited'
+      },
+      resetDate: subscriptionLevel === 'explore' ? exports.getNextWeekReset() : null
+    });
+
+  } catch (error) {
+    console.error('❌ Erreur limites usage:', error);
+    res.status(500).json({ 
+      message: 'Erreur lors de la récupération des limites',
+      error: error.message 
+    });
+  }
+};
+
+// Helper: Obtenir la date de réinitialisation hebdomadaire
+exports.getNextWeekReset = function() {
+  const now = new Date();
+  const nextMonday = new Date();
+  nextMonday.setDate(now.getDate() + (7 - now.getDay() + 1) % 7);
+  nextMonday.setHours(0, 0, 0, 0);
+  return nextMonday.toISOString();
 };

@@ -26,6 +26,22 @@ const userSchema = new mongoose.Schema({
     enum: ['explore', 'perform', 'pro', 'elite'],
     default: 'explore'
   },
+  subscriptionStatus: {
+    type: String,
+    enum: ['active', 'inactive', 'canceled', 'payment_failed'],
+    default: 'active'
+  },
+  stripeCustomerId: {
+    type: String,
+    sparse: true
+  },
+  stripeSubscriptionId: {
+    type: String,
+    sparse: true
+  },
+  lastPaymentDate: {
+    type: Date
+  },
   stats: {
     sommeil: {
       type: Number,
@@ -106,6 +122,101 @@ const userSchema = new mongoose.Schema({
       default: ''
     }
   },
+  
+  // Configuration des notifications push
+  fcmTokens: [{
+    token: String,
+    active: {
+      type: Boolean,
+      default: true
+    },
+    registeredAt: {
+      type: Date,
+      default: Date.now
+    },
+    lastUsed: Date,
+    deactivatedAt: Date,
+    deviceInfo: {
+      type: String,        // 'mobile', 'tablet', 'desktop'
+      platform: String,    // 'android', 'ios', 'web'
+      version: String,
+      model: String
+    },
+    successCount: {
+      type: Number,
+      default: 0
+    },
+    errorCount: {
+      type: Number,
+      default: 0
+    }
+  }],
+  
+  topicSubscriptions: [{
+    type: String,
+    enum: ['health_tips', 'workout_reminders', 'nutrition_alerts', 'achievements', 'premium_features']
+  }],
+  
+  notificationPreferences: {
+    enabled: {
+      type: Boolean,
+      default: true
+    },
+    types: {
+      welcome: {
+        type: Boolean,
+        default: true
+      },
+      reminder: {
+        type: Boolean,
+        default: true
+      },
+      achievement: {
+        type: Boolean,
+        default: true
+      },
+      health_alert: {
+        type: Boolean,
+        default: true
+      },
+      premium: {
+        type: Boolean,
+        default: true
+      }
+    },
+    timing: {
+      quietHours: {
+        enabled: {
+          type: Boolean,
+          default: false
+        },
+        start: {
+          type: String,
+          default: '22:00'
+        },
+        end: {
+          type: String,
+          default: '08:00'
+        }
+      },
+      timezone: {
+        type: String,
+        default: 'Europe/Paris'
+      }
+    }
+  },
+  
+  notificationHistory: [{
+    title: String,
+    body: String,
+    type: String,
+    sentAt: Date,
+    success: Boolean,
+    tokensCount: Number,
+    successCount: Number,
+    data: mongoose.Schema.Types.Mixed
+  }],
+  
   createdAt: {
     type: Date,
     default: Date.now

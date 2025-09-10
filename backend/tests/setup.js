@@ -3,8 +3,11 @@ const mongoose = require('mongoose');
 
 // Configurer l'environnement de test
 process.env.NODE_ENV = 'test';
-process.env.JWT_SECRET = 'test-secret-key';
+process.env.JWT_SECRET = 'test-jwt-secret-key-for-tests-only-minimum-32-characters-long';
 process.env.MONGODB_URI = 'mongodb://localhost:27017/ava-app-test';
+process.env.SPOONACULAR_API_KEY = 'test-spoonacular-key';
+process.env.STRIPE_SECRET_KEY = 'sk_test_test-stripe-key';
+process.env.STRIPE_WEBHOOK_SECRET = 'whsec_test-webhook-secret';
 
 // Timeout pour les tests
 jest.setTimeout(30000);
