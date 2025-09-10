@@ -9,7 +9,11 @@ var jumpToCode = (function init() {
     // We don't want to select elements that are direct descendants of another match
     var notSelector = ':not(' + missingCoverageClasses.join('):not(') + ') > '; // becomes `:not(a):not(b) > `
 
+<<<<<<< HEAD
     // Selector that finds elements on the page to which we can jump
+=======
+    // Selecter that finds elements on the page to which we can jump
+>>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
     var selector =
         fileListingElements.join(', ') +
         ', ' +

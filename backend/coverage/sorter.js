@@ -27,6 +27,7 @@ var addSorting = (function() {
     function onFilterInput() {
         const searchValue = document.getElementById('fileSearch').value;
         const rows = document.getElementsByTagName('tbody')[0].children;
+<<<<<<< HEAD
 
         // Try to create a RegExp from the searchValue. If it fails (invalid regex),
         // it will be treated as a plain text search
@@ -52,6 +53,19 @@ var addSorting = (function() {
             }
 
             row.style.display = isMatch ? '' : 'none';
+=======
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i];
+            if (
+                row.textContent
+                    .toLowerCase()
+                    .includes(searchValue.toLowerCase())
+            ) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+>>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
         }
     }
 

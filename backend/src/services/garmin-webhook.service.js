@@ -317,7 +317,7 @@ class GarminWebhookService {
   async saveRawGarminData(userId, dataType, rawData) {
     try {
       // Utiliser le modèle GarminData pour sauvegarder
-      const GarminData = require('../models/GarminData.model');
+      const GarminData = require('../models/garmindata.model');
       
       const garminDataEntry = new GarminData({
         userId,
@@ -498,7 +498,7 @@ class GarminWebhookService {
     
     try {
       // Sauvegarder les échecs pour analyse
-      const GarminData = require('../models/GarminData.model');
+      const GarminData = require('../models/garmindata.model');
       
       await GarminData.create({
         userId: this.extractUserId(item.data) || 'unknown',
@@ -526,7 +526,7 @@ class GarminWebhookService {
   // Statistiques des webhooks
   async getWebhookStats(timeRange = 24) {
     try {
-      const GarminData = require('../models/GarminData.model');
+      const GarminData = require('../models/garmindata.model');
       const since = new Date(Date.now() - timeRange * 60 * 60 * 1000);
       
       const stats = await GarminData.aggregate([

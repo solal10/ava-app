@@ -1,5 +1,8 @@
 const User = require('../../models/user.model');
+<<<<<<< HEAD
 const PaymentHistory = require('../../models/paymenthistory.model');
+=======
+>>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
 const paymentService = require('../../services/payment.service');
 
 // Récupérer les informations d'abonnement de l'utilisateur
@@ -165,6 +168,7 @@ function getFeaturesByLevel(level) {
   return baseFeatures;
 }
 
+<<<<<<< HEAD
 // Récupérer l'historique des paiements de l'utilisateur
 exports.getPaymentHistory = async (req, res) => {
   try {
@@ -215,6 +219,8 @@ exports.recordPayment = async (userId, paymentData) => {
   }
 };
 
+=======
+>>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
 // Simuler une date de renouvellement (30 jours à partir d'aujourd'hui)
 function getNextRenewalDate() {
   const date = new Date();

@@ -1,7 +1,10 @@
 const Meal = require('../../models/meal.model');
 const User = require('../../models/user.model');
+<<<<<<< HEAD
 const NutritionPlan = require('../../models/nutritionplan.model');
 const WorkoutPlan = require('../../models/workoutplan.model');
+=======
+>>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
 const spoonacularService = require('../../services/spoonacular.service');
 const { foodRecognitionService } = require('../../services/food-recognition.service');
 
@@ -639,6 +642,7 @@ function generateWarnings(nutritionalAnalysis) {
 
   return warnings;
 }
+<<<<<<< HEAD
 
 // Créer un plan nutritionnel personnalisé
 exports.createNutritionPlan = async (req, res) => {
@@ -771,3 +775,5 @@ exports.getWorkoutPlans = async (req, res) => {
     });
   }
 };
+=======
+>>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
