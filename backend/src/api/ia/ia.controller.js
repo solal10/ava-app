@@ -250,6 +250,54 @@ exports.getUsageLimits = async (req, res) => {
   }
 };
 
+// Obtenir le statut du service IA
+exports.getServiceStatus = async (req, res) => {
+  try {
+    const status = aiChatService.getServiceStatus();
+    
+    res.status(200).json({
+      message: 'Statut du service IA récupéré',
+      status,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error('❌ Erreur récupération statut IA:', error);
+    res.status(500).json({
+      message: 'Erreur lors de la récupération du statut IA',
+      error: error.message
+    });
+  }
+};
+
+// Tester les connexions API
+exports.testAPIConnections = async (req, res) => {
+  try {
+    const { subscriptionLevel } = req;
+    
+    // Fonctionnalité réservée aux admins ou Elite
+    if (subscriptionLevel !== 'elite') {
+      return res.status(403).json({
+        message: 'Test API réservé aux utilisateurs Elite',
+        upgrade: true
+      });
+    }
+
+    const results = await aiChatService.testAPIConnections();
+    
+    res.status(200).json({
+      message: 'Test des connexions API terminé',
+      results,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error('❌ Erreur test connexions API:', error);
+    res.status(500).json({
+      message: 'Erreur lors du test des connexions API',
+      error: error.message
+    });
+  }
+};
+
 // Helper: Obtenir la date de réinitialisation hebdomadaire
 exports.getNextWeekReset = function() {
   const now = new Date();

@@ -8,8 +8,10 @@ const { apiLimiter } = require('../../middlewares/security.middleware');
 // Routes de reconnaissance alimentaire avancée (TensorFlow.js + Spoonacular)
 router.post('/analyze-image', authMiddleware, apiLimiter, mealController.analyzeFoodImage);
 router.post('/recognize-advanced', authMiddleware, apiLimiter, mealController.advancedFoodRecognition);
+router.post('/recognize-enhanced', authMiddleware, apiLimiter, mealController.enhancedFoodRecognition);
 router.post('/recognize-batch', authMiddleware, apiLimiter, mealController.batchFoodRecognition);
 router.get('/model-info', authMiddleware, mealController.getModelInfo);
+router.post('/download-model', authMiddleware, mealController.downloadPretrainedModel);
 
 // Routes Spoonacular (avec rate limiting API)
 router.get('/nutrition', authMiddleware, apiLimiter, mealController.searchNutrition);

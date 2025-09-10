@@ -523,10 +523,12 @@ exports.batchFoodRecognition = async (req, res) => {
 exports.getModelInfo = async (_, res) => {
   try {
     const modelInfo = foodRecognitionService.getModelInfo();
+    const modelStats = foodRecognitionService.getModelStats();
 
     res.status(200).json({
       message: 'Informations du modèle récupérées',
       model: modelInfo,
+      stats: modelStats,
       status: {
         initialized: foodRecognitionService.isModelLoaded,
         ready: modelInfo !== null
@@ -536,7 +538,9 @@ exports.getModelInfo = async (_, res) => {
         nutritionAnalysis: true,
         batchProcessing: true,
         confidenceScoring: true,
-        portionEstimation: true
+        portionEstimation: true,
+        enhancedRecognition: true,
+        pretrainedModels: true
       }
     });
 
@@ -544,6 +548,97 @@ exports.getModelInfo = async (_, res) => {
     console.error('Erreur récupération info modèle:', error);
     res.status(500).json({
       message: 'Erreur lors de la récupération des informations du modèle',
+      error: error.message
+    });
+  }
+};
+
+// Reconnaissance alimentaire améliorée avec MobileNet
+exports.enhancedFoodRecognition = async (req, res) => {
+  try {
+    const { subscriptionLevel } = req;
+    
+    // Fonctionnalité réservée aux abonnements Pro et Elite
+    if (!['pro', 'elite'].includes(subscriptionLevel)) {
+      return res.status(403).json({
+        message: 'Reconnaissance améliorée réservée aux abonnements Pro et Elite',
+        upgrade: true
+      });
+    }
+
+    const { imageData, options = {} } = req.body;
+
+    if (!imageData) {
+      return res.status(400).json({ 
+        message: 'Données d\'image requises pour la reconnaissance améliorée' 
+      });
+    }
+
+    // Convertir l'image base64 en buffer
+    const imageBuffer = Buffer.from(imageData.replace(/^data:image\/[a-z]+;base64,/, ''), 'base64');
+
+    // Utiliser la reconnaissance améliorée
+    const recognition = await foodRecognitionService.enhancedRecognition(imageBuffer, {
+      topK: options.topK || 5,
+      threshold: options.threshold || 0.1,
+      enhancedMode: true
+    });
+
+    res.status(200).json({
+      message: 'Reconnaissance alimentaire améliorée terminée',
+      recognition,
+      subscription: { level: subscriptionLevel, feature: 'enhanced_recognition' }
+    });
+
+  } catch (error) {
+    console.error('❌ Erreur reconnaissance améliorée:', error);
+    res.status(500).json({
+      message: 'Erreur lors de la reconnaissance alimentaire améliorée',
+      error: error.message
+    });
+  }
+};
+
+// Télécharger et configurer un modèle pré-entraîné
+exports.downloadPretrainedModel = async (req, res) => {
+  try {
+    const { subscriptionLevel } = req;
+    
+    // Fonctionnalité réservée aux utilisateurs Elite
+    if (subscriptionLevel !== 'elite') {
+      return res.status(403).json({
+        message: 'Téléchargement de modèles réservé aux utilisateurs Elite',
+        upgrade: true
+      });
+    }
+
+    const { modelUrl, modelName } = req.body;
+
+    if (!modelUrl) {
+      return res.status(400).json({ 
+        message: 'URL du modèle requise' 
+      });
+    }
+
+    const result = await foodRecognitionService.downloadPretrainedModel(modelUrl, modelName);
+    
+    if (result.success) {
+      res.status(200).json({
+        message: `Modèle ${result.modelName} téléchargé et configuré avec succès`,
+        result,
+        subscription: { level: subscriptionLevel, feature: 'model_download' }
+      });
+    } else {
+      res.status(400).json({
+        message: 'Échec du téléchargement du modèle',
+        error: result.error
+      });
+    }
+
+  } catch (error) {
+    console.error('❌ Erreur téléchargement modèle:', error);
+    res.status(500).json({
+      message: 'Erreur lors du téléchargement du modèle',
       error: error.message
     });
   }

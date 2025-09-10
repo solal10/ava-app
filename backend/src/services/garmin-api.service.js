@@ -7,6 +7,23 @@ class GarminAPIService {
     this.rateLimitDelay = 1000; // 1 seconde entre les requêtes
     this.lastRequestTime = 0;
     this.maxRetries = 3;
+    
+    // Configuration des endpoints mis à jour (2024)
+    this.endpoints = {
+      health: '/wellness-api/rest/dailies',
+      activities: '/activity-search-service-1.2/json/activities',
+      sleep: '/wellness-api/rest/sleepData',
+      stress: '/wellness-api/rest/stressDetails',
+      heartRate: '/wellness-api/rest/heartRate',
+      bodyBattery: '/wellness-api/rest/bodyBattery'
+    };
+    
+    // Headers par défaut pour toutes les requêtes
+    this.defaultHeaders = {
+      'Accept': 'application/json',
+      'User-Agent': 'AVA-Coach/2.0',
+      'di-backend': 'connectapi.garmin.com'
+    };
   }
 
   // Rate limiting pour respecter les limites de l'API Garmin
@@ -48,16 +65,21 @@ class GarminAPIService {
     const targetDate = date || new Date().toISOString().split('T')[0];
     
     return await this.retryRequest(async () => {
-      const response = await axios.get(`${this.connectURL}/health-api/v1/dailies`, {
+      const response = await axios.get(`${this.connectURL}${this.endpoints.health}`, {
         params: {
-          date: targetDate
+          uploadStartTimeInGMT: targetDate,
+          uploadEndTimeInGMT: targetDate
         },
         headers: {
           'Authorization': `Bearer ${accessToken}`,
-          'Accept': 'application/json',
-          'User-Agent': 'AVA-Coach/1.0'
+          ...this.defaultHeaders
         },
         timeout: 10000
+      });
+
+      console.log(`✅ Données de santé récupérées pour ${targetDate}:`, {
+        status: response.status,
+        dataPoints: response.data?.length || 0
       });
 
       return this.formatHealthData(response.data);
@@ -72,7 +94,7 @@ class GarminAPIService {
     const end = endDate || new Date().toISOString().split('T')[0];
 
     return await this.retryRequest(async () => {
-      const response = await axios.get(`${this.connectURL}/activity-api/v1/activities`, {
+      const response = await axios.get(`${this.connectURL}${this.endpoints.activities}`, {
         params: {
           startDate: start,
           endDate: end,
@@ -80,13 +102,44 @@ class GarminAPIService {
         },
         headers: {
           'Authorization': `Bearer ${accessToken}`,
-          'Accept': 'application/json',
-          'User-Agent': 'AVA-Coach/1.0'
+          ...this.defaultHeaders
         },
         timeout: 15000
       });
 
+      console.log(`✅ Données d'activité récupérées pour ${start} à ${end}:`, {
+        status: response.status,
+        activities: response.data?.length || 0
+      });
+
       return this.formatActivityData(response.data);
+    });
+  }
+
+  // Obtenir les données de Body Battery (énergie corporelle)
+  async getBodyBatteryData(accessToken, date = null) {
+    await this.waitForRateLimit();
+
+    const targetDate = date || new Date().toISOString().split('T')[0];
+    
+    return await this.retryRequest(async () => {
+      const response = await axios.get(`${this.connectURL}${this.endpoints.bodyBattery}`, {
+        params: {
+          date: targetDate
+        },
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          ...this.defaultHeaders
+        },
+        timeout: 10000
+      });
+
+      console.log(`✅ Données Body Battery récupérées pour ${targetDate}:`, {
+        status: response.status,
+        hasData: !!response.data
+      });
+
+      return this.formatBodyBatteryData(response.data);
     });
   }
 
@@ -143,14 +196,22 @@ class GarminAPIService {
       includeSleep = true,
       includeStress = true,
       includeActivity = true,
+      includeBodyBattery = true,
       dateRange = 7 // derniers N jours
     } = options;
+
+    console.log('🔄 Récupération complète des données Garmin...', options);
 
     try {
       const promises = [];
 
       // Données de santé de base
       promises.push(this.getDailyHealthData(accessToken));
+
+      // Body Battery (énergie corporelle)
+      if (includeBodyBattery) {
+        promises.push(this.getBodyBatteryData(accessToken));
+      }
 
       // Données de sommeil
       if (includeSleep) {
@@ -173,14 +234,21 @@ class GarminAPIService {
 
       const results = await Promise.allSettled(promises);
       
+      console.log('📊 Résultats récupération Garmin:', {
+        promises: promises.length,
+        success: results.filter(r => r.status === 'fulfilled').length,
+        failed: results.filter(r => r.status === 'rejected').length
+      });
+
       return this.combineHealthData(results, {
         includeSleep,
         includeStress,
-        includeActivity
+        includeActivity,
+        includeBodyBattery
       });
 
     } catch (error) {
-      console.error('Erreur lors de la récupération des données complètes:', error);
+      console.error('❌ Erreur lors de la récupération des données complètes:', error);
       throw error;
     }
   }

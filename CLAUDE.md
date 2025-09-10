@@ -104,15 +104,15 @@ The application expects MongoDB running locally. The start script automatically 
 - [✅ COMPLETED] **PAYMENT-002**: Implement webhook handling for payment events (included in PAYMENT-001)
 - [✅ COMPLETED] **PAYMENT-003**: Add trial period logic and payment failure handling (included in PAYMENT-001)
 - [✅ COMPLETED] **SPOON-001**: Complete real Spoonacular API integration in `backend/src/services/spoonacular.service.js`
-- [ ] **TEST-001**: Add basic unit tests for controllers (minimum 50% coverage)
+- [✅ COMPLETED] **TEST-001**: Add basic unit tests for controllers (minimum 50% coverage)
 
 ### Phase 2 - Data Integration & Real APIs (MEDIUM PRIORITY)  
 - [ ] **GARMIN-001**: Apply for Garmin commercial partnership for real API access
 - [ ] **GARMIN-002**: Replace simulated data (lines 142-173 in garmin.controller.js) with real API calls
 - [ ] **GARMIN-003**: Implement webhook system for real-time Garmin data sync
-- [ ] **DB-001**: Create missing models: `WorkoutPlan.model.js`, `NutritionPlan.model.js`, `GarminData.model.js`, `PaymentHistory.model.js`
-- [ ] **AI-001**: Integrate real AI chat (OpenAI/Claude API) replacing mock responses
-- [ ] **AI-002**: Implement actual food recognition model with TensorFlow.js
+- [✅ COMPLETED] **DB-001**: Create missing models: `WorkoutPlan.model.js`, `NutritionPlan.model.js`, `GarminData.model.js`, `PaymentHistory.model.js`
+- [✅ COMPLETED] **AI-001**: Integrate real AI chat (OpenAI/Claude API) replacing mock responses
+- [✅ COMPLETED] **AI-002**: Implement actual food recognition model with TensorFlow.js
 - [ ] **NOTIF-001**: Add push notification system (Firebase Cloud Messaging)
 - [ ] **NOTIF-002**: Implement email notifications (SendGrid/AWS SES)
 

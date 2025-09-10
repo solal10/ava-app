@@ -308,6 +308,67 @@ Utilise les données de stress et sommeil Garmin pour des conseils personnalisé
     return contextStr;
   }
 
+  // Tester la connexion aux API AI
+  async testAPIConnections() {
+    const results = {
+      openai: { available: this.openaiEnabled, working: false, error: null },
+      claude: { available: this.claudeEnabled, working: false, error: null },
+      mockMode: this.mockMode
+    };
+
+    // Test OpenAI
+    if (this.openaiEnabled) {
+      try {
+        const testResponse = await this.openai.chat.completions.create({
+          model: 'gpt-3.5-turbo',
+          messages: [{ role: 'user', content: 'Test' }],
+          max_tokens: 5
+        });
+        results.openai.working = true;
+        console.log('✅ OpenAI API fonctionne');
+      } catch (error) {
+        results.openai.error = error.message;
+        console.log('❌ OpenAI API erreur:', error.message);
+      }
+    }
+
+    // Test Claude
+    if (this.claudeEnabled) {
+      try {
+        const testResponse = await this.anthropic.messages.create({
+          model: 'claude-3-sonnet-20240229',
+          max_tokens: 5,
+          messages: [{ role: 'user', content: 'Test' }]
+        });
+        results.claude.working = true;
+        console.log('✅ Claude API fonctionne');
+      } catch (error) {
+        results.claude.error = error.message;
+        console.log('❌ Claude API erreur:', error.message);
+      }
+    }
+
+    return results;
+  }
+
+  // Obtenir le statut du service
+  getServiceStatus() {
+    return {
+      mockMode: this.mockMode,
+      providers: {
+        openai: {
+          enabled: this.openaiEnabled,
+          configured: !!process.env.OPENAI_API_KEY
+        },
+        claude: {
+          enabled: this.claudeEnabled,
+          configured: !!process.env.ANTHROPIC_API_KEY
+        }
+      },
+      defaultProvider: this.defaultProvider
+    };
+  }
+
   // Générer des insights de santé
   generateHealthInsight(healthData) {
     if (!healthData) return "Connecte tes données pour des conseils personnalisés !";

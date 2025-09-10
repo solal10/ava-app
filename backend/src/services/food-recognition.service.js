@@ -48,53 +48,120 @@ class FoodRecognitionService {
   }
 
   async createBaseModel() {
-    // Modèle CNN pour la classification d'images alimentaires
-    const model = tf.sequential({
-      layers: [
-        // Couches de convolution
-        tf.layers.conv2d({
-          inputShape: [224, 224, 3],
-          filters: 32,
-          kernelSize: 3,
-          activation: 'relu'
-        }),
-        tf.layers.maxPooling2d({ poolSize: 2 }),
-        
-        tf.layers.conv2d({
-          filters: 64,
-          kernelSize: 3,
-          activation: 'relu'
-        }),
-        tf.layers.maxPooling2d({ poolSize: 2 }),
-        
-        tf.layers.conv2d({
-          filters: 128,
-          kernelSize: 3,
-          activation: 'relu'
-        }),
-        tf.layers.maxPooling2d({ poolSize: 2 }),
-        
-        // Couches denses
-        tf.layers.flatten(),
-        tf.layers.dense({
-          units: 512,
-          activation: 'relu'
-        }),
-        tf.layers.dropout({ rate: 0.5 }),
-        tf.layers.dense({
-          units: 1000, // 1000 classes d'aliments
-          activation: 'softmax'
-        })
-      ]
-    });
+    try {
+      // Tenter d'utiliser MobileNet pré-entraîné pour de meilleures performances
+      console.log('📱 Tentative de chargement MobileNet...');
+      
+      const mobilenet = await tf.loadLayersModel('https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v3_large_100_224/classification/5/default/1', {
+        fromTFHub: true
+      });
 
-    model.compile({
-      optimizer: 'adam',
-      loss: 'categoricalCrossentropy',
-      metrics: ['accuracy']
-    });
+      // Adapter MobileNet pour la classification alimentaire
+      const transferModel = tf.sequential({
+        layers: [
+          // Base MobileNet (sans la couche de classification)
+          tf.layers.lambda({
+            func: (x) => mobilenet.apply(x, { training: false }),
+            outputShape: [1280] // MobileNetV3 output
+          }),
+          
+          // Couches personnalisées pour la nourriture
+          tf.layers.dense({
+            units: 512,
+            activation: 'relu',
+            name: 'food_dense_1'
+          }),
+          tf.layers.dropout({ rate: 0.3 }),
+          tf.layers.dense({
+            units: 256,
+            activation: 'relu',
+            name: 'food_dense_2'
+          }),
+          tf.layers.dropout({ rate: 0.2 }),
+          tf.layers.dense({
+            units: this.foodLabels.length || 200,
+            activation: 'softmax',
+            name: 'food_predictions'
+          })
+        ]
+      });
 
-    return model;
+      transferModel.compile({
+        optimizer: tf.train.adam(0.001),
+        loss: 'categoricalCrossentropy',
+        metrics: ['accuracy']
+      });
+
+      console.log('✅ MobileNet adapté pour la classification alimentaire');
+      return transferModel;
+
+    } catch (error) {
+      console.log('⚠️ MobileNet non disponible, création modèle de base:', error.message);
+      
+      // Fallback: Modèle CNN personnalisé amélioré
+      const model = tf.sequential({
+        layers: [
+          // Couches de convolution avec BatchNormalization
+          tf.layers.conv2d({
+            inputShape: [224, 224, 3],
+            filters: 32,
+            kernelSize: 3,
+            activation: 'relu',
+            padding: 'same'
+          }),
+          tf.layers.batchNormalization(),
+          tf.layers.maxPooling2d({ poolSize: 2 }),
+          tf.layers.dropout({ rate: 0.25 }),
+          
+          tf.layers.conv2d({
+            filters: 64,
+            kernelSize: 3,
+            activation: 'relu',
+            padding: 'same'
+          }),
+          tf.layers.batchNormalization(),
+          tf.layers.maxPooling2d({ poolSize: 2 }),
+          tf.layers.dropout({ rate: 0.25 }),
+          
+          tf.layers.conv2d({
+            filters: 128,
+            kernelSize: 3,
+            activation: 'relu',
+            padding: 'same'
+          }),
+          tf.layers.batchNormalization(),
+          tf.layers.maxPooling2d({ poolSize: 2 }),
+          tf.layers.dropout({ rate: 0.25 }),
+          
+          // Couches denses avec régularisation
+          tf.layers.flatten(),
+          tf.layers.dense({
+            units: 512,
+            activation: 'relu',
+            kernelRegularizer: tf.regularizers.l2({ l2: 0.001 })
+          }),
+          tf.layers.dropout({ rate: 0.5 }),
+          tf.layers.dense({
+            units: 256,
+            activation: 'relu',
+            kernelRegularizer: tf.regularizers.l2({ l2: 0.001 })
+          }),
+          tf.layers.dropout({ rate: 0.3 }),
+          tf.layers.dense({
+            units: this.foodLabels.length || 200,
+            activation: 'softmax'
+          })
+        ]
+      });
+
+      model.compile({
+        optimizer: tf.train.adam(0.001),
+        loss: 'categoricalCrossentropy',
+        metrics: ['accuracy']
+      });
+
+      return model;
+    }
   }
 
   async loadFoodLabels() {
@@ -474,6 +541,128 @@ class FoodRecognitionService {
       outputShape: this.model.output.shape,
       foodLabels: this.foodLabels.length,
       nutritionEntries: this.nutritionDatabase.size
+    };
+  }
+
+  // Télécharger un modèle pré-entraîné depuis une URL
+  async downloadPretrainedModel(modelUrl, modelName = 'food-model') {
+    try {
+      console.log(`📥 Téléchargement du modèle ${modelName} depuis ${modelUrl}...`);
+      
+      // Télécharger et charger le modèle
+      const model = await tf.loadLayersModel(modelUrl);
+      
+      // Vérifier la compatibilité du modèle
+      const inputShape = model.inputs[0].shape;
+      if (inputShape[1] !== 224 || inputShape[2] !== 224) {
+        console.warn('⚠️ Taille d\'entrée inattendue:', inputShape);
+      }
+      
+      // Remplacer le modèle actuel
+      if (this.model) {
+        this.model.dispose();
+      }
+      this.model = model;
+      this.modelType = modelName;
+      
+      console.log(`✅ Modèle ${modelName} téléchargé et configuré`);
+      return {
+        success: true,
+        modelName,
+        inputShape: inputShape,
+        outputShape: model.outputs[0].shape
+      };
+      
+    } catch (error) {
+      console.error(`❌ Erreur téléchargement modèle ${modelName}:`, error);
+      return {
+        success: false,
+        error: error.message
+      };
+    }
+  }
+
+  // Reconnaissance améliorée avec confiance et alternatives
+  async enhancedRecognition(imageBuffer, options = {}) {
+    try {
+      const startTime = Date.now();
+      
+      // Reconnaissance principale avec notre modèle
+      const primaryResult = await this.recognizeFood(imageBuffer, {
+        ...options,
+        startTime
+      });
+      
+      // Améliorer la confiance en analysant la cohérence des résultats
+      const enhancedResults = primaryResult.results.map(result => ({
+        ...result,
+        enhanced: true,
+        contextualScore: this.calculateContextualScore(result),
+        nutritionComplete: !!result.nutrition
+      }));
+      
+      // Trier par score combiné (confiance + contexte)
+      enhancedResults.sort((a, b) => {
+        const scoreA = (a.confidence * 0.7) + (a.contextualScore * 0.3);
+        const scoreB = (b.confidence * 0.7) + (b.contextualScore * 0.3);
+        return scoreB - scoreA;
+      });
+      
+      return {
+        success: true,
+        results: enhancedResults,
+        confidence: enhancedResults[0]?.confidence || 0,
+        enhanced: true,
+        processingTime: Date.now() - startTime,
+        modelType: this.modelType || 'custom',
+        metadata: {
+          totalCandidates: enhancedResults.length,
+          nutritionDataAvailable: enhancedResults.filter(r => r.nutrition).length,
+          averageConfidence: enhancedResults.reduce((sum, r) => sum + r.confidence, 0) / enhancedResults.length
+        }
+      };
+      
+    } catch (error) {
+      console.error('❌ Erreur reconnaissance améliorée:', error);
+      // Fallback vers reconnaissance standard
+      return await this.recognizeFood(imageBuffer, options);
+    }
+  }
+
+  // Calculer un score contextuel basé sur la cohérence nutritionnelle
+  calculateContextualScore(result) {
+    if (!result.nutrition) return 0.5;
+    
+    const nutrition = result.nutrition;
+    let score = 0.5;
+    
+    // Bonus pour des valeurs nutritionnelles cohérentes
+    if (nutrition.calories > 0) score += 0.1;
+    if (nutrition.protein >= 0) score += 0.1;
+    if (nutrition.carbs >= 0) score += 0.1;
+    if (nutrition.fat >= 0) score += 0.1;
+    
+    // Pénalité pour valeurs incohérentes
+    if (nutrition.calories > 1000) score -= 0.2; // Très calorique
+    if (nutrition.protein > 50) score -= 0.1; // Très protéiné
+    
+    return Math.max(0, Math.min(1, score));
+  }
+
+  // Obtenir des statistiques du modèle
+  getModelStats() {
+    return {
+      isInitialized: this.isModelLoaded,
+      modelType: this.modelType || 'custom',
+      foodLabels: this.foodLabels.length,
+      nutritionDatabase: this.nutritionDatabase.size,
+      memoryUsage: this.model ? `${Math.round(this.model.countParams() / 1000)}K params` : 'N/A',
+      capabilities: {
+        batchProcessing: true,
+        nutritionAnalysis: true,
+        enhancedRecognition: true,
+        transferLearning: true
+      }
     };
   }
 }
