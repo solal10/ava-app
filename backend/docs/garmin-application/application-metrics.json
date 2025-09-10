@@ -1,0 +1,53 @@
+{
+  "application": {
+    "name": "AVA Coach Santé IA",
+    "version": "1.0.0",
+    "lastUpdated": "2025-09-10T16:05:04.647Z",
+    "status": "Production Ready"
+  },
+  "technical": {
+    "framework": "Node.js + Express",
+    "database": "MongoDB",
+    "authentication": "OAuth 2.0 + PKCE",
+    "security": [
+      "JWT",
+      "AES-256",
+      "TLS 1.3",
+      "Rate Limiting"
+    ],
+    "apiEndpoints": 41,
+    "testCoverage": "50%+"
+  },
+  "business": {
+    "targetUsers": "Health-conscious Garmin device owners",
+    "subscriptionTiers": [
+      "Explore (Free)",
+      "Perform (€9.99)",
+      "Pro (€19.99)",
+      "Elite (€49.99)"
+    ],
+    "expectedUsers": {
+      "6months": 10000,
+      "12months": 50000,
+      "24months": 100000
+    },
+    "revenueProjection": {
+      "year1": "€500K",
+      "year2": "€2M",
+      "year3": "€5M"
+    }
+  },
+  "compliance": {
+    "gdpr": "Compliant",
+    "dataEncryption": "AES-256",
+    "userRights": [
+      "Access",
+      "Rectification",
+      "Erasure",
+      "Portability"
+    ],
+    "dataRetention": "2 years (user configurable)",
+    "privacyPolicy": "Available",
+    "termsOfService": "Available"
+  }
+}

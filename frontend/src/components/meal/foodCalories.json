@@ -1,0 +1,137 @@
+{
+  "pizza": {
+    "name": "Pizza",
+    "calories": 285,
+    "proteins": 12,
+    "lipids": 10,
+    "carbs": 36,
+    "isHealthy": false,
+    "description": "Pizza classique avec fromage et sauce tomate"
+  },
+  "salad": {
+    "name": "Salade",
+    "calories": 65,
+    "proteins": 3,
+    "lipids": 1,
+    "carbs": 12,
+    "isHealthy": true,
+    "description": "Salade verte mixte avec légumes frais"
+  },
+  "sushi": {
+    "name": "Sushi",
+    "calories": 200,
+    "proteins": 9,
+    "lipids": 4,
+    "carbs": 37,
+    "isHealthy": true,
+    "description": "Sushi traditionnel au poisson cru"
+  },
+  "burger": {
+    "name": "Burger",
+    "calories": 540,
+    "proteins": 25,
+    "lipids": 31,
+    "carbs": 40,
+    "isHealthy": false,
+    "description": "Hamburger avec steak, fromage et légumes"
+  },
+  "pasta": {
+    "name": "Pâtes",
+    "calories": 220,
+    "proteins": 8,
+    "lipids": 2,
+    "carbs": 44,
+    "isHealthy": true,
+    "description": "Pâtes italiennes avec sauce tomate"
+  },
+  "chicken": {
+    "name": "Poulet grillé",
+    "calories": 165,
+    "proteins": 31,
+    "lipids": 4,
+    "carbs": 0,
+    "isHealthy": true,
+    "description": "Blanc de poulet grillé sans peau"
+  },
+  "fish": {
+    "name": "Poisson",
+    "calories": 206,
+    "proteins": 22,
+    "lipids": 12,
+    "carbs": 0,
+    "isHealthy": true,
+    "description": "Filet de poisson grillé"
+  },
+  "rice": {
+    "name": "Riz",
+    "calories": 130,
+    "proteins": 3,
+    "lipids": 0,
+    "carbs": 28,
+    "isHealthy": true,
+    "description": "Riz blanc cuit à la vapeur"
+  },
+  "soup": {
+    "name": "Soupe",
+    "calories": 85,
+    "proteins": 4,
+    "lipids": 2,
+    "carbs": 12,
+    "isHealthy": true,
+    "description": "Soupe de légumes maison"
+  },
+  "sandwich": {
+    "name": "Sandwich",
+    "calories": 350,
+    "proteins": 15,
+    "lipids": 12,
+    "carbs": 45,
+    "isHealthy": false,
+    "description": "Sandwich au jambon et fromage"
+  },
+  "fruit": {
+    "name": "Fruits",
+    "calories": 52,
+    "proteins": 1,
+    "lipids": 0,
+    "carbs": 14,
+    "isHealthy": true,
+    "description": "Fruits frais de saison"
+  },
+  "yogurt": {
+    "name": "Yaourt",
+    "calories": 59,
+    "proteins": 10,
+    "lipids": 0,
+    "carbs": 4,
+    "isHealthy": true,
+    "description": "Yaourt nature sans sucre ajouté"
+  },
+  "bread": {
+    "name": "Pain",
+    "calories": 265,
+    "proteins": 9,
+    "lipids": 3,
+    "carbs": 49,
+    "isHealthy": true,
+    "description": "Pain complet artisanal"
+  },
+  "eggs": {
+    "name": "Œufs",
+    "calories": 155,
+    "proteins": 13,
+    "lipids": 11,
+    "carbs": 1,
+    "isHealthy": true,
+    "description": "Œufs brouillés ou à la coque"
+  },
+  "steak": {
+    "name": "Steak",
+    "calories": 271,
+    "proteins": 26,
+    "lipids": 18,
+    "carbs": 0,
+    "isHealthy": true,
+    "description": "Steak de bœuf grillé"
+  }
+}
