@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Automatique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f7fa;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+        h1 {
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #718096;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        button {
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3182ce;
+        }
+        .status {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background-color: #c6f6d5;
+            color: #276749;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Connexion Automatique</h1>
+        <p>Cliquez sur le bouton ci-dessous pour vous connecter automatiquement en tant qu'utilisateur test et accéder à toutes les fonctionnalités de l'application, y compris les nouveaux modules d'objectifs santé.</p>
+        
+        <button id="loginButton">Se connecter</button>
+        
+        <div id="status" class="status"></div>
+    </div>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            // Créer un token fictif
+            const mockToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1Njc4OTAiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2MzIxNTQxNjJ9.8h5TbQB0_xnJn8mAIBIm1UC_uqLvY4JUYg9nNGPB38c";
+            
+            // Créer un utilisateur fictif
+            const mockUser = {
+                id: "1234567890",
+                name: "Utilisateur Test",
+                email: "test@test.com",
+                isPremium: true,
+                stats: {
+                    sommeil: 7,
+                    hydratation: 1.5,
+                    stress: 5,
+                    activite: 45,
+                    energie: 6
+                }
+            };
+            
+            // Stocker dans localStorage
+            localStorage.setItem('auth_token', mockToken);
+            localStorage.setItem('user', JSON.stringify(mockUser));
+            
+            // Afficher le message de succès
+            const statusElement = document.getElementById('status');
+            statusElement.className = "status success";
+            statusElement.style.display = "block";
+            statusElement.textContent = "✅ Connexion réussie ! Vous allez être redirigé vers la page d'accueil...";
+            
+            // Rediriger après un court délai
+            setTimeout(function() {
+                window.location.href = '/';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

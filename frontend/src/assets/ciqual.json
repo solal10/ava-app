@@ -1,0 +1,902 @@
+[
+  {
+    "nom": "Tarte aux pommes",
+    "calories": 237,
+    "proteines": 2.4,
+    "lipides": 8.7,
+    "glucides": 38.2,
+    "fibres": 1.8,
+    "sucres": 22.1
+  },
+  {
+    "nom": "Côtes de porc",
+    "calories": 242,
+    "proteines": 27.4,
+    "lipides": 14.1,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Baklava",
+    "calories": 417,
+    "proteines": 7.8,
+    "lipides": 23.4,
+    "glucides": 45.2,
+    "fibres": 2.1,
+    "sucres": 28.7
+  },
+  {
+    "nom": "Carpaccio de bœuf",
+    "calories": 114,
+    "proteines": 21.8,
+    "lipides": 2.3,
+    "glucides": 0.5,
+    "fibres": 0,
+    "sucres": 0.5
+  },
+  {
+    "nom": "Tartare de bœuf",
+    "calories": 144,
+    "proteines": 20.1,
+    "lipides": 6.8,
+    "glucides": 0.6,
+    "fibres": 0,
+    "sucres": 0.6
+  },
+  {
+    "nom": "Salade de betteraves",
+    "calories": 43,
+    "proteines": 1.6,
+    "lipides": 0.2,
+    "glucides": 9.6,
+    "fibres": 2.8,
+    "sucres": 6.8
+  },
+  {
+    "nom": "Beignets",
+    "calories": 452,
+    "proteines": 5.8,
+    "lipides": 25.2,
+    "glucides": 51.4,
+    "fibres": 1.2,
+    "sucres": 12.8
+  },
+  {
+    "nom": "Bibimbap",
+    "calories": 218,
+    "proteines": 12.4,
+    "lipides": 8.2,
+    "glucides": 24.6,
+    "fibres": 3.2,
+    "sucres": 4.1
+  },
+  {
+    "nom": "Pudding au pain",
+    "calories": 153,
+    "proteines": 4.1,
+    "lipides": 4.8,
+    "glucides": 24.2,
+    "fibres": 0.8,
+    "sucres": 16.4
+  },
+  {
+    "nom": "Burrito petit-déjeuner",
+    "calories": 255,
+    "proteines": 12.8,
+    "lipides": 12.4,
+    "glucides": 24.2,
+    "fibres": 2.8,
+    "sucres": 2.1
+  },
+  {
+    "nom": "Bruschetta",
+    "calories": 194,
+    "proteines": 5.2,
+    "lipides": 8.4,
+    "glucides": 26.8,
+    "fibres": 2.1,
+    "sucres": 3.4
+  },
+  {
+    "nom": "Salade César",
+    "calories": 158,
+    "proteines": 8.2,
+    "lipides": 12.4,
+    "glucides": 5.8,
+    "fibres": 2.4,
+    "sucres": 2.8
+  },
+  {
+    "nom": "Cannoli",
+    "calories": 379,
+    "proteines": 7.2,
+    "lipides": 19.8,
+    "glucides": 46.4,
+    "fibres": 1.4,
+    "sucres": 32.1
+  },
+  {
+    "nom": "Salade Caprese",
+    "calories": 166,
+    "proteines": 11.2,
+    "lipides": 12.8,
+    "glucides": 4.2,
+    "fibres": 1.2,
+    "sucres": 3.8
+  },
+  {
+    "nom": "Gâteau aux carottes",
+    "calories": 415,
+    "proteines": 4.8,
+    "lipides": 21.2,
+    "glucides": 52.4,
+    "fibres": 1.8,
+    "sucres": 38.6
+  },
+  {
+    "nom": "Ceviche",
+    "calories": 124,
+    "proteines": 18.4,
+    "lipides": 2.8,
+    "glucides": 6.2,
+    "fibres": 1.4,
+    "sucres": 4.1
+  },
+  {
+    "nom": "Plateau de fromages",
+    "calories": 368,
+    "proteines": 22.8,
+    "lipides": 29.4,
+    "glucides": 2.4,
+    "fibres": 0,
+    "sucres": 2.4
+  },
+  {
+    "nom": "Cheesecake",
+    "calories": 321,
+    "proteines": 5.5,
+    "lipides": 22.5,
+    "glucides": 25.9,
+    "fibres": 0.8,
+    "sucres": 20.2
+  },
+  {
+    "nom": "Curry de poulet",
+    "calories": 165,
+    "proteines": 18.2,
+    "lipides": 6.8,
+    "glucides": 8.4,
+    "fibres": 2.1,
+    "sucres": 4.2
+  },
+  {
+    "nom": "Quesadilla au poulet",
+    "calories": 312,
+    "proteines": 18.4,
+    "lipides": 16.8,
+    "glucides": 22.4,
+    "fibres": 2.1,
+    "sucres": 2.8
+  },
+  {
+    "nom": "Ailes de poulet",
+    "calories": 203,
+    "proteines": 30.5,
+    "lipides": 8.1,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Gâteau au chocolat",
+    "calories": 389,
+    "proteines": 5.2,
+    "lipides": 16.4,
+    "glucides": 58.2,
+    "fibres": 3.8,
+    "sucres": 42.1
+  },
+  {
+    "nom": "Mousse au chocolat",
+    "calories": 168,
+    "proteines": 4.2,
+    "lipides": 9.8,
+    "glucides": 17.2,
+    "fibres": 1.8,
+    "sucres": 14.8
+  },
+  {
+    "nom": "Churros",
+    "calories": 367,
+    "proteines": 4.8,
+    "lipides": 17.2,
+    "glucides": 48.4,
+    "fibres": 1.4,
+    "sucres": 12.8
+  },
+  {
+    "nom": "Soupe de palourdes",
+    "calories": 98,
+    "proteines": 5.2,
+    "lipides": 3.8,
+    "glucides": 12.4,
+    "fibres": 1.2,
+    "sucres": 2.8
+  },
+  {
+    "nom": "Club sandwich",
+    "calories": 278,
+    "proteines": 15.8,
+    "lipides": 14.2,
+    "glucides": 24.8,
+    "fibres": 2.4,
+    "sucres": 3.2
+  },
+  {
+    "nom": "Galettes de crabe",
+    "calories": 155,
+    "proteines": 11.2,
+    "lipides": 8.4,
+    "glucides": 9.8,
+    "fibres": 0.8,
+    "sucres": 1.2
+  },
+  {
+    "nom": "Crème brûlée",
+    "calories": 323,
+    "proteines": 4.4,
+    "lipides": 23.2,
+    "glucides": 25.8,
+    "fibres": 0,
+    "sucres": 25.8
+  },
+  {
+    "nom": "Croque-madame",
+    "calories": 267,
+    "proteines": 15.2,
+    "lipides": 15.8,
+    "glucides": 18.4,
+    "fibres": 1.2,
+    "sucres": 3.8
+  },
+  {
+    "nom": "Cupcakes",
+    "calories": 305,
+    "proteines": 3.8,
+    "lipides": 12.4,
+    "glucides": 46.2,
+    "fibres": 0.8,
+    "sucres": 32.4
+  },
+  {
+    "nom": "Œufs à la diable",
+    "calories": 124,
+    "proteines": 6.2,
+    "lipides": 10.8,
+    "glucides": 0.6,
+    "fibres": 0,
+    "sucres": 0.6
+  },
+  {
+    "nom": "Donuts",
+    "calories": 452,
+    "proteines": 4.9,
+    "lipides": 25.2,
+    "glucides": 51.4,
+    "fibres": 1.4,
+    "sucres": 23.8
+  },
+  {
+    "nom": "Raviolis",
+    "calories": 175,
+    "proteines": 7.2,
+    "lipides": 5.8,
+    "glucides": 24.8,
+    "fibres": 1.8,
+    "sucres": 2.4
+  },
+  {
+    "nom": "Edamame",
+    "calories": 121,
+    "proteines": 11.9,
+    "lipides": 5.2,
+    "glucides": 8.9,
+    "fibres": 5.2,
+    "sucres": 2.2
+  },
+  {
+    "nom": "Œufs Bénédicte",
+    "calories": 312,
+    "proteines": 16.8,
+    "lipides": 24.2,
+    "glucides": 8.4,
+    "fibres": 0.8,
+    "sucres": 1.2
+  },
+  {
+    "nom": "Escargots",
+    "calories": 90,
+    "proteines": 16.1,
+    "lipides": 1.4,
+    "glucides": 2.0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Falafel",
+    "calories": 333,
+    "proteines": 13.3,
+    "lipides": 17.8,
+    "glucides": 31.8,
+    "fibres": 4.9,
+    "sucres": 1.2
+  },
+  {
+    "nom": "Filet mignon",
+    "calories": 227,
+    "proteines": 30.1,
+    "lipides": 10.8,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Fish and chips",
+    "calories": 232,
+    "proteines": 15.8,
+    "lipides": 11.2,
+    "glucides": 18.4,
+    "fibres": 1.8,
+    "sucres": 0.8
+  },
+  {
+    "nom": "Foie gras",
+    "calories": 462,
+    "proteines": 11.4,
+    "lipides": 43.8,
+    "glucides": 4.7,
+    "fibres": 0,
+    "sucres": 4.7
+  },
+  {
+    "nom": "Frites",
+    "calories": 365,
+    "proteines": 4.0,
+    "lipides": 17.0,
+    "glucides": 48.0,
+    "fibres": 4.0,
+    "sucres": 0.3
+  },
+  {
+    "nom": "Soupe à l'oignon",
+    "calories": 57,
+    "proteines": 3.8,
+    "lipides": 1.7,
+    "glucides": 8.2,
+    "fibres": 1.4,
+    "sucres": 5.2
+  },
+  {
+    "nom": "Pain perdu",
+    "calories": 166,
+    "proteines": 5.9,
+    "lipides": 7.0,
+    "glucides": 21.6,
+    "fibres": 1.4,
+    "sucres": 9.8
+  },
+  {
+    "nom": "Calamars frits",
+    "calories": 175,
+    "proteines": 15.3,
+    "lipides": 7.5,
+    "glucides": 12.6,
+    "fibres": 0.5,
+    "sucres": 0.2
+  },
+  {
+    "nom": "Riz sauté",
+    "calories": 163,
+    "proteines": 4.4,
+    "lipides": 5.6,
+    "glucides": 25.2,
+    "fibres": 0.6,
+    "sucres": 1.2
+  },
+  {
+    "nom": "Yaourt glacé",
+    "calories": 127,
+    "proteines": 3.2,
+    "lipides": 4.0,
+    "glucides": 20.6,
+    "fibres": 0,
+    "sucres": 20.0
+  },
+  {
+    "nom": "Pain à l'ail",
+    "calories": 350,
+    "proteines": 8.2,
+    "lipides": 16.8,
+    "glucides": 42.4,
+    "fibres": 2.8,
+    "sucres": 3.2
+  },
+  {
+    "nom": "Gnocchis",
+    "calories": 131,
+    "proteines": 3.7,
+    "lipides": 0.9,
+    "glucides": 27.4,
+    "fibres": 1.8,
+    "sucres": 1.2
+  },
+  {
+    "nom": "Salade grecque",
+    "calories": 107,
+    "proteines": 4.2,
+    "lipides": 8.4,
+    "glucides": 5.8,
+    "fibres": 2.8,
+    "sucres": 4.2
+  },
+  {
+    "nom": "Croque-monsieur",
+    "calories": 267,
+    "proteines": 15.2,
+    "lipides": 15.8,
+    "glucides": 18.4,
+    "fibres": 1.2,
+    "sucres": 3.8
+  },
+  {
+    "nom": "Saumon grillé",
+    "calories": 206,
+    "proteines": 22.1,
+    "lipides": 12.4,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Guacamole",
+    "calories": 160,
+    "proteines": 2.0,
+    "lipides": 14.7,
+    "glucides": 8.5,
+    "fibres": 6.7,
+    "sucres": 0.7
+  },
+  {
+    "nom": "Gyoza",
+    "calories": 211,
+    "proteines": 8.2,
+    "lipides": 8.8,
+    "glucides": 26.4,
+    "fibres": 1.8,
+    "sucres": 2.1
+  },
+  {
+    "nom": "Hamburger",
+    "calories": 540,
+    "proteines": 25.0,
+    "lipides": 31.0,
+    "glucides": 40.0,
+    "fibres": 3.0,
+    "sucres": 5.0
+  },
+  {
+    "nom": "Soupe aigre-douce",
+    "calories": 91,
+    "proteines": 3.8,
+    "lipides": 3.2,
+    "glucides": 12.4,
+    "fibres": 1.8,
+    "sucres": 6.2
+  },
+  {
+    "nom": "Hot-dog",
+    "calories": 290,
+    "proteines": 10.4,
+    "lipides": 17.8,
+    "glucides": 24.3,
+    "fibres": 1.8,
+    "sucres": 4.2
+  },
+  {
+    "nom": "Huevos rancheros",
+    "calories": 194,
+    "proteines": 11.2,
+    "lipides": 12.8,
+    "glucides": 8.4,
+    "fibres": 2.1,
+    "sucres": 4.2
+  },
+  {
+    "nom": "Houmous",
+    "calories": 166,
+    "proteines": 8.0,
+    "lipides": 9.6,
+    "glucides": 14.3,
+    "fibres": 6.0,
+    "sucres": 0.5
+  },
+  {
+    "nom": "Glace",
+    "calories": 207,
+    "proteines": 3.5,
+    "lipides": 11.0,
+    "glucides": 23.6,
+    "fibres": 0.7,
+    "sucres": 21.2
+  },
+  {
+    "nom": "Lasagnes",
+    "calories": 135,
+    "proteines": 8.1,
+    "lipides": 4.8,
+    "glucides": 15.4,
+    "fibres": 1.4,
+    "sucres": 3.2
+  },
+  {
+    "nom": "Bisque de homard",
+    "calories": 104,
+    "proteines": 4.8,
+    "lipides": 5.2,
+    "glucides": 10.2,
+    "fibres": 0.4,
+    "sucres": 2.8
+  },
+  {
+    "nom": "Sandwich au homard",
+    "calories": 436,
+    "proteines": 18.8,
+    "lipides": 27.2,
+    "glucides": 28.4,
+    "fibres": 1.8,
+    "sucres": 4.2
+  },
+  {
+    "nom": "Macaronis au fromage",
+    "calories": 164,
+    "proteines": 6.4,
+    "lipides": 6.1,
+    "glucides": 21.2,
+    "fibres": 1.2,
+    "sucres": 2.8
+  },
+  {
+    "nom": "Macarons",
+    "calories": 407,
+    "proteines": 5.2,
+    "lipides": 13.8,
+    "glucides": 68.2,
+    "fibres": 1.8,
+    "sucres": 64.8
+  },
+  {
+    "nom": "Soupe miso",
+    "calories": 40,
+    "proteines": 2.8,
+    "lipides": 1.2,
+    "glucides": 5.4,
+    "fibres": 0.8,
+    "sucres": 2.1
+  },
+  {
+    "nom": "Moules",
+    "calories": 86,
+    "proteines": 11.9,
+    "lipides": 2.2,
+    "glucides": 3.7,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Nachos",
+    "calories": 346,
+    "proteines": 9.8,
+    "lipides": 19.4,
+    "glucides": 36.2,
+    "fibres": 4.2,
+    "sucres": 2.8
+  },
+  {
+    "nom": "Omelette",
+    "calories": 154,
+    "proteines": 10.6,
+    "lipides": 11.7,
+    "glucides": 1.0,
+    "fibres": 0,
+    "sucres": 1.0
+  },
+  {
+    "nom": "Rondelles d'oignon",
+    "calories": 411,
+    "proteines": 5.2,
+    "lipides": 24.8,
+    "glucides": 43.2,
+    "fibres": 2.8,
+    "sucres": 4.2
+  },
+  {
+    "nom": "Huîtres",
+    "calories": 68,
+    "proteines": 7.1,
+    "lipides": 2.5,
+    "glucides": 3.9,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Pad thaï",
+    "calories": 181,
+    "proteines": 8.8,
+    "lipides": 5.2,
+    "glucides": 25.4,
+    "fibres": 1.8,
+    "sucres": 8.4
+  },
+  {
+    "nom": "Paella",
+    "calories": 172,
+    "proteines": 12.8,
+    "lipides": 6.2,
+    "glucides": 18.4,
+    "fibres": 1.2,
+    "sucres": 2.8
+  },
+  {
+    "nom": "Pancakes",
+    "calories": 227,
+    "proteines": 6.2,
+    "lipides": 8.8,
+    "glucides": 32.4,
+    "fibres": 1.4,
+    "sucres": 6.8
+  },
+  {
+    "nom": "Panna cotta",
+    "calories": 156,
+    "proteines": 2.8,
+    "lipides": 11.2,
+    "glucides": 12.4,
+    "fibres": 0,
+    "sucres": 12.4
+  },
+  {
+    "nom": "Canard laqué",
+    "calories": 337,
+    "proteines": 18.9,
+    "lipides": 28.4,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Pho",
+    "calories": 194,
+    "proteines": 15.2,
+    "lipides": 5.8,
+    "glucides": 20.4,
+    "fibres": 1.8,
+    "sucres": 4.2
+  },
+  {
+    "nom": "Pizza",
+    "calories": 285,
+    "proteines": 12.0,
+    "lipides": 10.0,
+    "glucides": 36.0,
+    "fibres": 2.3,
+    "sucres": 3.6
+  },
+  {
+    "nom": "Côte de porc",
+    "calories": 242,
+    "proteines": 27.4,
+    "lipides": 14.1,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Poutine",
+    "calories": 740,
+    "proteines": 37.0,
+    "lipides": 34.0,
+    "glucides": 71.0,
+    "fibres": 7.0,
+    "sucres": 2.0
+  },
+  {
+    "nom": "Côte de bœuf",
+    "calories": 291,
+    "proteines": 25.8,
+    "lipides": 20.2,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Sandwich porc effiloché",
+    "calories": 367,
+    "proteines": 28.4,
+    "lipides": 18.2,
+    "glucides": 22.8,
+    "fibres": 2.1,
+    "sucres": 8.4
+  },
+  {
+    "nom": "Ramen",
+    "calories": 436,
+    "proteines": 19.8,
+    "lipides": 17.2,
+    "glucides": 52.4,
+    "fibres": 4.2,
+    "sucres": 5.8
+  },
+  {
+    "nom": "Red velvet cake",
+    "calories": 234,
+    "proteines": 2.9,
+    "lipides": 8.7,
+    "glucides": 37.4,
+    "fibres": 1.2,
+    "sucres": 25.8
+  },
+  {
+    "nom": "Risotto",
+    "calories": 166,
+    "proteines": 3.4,
+    "lipides": 6.8,
+    "glucides": 22.8,
+    "fibres": 0.8,
+    "sucres": 1.2
+  },
+  {
+    "nom": "Samosa",
+    "calories": 308,
+    "proteines": 5.6,
+    "lipides": 17.8,
+    "glucides": 32.4,
+    "fibres": 3.2,
+    "sucres": 2.8
+  },
+  {
+    "nom": "Sashimi",
+    "calories": 127,
+    "proteines": 20.5,
+    "lipides": 4.4,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Coquilles Saint-Jacques",
+    "calories": 137,
+    "proteines": 23.2,
+    "lipides": 4.4,
+    "glucides": 2.5,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Salade d'algues",
+    "calories": 45,
+    "proteines": 3.0,
+    "lipides": 0.6,
+    "glucides": 9.6,
+    "fibres": 0.5,
+    "sucres": 0.5
+  },
+  {
+    "nom": "Crevettes et semoule",
+    "calories": 126,
+    "proteines": 18.0,
+    "lipides": 1.7,
+    "glucides": 9.4,
+    "fibres": 0.3,
+    "sucres": 0.2
+  },
+  {
+    "nom": "Spaghetti bolognaise",
+    "calories": 151,
+    "proteines": 8.2,
+    "lipides": 4.8,
+    "glucides": 19.4,
+    "fibres": 2.1,
+    "sucres": 4.2
+  },
+  {
+    "nom": "Spaghetti carbonara",
+    "calories": 174,
+    "proteines": 8.8,
+    "lipides": 6.8,
+    "glucides": 21.2,
+    "fibres": 1.8,
+    "sucres": 2.1
+  },
+  {
+    "nom": "Rouleaux de printemps",
+    "calories": 154,
+    "proteines": 6.2,
+    "lipides": 5.8,
+    "glucides": 20.4,
+    "fibres": 2.8,
+    "sucres": 3.2
+  },
+  {
+    "nom": "Steak",
+    "calories": 271,
+    "proteines": 26.0,
+    "lipides": 18.0,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Shortcake aux fraises",
+    "calories": 344,
+    "proteines": 4.2,
+    "lipides": 16.8,
+    "glucides": 44.2,
+    "fibres": 2.1,
+    "sucres": 28.4
+  },
+  {
+    "nom": "Sushi",
+    "calories": 200,
+    "proteines": 9.0,
+    "lipides": 4.0,
+    "glucides": 37.0,
+    "fibres": 0.5,
+    "sucres": 7.9
+  },
+  {
+    "nom": "Tacos",
+    "calories": 226,
+    "proteines": 9.4,
+    "lipides": 10.5,
+    "glucides": 25.7,
+    "fibres": 4.1,
+    "sucres": 2.3
+  },
+  {
+    "nom": "Takoyaki",
+    "calories": 112,
+    "proteines": 5.8,
+    "lipides": 5.2,
+    "glucides": 10.4,
+    "fibres": 0.8,
+    "sucres": 2.1
+  },
+  {
+    "nom": "Tiramisu",
+    "calories": 240,
+    "proteines": 4.6,
+    "lipides": 12.5,
+    "glucides": 28.2,
+    "fibres": 1.0,
+    "sucres": 17.8
+  },
+  {
+    "nom": "Tartare de thon",
+    "calories": 144,
+    "proteines": 25.4,
+    "lipides": 4.9,
+    "glucides": 0,
+    "fibres": 0,
+    "sucres": 0
+  },
+  {
+    "nom": "Gaufres",
+    "calories": 291,
+    "proteines": 5.9,
+    "lipides": 9.6,
+    "glucides": 47.4,
+    "fibres": 1.7,
+    "sucres": 13.4
+  }
+]
