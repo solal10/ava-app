@@ -92,3 +92,67 @@ The application expects MongoDB running locally. The start script automatically 
 - TensorFlow.js models are loaded client-side for food recognition
 - Subscription features are gated throughout the application
 - The codebase includes multiple component versions (V2 variants are usually the active ones)
+
+## 🚨 CRITICAL TODO LIST - Production Readiness
+
+### Phase 1 - Core Security & Functionality (HIGH PRIORITY)
+- [ ] **SECURITY-001**: Move hardcoded secrets from `backend/src/api/garmin/garmin.controller.js` lines 7-8 to environment variables
+- [ ] **SECURITY-002**: Implement proper JWT secret generation and rotation
+- [ ] **SECURITY-003**: Add input validation middleware for all API endpoints
+- [ ] **SECURITY-004**: Implement XSS protection and SQL injection prevention
+- [ ] **PAYMENT-001**: Integrate Stripe/PayPal for real subscription payments in `backend/src/api/subscription/`
+- [ ] **PAYMENT-002**: Implement webhook handling for payment events
+- [ ] **PAYMENT-003**: Add trial period logic and payment failure handling
+- [ ] **SPOON-001**: Complete real Spoonacular API integration in `backend/src/services/nutrition.service.js`
+- [ ] **TEST-001**: Add basic unit tests for controllers (minimum 50% coverage)
+
+### Phase 2 - Data Integration & Real APIs (MEDIUM PRIORITY)  
+- [ ] **GARMIN-001**: Apply for Garmin commercial partnership for real API access
+- [ ] **GARMIN-002**: Replace simulated data (lines 142-173 in garmin.controller.js) with real API calls
+- [ ] **GARMIN-003**: Implement webhook system for real-time Garmin data sync
+- [ ] **DB-001**: Create missing models: `WorkoutPlan.model.js`, `NutritionPlan.model.js`, `GarminData.model.js`, `PaymentHistory.model.js`
+- [ ] **AI-001**: Integrate real AI chat (OpenAI/Claude API) replacing mock responses
+- [ ] **AI-002**: Implement actual food recognition model with TensorFlow.js
+- [ ] **NOTIF-001**: Add push notification system (Firebase Cloud Messaging)
+- [ ] **NOTIF-002**: Implement email notifications (SendGrid/AWS SES)
+
+### Phase 3 - Production Infrastructure (MEDIUM PRIORITY)
+- [ ] **DOCKER-001**: Create Dockerfile and docker-compose.yml for containerization
+- [ ] **CI-001**: Set up CI/CD pipeline (GitHub Actions)
+- [ ] **MONITOR-001**: Add error monitoring (Sentry integration)
+- [ ] **MONITOR-002**: Implement logging and analytics service
+- [ ] **BACKUP-001**: Set up MongoDB backup strategy
+- [ ] **ENV-001**: Create proper environment management (dev/staging/prod)
+
+### Phase 4 - Code Quality & Polish (LOW PRIORITY)
+- [ ] **CLEAN-001**: Remove duplicate component versions (V1/V2 cleanup)
+- [ ] **CLEAN-002**: Add error boundaries to all major components
+- [ ] **CLEAN-003**: Implement loading states across the application
+- [ ] **PWA-001**: Configure Progressive Web App features
+- [ ] **TEST-002**: Complete test coverage (80%+ target)
+- [ ] **DOCS-001**: Create API documentation with Swagger/OpenAPI
+
+### Phase 5 - Compliance & Legal
+- [ ] **GDPR-001**: Implement GDPR compliance (data deletion, export)
+- [ ] **HIPAA-001**: Add HIPAA considerations for health data
+- [ ] **LEGAL-001**: Create Terms of Service and Privacy Policy
+- [ ] **LEGAL-002**: Add cookie consent management
+
+## 🔄 TODO LIST WORKFLOW INSTRUCTIONS
+
+**IMPORTANT**: Before starting any task, check if it corresponds to a TODO item above:
+
+1. **Check TODO Match**: When receiving a prompt, first identify if the work matches any TODO item
+2. **Mark as Started**: If starting work on a TODO, mark it as `[🔄 IN PROGRESS]`
+3. **Complete and Remove**: When a TODO is completed, mark it as `[✅ COMPLETED]` then remove the line
+4. **Stay Focused**: Try to prioritize work according to the Phase order (1 → 2 → 3 → 4 → 5)
+5. **Add New TODOs**: If new critical issues are discovered, add them to the appropriate phase
+
+**Example Workflow**:
+```
+Before: - [ ] **SECURITY-001**: Move hardcoded secrets...
+During: - [🔄 IN PROGRESS] **SECURITY-001**: Move hardcoded secrets...
+After: Remove the entire line when completed
+```
+
+This TODO list should guide all development decisions and ensure systematic progress toward production readiness.
