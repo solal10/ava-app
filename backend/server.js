@@ -97,8 +97,9 @@ app.use('*', (req, res) => {
   });
 });
 
-// Initialisation des services IA
+// Initialisation des services IA et notifications
 const { foodRecognitionService } = require('./src/services/food-recognition.service');
+const notificationScheduler = require('./src/cron/notification-scheduler');
 
 // Connexion à la base de données
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/ava-app';
@@ -110,6 +111,8 @@ mongoose.connect(mongoUri)
   })
   .then(() => {
     console.log('✅ Service de reconnaissance alimentaire initialisé');
+    // Démarrer le scheduler de notifications
+    notificationScheduler.start();
   })
   .catch(err => {
     console.error('❌ Erreur MongoDB ou reconnaissance alimentaire:', err);
@@ -119,6 +122,7 @@ mongoose.connect(mongoUri)
 app.listen(PORT, () => {
   console.log(`Serveur en écoute sur le port ${PORT}`);
   console.log(`🧠 TensorFlow.js: ${foodRecognitionService.isModelLoaded ? 'Activé' : 'En attente'}`);
+  console.log(`🔔 Notifications: ${notificationScheduler.getStatus().isRunning ? 'Activées' : 'Désactivées'}`);
 });
 
 module.exports = app;
