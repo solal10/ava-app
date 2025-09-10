@@ -17,6 +17,8 @@ router.get('/health-data', garminController.getHealthData);
 router.post('/webhook', garminController.receiveWebhookData);
 router.post('/webhook/register', garminController.registerUserWebhook);
 router.get('/webhook/status/:userId', garminController.getWebhookStatus);
+router.get('/webhook/stats', garminController.getWebhookStats);
+router.get('/webhook/test', garminController.testWebhookConnectivity);
 
 // Legacy routes pour compatibilité
 router.post('/auth-url', (req, res) => garminController.login(req, res));

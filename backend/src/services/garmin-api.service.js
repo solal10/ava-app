@@ -443,6 +443,46 @@ class GarminAPIService {
       stressQualifier: null
     };
   }
+
+  // Formater les données de Body Battery (énergie corporelle)
+  formatBodyBatteryData(rawData) {
+    if (!rawData || (!Array.isArray(rawData) && !rawData.bodyBatteryValues)) {
+      return this.getDefaultBodyBatteryData();
+    }
+
+    const batteryData = Array.isArray(rawData) ? rawData : rawData.bodyBatteryValues;
+    
+    if (!batteryData || batteryData.length === 0) {
+      return this.getDefaultBodyBatteryData();
+    }
+
+    // Calculer les statistiques à partir des données de la journée
+    const values = batteryData.map(entry => entry.value || entry.bodyBatteryLevel).filter(v => v !== null);
+    
+    return {
+      date: new Date().toISOString().split('T')[0],
+      batteryLevel: values.length > 0 ? values[values.length - 1] : null,
+      lowestLevel: values.length > 0 ? Math.min(...values) : null,
+      highestLevel: values.length > 0 ? Math.max(...values) : null,
+      averageLevel: values.length > 0 ? Math.round(values.reduce((a, b) => a + b, 0) / values.length) : null,
+      dataPoints: batteryData.length,
+      rawTimeSeries: batteryData.slice(0, 50), // Limiter pour éviter les réponses trop lourdes
+      lastSync: new Date().toISOString()
+    };
+  }
+
+  getDefaultBodyBatteryData() {
+    return {
+      date: new Date().toISOString().split('T')[0],
+      batteryLevel: null,
+      lowestLevel: null,
+      highestLevel: null,
+      averageLevel: null,
+      dataPoints: 0,
+      rawTimeSeries: [],
+      lastSync: new Date().toISOString()
+    };
+  }
 }
 
 module.exports = new GarminAPIService();

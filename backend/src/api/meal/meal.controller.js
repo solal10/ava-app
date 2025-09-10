@@ -1,5 +1,10 @@
 const Meal = require('../../models/meal.model');
 const User = require('../../models/user.model');
+<<<<<<< HEAD
+const NutritionPlan = require('../../models/nutritionplan.model');
+const WorkoutPlan = require('../../models/workoutplan.model');
+=======
+>>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
 const spoonacularService = require('../../services/spoonacular.service');
 const { foodRecognitionService } = require('../../services/food-recognition.service');
 
@@ -732,3 +737,138 @@ function generateWarnings(nutritionalAnalysis) {
 
   return warnings;
 }
+<<<<<<< HEAD
+
+// Créer un plan nutritionnel personnalisé
+exports.createNutritionPlan = async (req, res) => {
+  try {
+    const { userId } = req;
+    const { 
+      goals, 
+      dietaryRestrictions, 
+      targetCalories, 
+      duration,
+      preferences 
+    } = req.body;
+
+    // Vérifier si l'utilisateur existe
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'Utilisateur non trouvé' });
+    }
+
+    const nutritionPlan = new NutritionPlan({
+      userId,
+      name: `Plan nutritionnel personnalisé - ${new Date().toLocaleDateString()}`,
+      goals,
+      dietaryRestrictions: dietaryRestrictions || [],
+      targetCalories,
+      duration: duration || 30,
+      preferences: preferences || {},
+      createdAt: new Date(),
+      status: 'active'
+    });
+
+    await nutritionPlan.save();
+
+    res.status(201).json({
+      message: 'Plan nutritionnel créé avec succès',
+      nutritionPlan
+    });
+  } catch (error) {
+    console.error('❌ Erreur création plan nutritionnel:', error);
+    res.status(500).json({
+      message: 'Erreur lors de la création du plan nutritionnel',
+      error: error.message
+    });
+  }
+};
+
+// Récupérer les plans nutritionnels de l'utilisateur
+exports.getNutritionPlans = async (req, res) => {
+  try {
+    const { userId } = req;
+
+    const plans = await NutritionPlan.find({ userId })
+      .sort({ createdAt: -1 });
+
+    res.status(200).json({
+      message: 'Plans nutritionnels récupérés avec succès',
+      plans
+    });
+  } catch (error) {
+    console.error('❌ Erreur récupération plans nutritionnels:', error);
+    res.status(500).json({
+      message: 'Erreur lors de la récupération des plans nutritionnels',
+      error: error.message
+    });
+  }
+};
+
+// Créer un plan d'entraînement personnalisé  
+exports.createWorkoutPlan = async (req, res) => {
+  try {
+    const { userId } = req;
+    const { 
+      goals,
+      fitnessLevel,
+      availableDays,
+      duration,
+      preferences 
+    } = req.body;
+
+    // Vérifier si l'utilisateur existe
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'Utilisateur non trouvé' });
+    }
+
+    const workoutPlan = new WorkoutPlan({
+      userId,
+      name: `Plan d'entraînement personnalisé - ${new Date().toLocaleDateString()}`,
+      goals: goals || ['general_fitness'],
+      fitnessLevel: fitnessLevel || 'beginner', 
+      availableDays: availableDays || 3,
+      duration: duration || 30,
+      preferences: preferences || {},
+      createdAt: new Date(),
+      status: 'active'
+    });
+
+    await workoutPlan.save();
+
+    res.status(201).json({
+      message: 'Plan d\'entraînement créé avec succès',
+      workoutPlan
+    });
+  } catch (error) {
+    console.error('❌ Erreur création plan entraînement:', error);
+    res.status(500).json({
+      message: 'Erreur lors de la création du plan d\'entraînement',
+      error: error.message
+    });
+  }
+};
+
+// Récupérer les plans d'entraînement de l'utilisateur
+exports.getWorkoutPlans = async (req, res) => {
+  try {
+    const { userId } = req;
+
+    const plans = await WorkoutPlan.find({ userId })
+      .sort({ createdAt: -1 });
+
+    res.status(200).json({
+      message: 'Plans d\'entraînement récupérés avec succès',
+      plans
+    });
+  } catch (error) {
+    console.error('❌ Erreur récupération plans entraînement:', error);
+    res.status(500).json({
+      message: 'Erreur lors de la récupération des plans d\'entraînement',
+      error: error.message
+    });
+  }
+};
+=======
+>>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2

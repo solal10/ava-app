@@ -316,18 +316,35 @@ class GarminWebhookService {
   // Sauvegarder les données Garmin brutes
   async saveRawGarminData(userId, dataType, rawData) {
     try {
-      // TODO: Créer le modèle GarminData plus tard dans DB-001
-      console.log(`💾 Sauvegarde données ${dataType} pour utilisateur ${userId}`);
+      // Utiliser le modèle GarminData pour sauvegarder
+      const GarminData = require('../models/garmindata.model');
       
-      // Pour l'instant, juste logger - sera implémenté avec le modèle GarminData
-      console.log(`📊 Données ${dataType}:`, {
+      const garminDataEntry = new GarminData({
+        userId,
+        dataType,
+        data: rawData,
+        source: 'webhook_realtime',
+        syncTimestamp: new Date(),
+        metadata: {
+          webhookProcessed: true,
+          processedAt: new Date(),
+          dataKeys: Object.keys(rawData)
+        }
+      });
+
+      const saved = await garminDataEntry.save();
+      console.log(`💾 Données Garmin ${dataType} sauvées: ${saved._id} pour utilisateur ${userId}`);
+      
+      return saved;
+
+    } catch (error) {
+      console.error('❌ Erreur sauvegarde données Garmin:', error);
+      // Ne pas faire échouer le webhook si la sauvegarde échoue
+      console.log(`📊 Fallback - Données ${dataType}:`, {
         userId,
         timestamp: new Date(),
         dataKeys: Object.keys(rawData)
       });
-
-    } catch (error) {
-      console.error('❌ Erreur sauvegarde données Garmin:', error);
     }
   }
 
@@ -411,12 +428,58 @@ class GarminWebhookService {
 
   // Valider la signature Garmin (si configurée)
   validateGarminSignature(req) {
-    // TODO: Implémenter la validation de signature Garmin
-    // const signature = req.headers['x-garmin-signature'];
-    // const payload = JSON.stringify(req.body);
-    // return crypto.validateSignature(payload, signature, process.env.GARMIN_WEBHOOK_SECRET);
-    
-    return true; // Pour l'instant, accepter toutes les requêtes
+    try {
+      const signature = req.headers['x-garmin-signature'] || req.headers['X-Garmin-Signature'];
+      const timestamp = req.headers['x-garmin-timestamp'] || req.headers['X-Garmin-Timestamp'];
+      
+      if (!process.env.GARMIN_WEBHOOK_SECRET) {
+        console.warn('⚠️ GARMIN_WEBHOOK_SECRET non configuré - validation ignorée');
+        return true;
+      }
+      
+      if (!signature || !timestamp) {
+        console.error('❌ Headers signature/timestamp manquants');
+        return false;
+      }
+
+      // Valider la fraîcheur du webhook (éviter replay attacks)
+      const now = Math.floor(Date.now() / 1000);
+      const webhookTime = parseInt(timestamp);
+      const tolerance = 300; // 5 minutes
+      
+      if (Math.abs(now - webhookTime) > tolerance) {
+        console.error('❌ Webhook trop ancien ou timestamp invalide');
+        return false;
+      }
+
+      // Valider la signature HMAC-SHA256
+      const crypto = require('crypto');
+      const payload = JSON.stringify(req.body);
+      const expectedSignature = crypto
+        .createHmac('sha256', process.env.GARMIN_WEBHOOK_SECRET)
+        .update(timestamp + payload)
+        .digest('hex');
+      
+      const receivedSignature = signature.replace('sha256=', '');
+      
+      // Comparaison temporelle sécurisée
+      const isValid = crypto.timingSafeEqual(
+        Buffer.from(expectedSignature, 'hex'),
+        Buffer.from(receivedSignature, 'hex')
+      );
+
+      if (isValid) {
+        console.log('✅ Signature webhook Garmin valide');
+      } else {
+        console.error('❌ Signature webhook Garmin invalide');
+      }
+      
+      return isValid;
+      
+    } catch (error) {
+      console.error('❌ Erreur validation signature:', error.message);
+      return false;
+    }
   }
 
   // Générer un ID unique pour les items
@@ -433,7 +496,119 @@ class GarminWebhookService {
       data: item.data
     });
     
-    // TODO: Sauvegarder en base pour analyse
+    try {
+      // Sauvegarder les échecs pour analyse
+      const GarminData = require('../models/garmindata.model');
+      
+      await GarminData.create({
+        userId: this.extractUserId(item.data) || 'unknown',
+        dataType: 'webhook_failure',
+        data: {
+          originalData: item.data,
+          error: item.lastError,
+          attempts: item.attempts,
+          failedAt: new Date()
+        },
+        source: 'webhook_error',
+        syncTimestamp: new Date(),
+        metadata: {
+          webhookProcessed: false,
+          errorLogged: true,
+          itemId: item.id
+        }
+      });
+      
+    } catch (error) {
+      console.error('❌ Erreur logging échec webhook:', error.message);
+    }
+  }
+
+  // Statistiques des webhooks
+  async getWebhookStats(timeRange = 24) {
+    try {
+      const GarminData = require('../models/garmindata.model');
+      const since = new Date(Date.now() - timeRange * 60 * 60 * 1000);
+      
+      const stats = await GarminData.aggregate([
+        {
+          $match: {
+            syncTimestamp: { $gte: since },
+            source: { $in: ['webhook_realtime', 'webhook_error'] }
+          }
+        },
+        {
+          $group: {
+            _id: {
+              dataType: '$dataType',
+              source: '$source'
+            },
+            count: { $sum: 1 },
+            lastProcessed: { $max: '$syncTimestamp' }
+          }
+        },
+        {
+          $group: {
+            _id: '$_id.dataType',
+            success: {
+              $sum: {
+                $cond: [{ $eq: ['$_id.source', 'webhook_realtime'] }, '$count', 0]
+              }
+            },
+            errors: {
+              $sum: {
+                $cond: [{ $eq: ['$_id.source', 'webhook_error'] }, '$count', 0]
+              }
+            },
+            lastActivity: { $max: '$lastProcessed' }
+          }
+        }
+      ]);
+
+      return {
+        timeRange: `${timeRange}h`,
+        queueLength: this.processingQueue.length,
+        isProcessing: this.isProcessing,
+        stats,
+        summary: {
+          totalSuccess: stats.reduce((sum, s) => sum + s.success, 0),
+          totalErrors: stats.reduce((sum, s) => sum + s.errors, 0),
+          successRate: stats.length > 0 
+            ? Math.round((stats.reduce((sum, s) => sum + s.success, 0) / 
+               (stats.reduce((sum, s) => sum + s.success + s.errors, 0))) * 100)
+            : 0
+        }
+      };
+
+    } catch (error) {
+      console.error('❌ Erreur récupération stats webhook:', error.message);
+      return {
+        error: error.message,
+        queueLength: this.processingQueue.length,
+        isProcessing: this.isProcessing
+      };
+    }
+  }
+
+  // Test de connectivité webhook
+  async testWebhookConnectivity() {
+    return {
+      service: 'GarminWebhookService',
+      status: 'operational',
+      features: {
+        signatureValidation: !!process.env.GARMIN_WEBHOOK_SECRET,
+        queueProcessing: true,
+        realTimeNotifications: true,
+        dataStorage: true
+      },
+      processing: {
+        queueLength: this.processingQueue.length,
+        isProcessing: this.isProcessing
+      },
+      supportedEventTypes: this.supportedEventTypes || [
+        'health_snapshot', 'activity', 'sleep', 'stress'
+      ],
+      timestamp: new Date().toISOString()
+    };
   }
 }
 

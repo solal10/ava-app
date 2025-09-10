@@ -1,4 +1,5 @@
 const crypto = require('crypto');
+const GarminData = require('../../models/garmindata.model');
 
 class GarminController {
   constructor() {
@@ -458,97 +459,126 @@ class GarminController {
 
   // Fallback vers données simulées quand API réelle indisponible
   async getFallbackHealthData(userId, res) {
-    const today = new Date().toISOString().split('T')[0];
-    const steps = Math.floor(8000 + Math.random() * 4000); // 8000-12000 pas
-    const sleepHours = 7 + Math.random() * 2; // 7-9h de sommeil
-    const stressLevel = Math.floor(20 + Math.random() * 40); // stress 20-60
+    console.log('🔄 Tentative de récupération via service API Garmin en fallback');
     
-    console.log('🔄 Utilisation des données simulées réalistes');
+    const garminAPIService = require('../../services/garmin-api.service');
     
-    return res.json({
-      success: true,
-      message: '⚠️ Données simulées - API Garmin indisponible (nécessite partenariat commercial)',
-      data: {
-        date: today,
-        userId: userId,
-        source: 'simulated_fallback',
-        current: {
-          steps: steps,
-          sleep: parseFloat(sleepHours.toFixed(1)),
-          stress: stressLevel,
-          energy: Math.floor(70 + Math.random() * 25),
-          heartRate: Math.floor(65 + Math.random() * 20),
-          calories: Math.floor(1800 + Math.random() * 800),
-          distance: parseFloat((steps * 0.0007).toFixed(2)),
-          activeMinutes: {
-            vigorous: Math.floor(Math.random() * 30),
-            moderate: Math.floor(Math.random() * 60),
-            total: Math.floor(Math.random() * 90)
-          }
-        },
-        healthScore: Math.floor(75 + Math.random() * 20),
-        history: Array.from({length: 7}, (_, i) => ({
-          date: new Date(Date.now() - (6-i) * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-          steps: Math.floor(7000 + Math.random() * 5000),
-          sleep: parseFloat((6.5 + Math.random() * 2.5).toFixed(1)),
-          stress: Math.floor(15 + Math.random() * 50)
-        })),
-        sync: {
-          lastSync: new Date().toISOString(),
-          source: 'simulated_fallback',
-          dataQuality: 'simulated',
-          syncEnabled: false
-        },
-        note: 'Données simulées - Partenariat commercial Garmin requis pour accès API réel'
-      }
-    });
+    try {
+      // Essayer d'utiliser les données par défaut du service au lieu de générer aléatoirement
+      const defaultHealthData = garminAPIService.getDefaultHealthData();
+      const defaultSleepData = garminAPIService.getDefaultSleepData();
+      const defaultStressData = garminAPIService.getDefaultStressData();
+      const defaultBodyBatteryData = garminAPIService.getDefaultBodyBatteryData();
+      
+      const today = new Date().toISOString().split('T')[0];
+      
+      return res.json({
+        success: true,
+        message: '⚠️ Utilisation des données par défaut - Token d\'accès requis pour API Garmin',
+        data: {
+          date: today,
+          userId: userId,
+          source: 'garmin_api_default',
+          current: {
+            steps: defaultHealthData.steps,
+            sleep: defaultSleepData.totalSleep,
+            stress: defaultStressData.averageStressLevel,
+            energy: defaultBodyBatteryData.batteryLevel,
+            heartRate: defaultHealthData.heartRate.resting,
+            calories: defaultHealthData.calories,
+            distance: defaultHealthData.distance,
+            activeMinutes: defaultHealthData.activeMinutes
+          },
+          healthScore: 0, // Score non calculable sans vraies données
+          sleep: defaultSleepData,
+          stress: defaultStressData,
+          bodyBattery: defaultBodyBatteryData,
+          history: [], // Historique vide sans vraies données
+          sync: {
+            lastSync: new Date().toISOString(),
+            source: 'garmin_api_service',
+            dataQuality: 'default_values',
+            syncEnabled: true,
+            note: 'Service prêt - Token d\'accès Garmin requis pour données réelles'
+          },
+          note: 'Connectez votre compte Garmin pour accéder aux vraies données de santé'
+        }
+      });
+      
+    } catch (error) {
+      console.error('❌ Erreur dans le fallback:', error.message);
+      
+      // En dernier recours, retourner une structure vide mais valide
+      return res.status(503).json({
+        success: false,
+        error: 'Service Garmin temporairement indisponible',
+        data: {
+          date: new Date().toISOString().split('T')[0],
+          userId: userId,
+          source: 'service_unavailable',
+          note: 'Veuillez réessayer plus tard'
+        }
+      });
+    }
   }
 
   // Calculer le score de santé basé sur les vraies données Garmin
   calculateRealHealthScore(data) {
-    if (!data || !data.health) return 75;
+    if (!data || !data.health) return 0; // Pas de données = pas de score
     
     let score = 0;
-    let factors = 0;
+    let totalWeight = 0;
     
-    // Score basé sur les pas (25%)
-    if (data.health.steps) {
+    // Score basé sur les pas (20%)
+    if (data.health.steps && data.health.steps > 0) {
       const stepScore = Math.min(100, (data.health.steps / 10000) * 100);
-      score += stepScore * 0.25;
-      factors++;
+      score += stepScore * 0.20;
+      totalWeight += 0.20;
     }
     
-    // Score basé sur le sommeil (25%)
-    if (data.sleep && data.sleep.totalSleep) {
+    // Score basé sur le sommeil (20%)
+    if (data.sleep && data.sleep.totalSleep && data.sleep.totalSleep > 0) {
       const sleepHours = data.sleep.totalSleep;
-      const sleepScore = sleepHours >= 7 && sleepHours <= 9 ? 100 : 
-                       sleepHours >= 6 ? 80 : 60;
-      score += sleepScore * 0.25;
-      factors++;
+      let sleepScore = 0;
+      if (sleepHours >= 7 && sleepHours <= 9) sleepScore = 100;
+      else if (sleepHours >= 6 && sleepHours <= 10) sleepScore = 80;
+      else if (sleepHours >= 5) sleepScore = 60;
+      else sleepScore = 40;
+      
+      score += sleepScore * 0.20;
+      totalWeight += 0.20;
     }
     
-    // Score basé sur le stress (25%)
-    if (data.stress && data.stress.averageStressLevel !== undefined) {
-      const stressScore = Math.max(0, 100 - data.stress.averageStressLevel);
-      score += stressScore * 0.25;
-      factors++;
+    // Score basé sur le stress (20%)
+    if (data.stress && data.stress.averageStressLevel !== null && data.stress.averageStressLevel !== undefined) {
+      const stressLevel = data.stress.averageStressLevel;
+      const stressScore = Math.max(0, 100 - (stressLevel * 1.5)); // Stress 0-67 donne score 100-0
+      score += stressScore * 0.20;
+      totalWeight += 0.20;
     }
     
-    // Score basé sur l'activité (25%)
-    if (data.health.activeMinutes && data.health.activeMinutes.total) {
+    // Score basé sur l'activité (20%)
+    if (data.health.activeMinutes && data.health.activeMinutes.total > 0) {
       const activityScore = Math.min(100, (data.health.activeMinutes.total / 30) * 100);
-      score += activityScore * 0.25;
-      factors++;
+      score += activityScore * 0.20;
+      totalWeight += 0.20;
     }
     
-    // Ajuster si on n'a pas tous les facteurs
-    if (factors > 0) {
-      score = (score / (factors * 0.25)) * 100;
+    // Score basé sur Body Battery / énergie (20%)
+    if (data.health.bodyBattery !== null && data.health.bodyBattery !== undefined) {
+      const energyScore = data.health.bodyBattery; // Body Battery est déjà un score 0-100
+      score += energyScore * 0.20;
+      totalWeight += 0.20;
+    }
+    
+    // Normaliser le score en fonction du poids total des métriques disponibles
+    if (totalWeight > 0) {
+      score = (score / totalWeight) * 100;
     } else {
-      score = 75; // Score par défaut
+      return 0; // Aucune métrique valide
     }
     
-    return Math.round(Math.max(50, Math.min(100, score)));
+    return Math.round(Math.max(0, Math.min(100, score)));
   }
   
   // Calculer le score de santé basé sur les données Garmin
@@ -657,6 +687,191 @@ class GarminController {
     } catch (error) {
       console.error(`[${correlationId}] ❌ Exception lors de l'échange token:`, error.message);
       return { success: false, error: error.message };
+    }
+  }
+
+  // Méthode pour sauvegarder les données Garmin dans la base
+  async saveGarminData(userId, activityData, healthData) {
+    try {
+      const garminData = new GarminData({
+        userId: userId,
+        date: new Date(),
+        activities: activityData?.activities || [],
+        heartRate: healthData?.heartRate,
+        sleep: healthData?.sleep,
+        stress: healthData?.stress,
+        steps: healthData?.steps,
+        calories: healthData?.calories,
+        bodyBattery: healthData?.bodyBattery,
+        syncedAt: new Date()
+      });
+
+      await garminData.save();
+      console.log(`✅ Données Garmin sauvegardées pour l'utilisateur ${userId}`);
+      return { success: true, data: garminData };
+    } catch (error) {
+      console.error(`❌ Erreur sauvegarde données Garmin:`, error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // Méthode pour récupérer les données Garmin d'un utilisateur
+  async getUserGarminData(userId, fromDate, toDate) {
+    try {
+      const query = { userId };
+      if (fromDate || toDate) {
+        query.date = {};
+        if (fromDate) query.date.$gte = new Date(fromDate);
+        if (toDate) query.date.$lte = new Date(toDate);
+      }
+
+      const data = await GarminData.find(query).sort({ date: -1 }).limit(30);
+      return { success: true, data };
+    } catch (error) {
+      console.error(`❌ Erreur récupération données Garmin:`, error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // === MÉTHODES WEBHOOK ===
+
+  // Recevoir les données webhook de Garmin (endpoint principal)
+  async receiveWebhookData(req, res) {
+    try {
+      console.log('📨 Webhook Garmin reçu');
+      
+      const garminWebhookService = require('../../services/garmin-webhook.service');
+      await garminWebhookService.processWebhookData(req, res);
+      
+    } catch (error) {
+      console.error('❌ Erreur webhook principal:', error.message);
+      res.status(500).json({
+        success: false,
+        error: 'Erreur interne du webhook',
+        timestamp: new Date().toISOString()
+      });
+    }
+  }
+
+  // Enregistrer un webhook pour un utilisateur
+  async registerUserWebhook(req, res) {
+    try {
+      const { userId, callbackUrl, eventTypes } = req.body;
+      
+      if (!userId || !callbackUrl) {
+        return res.status(400).json({
+          success: false,
+          error: 'userId et callbackUrl requis'
+        });
+      }
+
+      const garminWebhookService = require('../../services/garmin-webhook.service');
+      garminWebhookService.registerWebhookEndpoint(userId, callbackUrl, eventTypes);
+      
+      res.json({
+        success: true,
+        message: 'Webhook enregistré avec succès',
+        userId,
+        callbackUrl,
+        eventTypes: eventTypes || ['health', 'activity', 'sleep'],
+        timestamp: new Date().toISOString()
+      });
+
+    } catch (error) {
+      console.error('❌ Erreur enregistrement webhook:', error.message);
+      res.status(500).json({
+        success: false,
+        error: error.message
+      });
+    }
+  }
+
+  // Obtenir le statut des webhooks pour un utilisateur
+  async getWebhookStatus(req, res) {
+    try {
+      const { userId } = req.params;
+      
+      if (!userId) {
+        return res.status(400).json({
+          success: false,
+          error: 'userId requis'
+        });
+      }
+
+      // Récupérer les dernières données webhook pour cet utilisateur
+      const recentData = await GarminData.find({
+        userId,
+        source: 'webhook_realtime'
+      })
+      .sort({ syncTimestamp: -1 })
+      .limit(10);
+
+      const lastWebhook = recentData.length > 0 ? recentData[0].syncTimestamp : null;
+      
+      res.json({
+        success: true,
+        userId,
+        webhookStatus: {
+          isActive: recentData.length > 0,
+          lastReceived: lastWebhook,
+          recentDataCount: recentData.length,
+          dataTypes: [...new Set(recentData.map(d => d.dataType))]
+        },
+        recentWebhooks: recentData.map(d => ({
+          dataType: d.dataType,
+          receivedAt: d.syncTimestamp,
+          hasData: !!d.data
+        }))
+      });
+
+    } catch (error) {
+      console.error('❌ Erreur statut webhook:', error.message);
+      res.status(500).json({
+        success: false,
+        error: error.message
+      });
+    }
+  }
+
+  // Obtenir les statistiques des webhooks
+  async getWebhookStats(req, res) {
+    try {
+      const timeRange = parseInt(req.query.hours) || 24;
+      
+      const garminWebhookService = require('../../services/garmin-webhook.service');
+      const stats = await garminWebhookService.getWebhookStats(timeRange);
+      
+      res.json({
+        success: true,
+        ...stats
+      });
+
+    } catch (error) {
+      console.error('❌ Erreur stats webhook:', error.message);
+      res.status(500).json({
+        success: false,
+        error: error.message
+      });
+    }
+  }
+
+  // Tester la connectivité des webhooks
+  async testWebhookConnectivity(req, res) {
+    try {
+      const garminWebhookService = require('../../services/garmin-webhook.service');
+      const status = await garminWebhookService.testWebhookConnectivity();
+      
+      res.json({
+        success: true,
+        ...status
+      });
+
+    } catch (error) {
+      console.error('❌ Erreur test webhook:', error.message);
+      res.status(500).json({
+        success: false,
+        error: error.message
+      });
     }
   }
 }
