@@ -123,34 +123,8 @@ const userSchema = new mongoose.Schema({
     }
   },
   
-  // Configuration des notifications push
-  fcmTokens: [{
-    token: String,
-    active: {
-      type: Boolean,
-      default: true
-    },
-    registeredAt: {
-      type: Date,
-      default: Date.now
-    },
-    lastUsed: Date,
-    deactivatedAt: Date,
-    deviceInfo: {
-      type: String,        // 'mobile', 'tablet', 'desktop'
-      platform: String,    // 'android', 'ios', 'web'
-      version: String,
-      model: String
-    },
-    successCount: {
-      type: Number,
-      default: 0
-    },
-    errorCount: {
-      type: Number,
-      default: 0
-    }
-  }],
+  // Configuration des notifications push - tokens FCM simplifiés
+  fcmTokens: [String],
   
   topicSubscriptions: [{
     type: String,

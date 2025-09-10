@@ -1,5 +1,6 @@
-const { notificationService } = require('../../services/notification.service');
-const User = require('../../models/user.model');
+// const { notificationService } = require('../../services/notification.service');
+const firebaseService = require('../../services/firebase.service');
+const User = require('../../models/User.model');
 
 // Envoyer une notification à un utilisateur
 exports.sendNotification = async (req, res) => {
@@ -12,19 +13,12 @@ exports.sendNotification = async (req, res) => {
       });
     }
 
-    const result = await notificationService.sendNotification(userId, notification, options);
+    const result = await firebaseService.sendNotificationToUser(userId, notification);
 
-    if (result.success) {
-      res.status(200).json({
-        message: 'Notification envoyée avec succès',
-        result
-      });
-    } else {
-      res.status(400).json({
-        message: 'Échec envoi notification',
-        error: result.error
-      });
-    }
+    res.status(200).json({
+      message: 'Notification envoyée avec succès',
+      result
+    });
 
   } catch (error) {
     console.error('❌ Erreur envoi notification:', error);
@@ -52,7 +46,7 @@ exports.sendBulkNotifications = async (req, res) => {
       });
     }
 
-    const result = await notificationService.sendBulkNotifications(userIds, notification, options);
+    const result = await firebaseService.sendNotificationToUsers(userIds, notification);
 
     res.status(200).json({
       message: 'Notifications groupées envoyées',
@@ -79,19 +73,12 @@ exports.sendTopicNotification = async (req, res) => {
       });
     }
 
-    const result = await notificationService.sendTopicNotification(topic, notification, options);
+    const result = await firebaseService.sendNotificationToTopic(topic, notification);
 
-    if (result.success) {
-      res.status(200).json({
-        message: 'Notification topic envoyée avec succès',
-        result
-      });
-    } else {
-      res.status(400).json({
-        message: 'Échec envoi notification topic',
-        error: result.error
-      });
-    }
+    res.status(200).json({
+      message: 'Notification topic envoyée avec succès',
+      result
+    });
 
   } catch (error) {
     console.error('❌ Erreur envoi notification topic:', error);
@@ -114,19 +101,12 @@ exports.registerFCMToken = async (req, res) => {
       });
     }
 
-    const result = await notificationService.registerFCMToken(userId, token, deviceInfo);
+    const result = await firebaseService.registerFCMToken(userId, token);
 
-    if (result.success) {
-      res.status(200).json({
-        message: 'Token FCM enregistré avec succès',
-        result
-      });
-    } else {
-      res.status(400).json({
-        message: 'Échec enregistrement token FCM',
-        error: result.error
-      });
-    }
+    res.status(200).json({
+      message: 'Token FCM enregistré avec succès',
+      result
+    });
 
   } catch (error) {
     console.error('❌ Erreur enregistrement token FCM:', error);
@@ -149,19 +129,12 @@ exports.unregisterFCMToken = async (req, res) => {
       });
     }
 
-    const result = await notificationService.unregisterFCMToken(userId, token);
+    const result = await firebaseService.unregisterFCMToken(userId, token);
 
-    if (result.success) {
-      res.status(200).json({
-        message: 'Token FCM supprimé avec succès',
-        result
-      });
-    } else {
-      res.status(400).json({
-        message: 'Échec suppression token FCM',
-        error: result.error
-      });
-    }
+    res.status(200).json({
+      message: 'Token FCM supprimé avec succès',
+      result
+    });
 
   } catch (error) {
     console.error('❌ Erreur suppression token FCM:', error);
@@ -184,19 +157,29 @@ exports.subscribeToTopic = async (req, res) => {
       });
     }
 
-    const result = await notificationService.subscribeToTopic(userId, topic);
-
-    if (result.success) {
-      res.status(200).json({
-        message: `Abonnement au topic "${topic}" réussi`,
-        result
-      });
-    } else {
-      res.status(400).json({
-        message: 'Échec abonnement topic',
-        error: result.error
+    // Récupérer les tokens de l'utilisateur
+    const user = await User.findById(userId);
+    if (!user || !user.fcmTokens || user.fcmTokens.length === 0) {
+      return res.status(400).json({
+        message: 'Utilisateur sans token FCM'
       });
     }
+
+    const result = await firebaseService.subscribeToTopic(user.fcmTokens, topic);
+    
+    // Enregistrer l'abonnement dans l'utilisateur
+    if (!user.topicSubscriptions) {
+      user.topicSubscriptions = [];
+    }
+    if (!user.topicSubscriptions.includes(topic)) {
+      user.topicSubscriptions.push(topic);
+      await user.save();
+    }
+
+    res.status(200).json({
+      message: `Abonnement au topic "${topic}" réussi`,
+      result
+    });
 
   } catch (error) {
     console.error('❌ Erreur abonnement topic:', error);
@@ -219,19 +202,26 @@ exports.unsubscribeFromTopic = async (req, res) => {
       });
     }
 
-    const result = await notificationService.unsubscribeFromTopic(userId, topic);
-
-    if (result.success) {
-      res.status(200).json({
-        message: `Désabonnement du topic "${topic}" réussi`,
-        result
-      });
-    } else {
-      res.status(400).json({
-        message: 'Échec désabonnement topic',
-        error: result.error
+    // Récupérer les tokens de l'utilisateur
+    const user = await User.findById(userId);
+    if (!user || !user.fcmTokens || user.fcmTokens.length === 0) {
+      return res.status(400).json({
+        message: 'Utilisateur sans token FCM'
       });
     }
+
+    const result = await firebaseService.unsubscribeFromTopic(user.fcmTokens, topic);
+    
+    // Supprimer l'abonnement de l'utilisateur
+    if (user.topicSubscriptions) {
+      user.topicSubscriptions = user.topicSubscriptions.filter(t => t !== topic);
+      await user.save();
+    }
+
+    res.status(200).json({
+      message: `Désabonnement du topic "${topic}" réussi`,
+      result
+    });
 
   } catch (error) {
     console.error('❌ Erreur désabonnement topic:', error);
@@ -256,7 +246,6 @@ exports.getNotificationPreferences = async (req, res) => {
     }
 
     const preferences = user.notificationPreferences || {};
-    const activeTokens = user.fcmTokens?.filter(t => t.active) || [];
     const subscriptions = user.topicSubscriptions || [];
 
     res.status(200).json({
@@ -264,13 +253,7 @@ exports.getNotificationPreferences = async (req, res) => {
       preferences,
       tokens: {
         total: user.fcmTokens?.length || 0,
-        active: activeTokens.length,
-        devices: activeTokens.map(t => ({
-          deviceType: t.deviceInfo?.type,
-          platform: t.deviceInfo?.platform,
-          registeredAt: t.registeredAt,
-          lastUsed: t.lastUsed
-        }))
+        active: user.fcmTokens?.length || 0
       },
       subscriptions
     });
@@ -380,7 +363,33 @@ exports.getNotificationHistory = async (req, res) => {
 // Obtenir les modèles de notifications disponibles
 exports.getNotificationTemplates = async (_, res) => {
   try {
-    const templates = notificationService.getNotificationTemplates();
+    const templates = {
+      welcome: {
+        title: '🎉 Bienvenue {userName}!',
+        body: 'Commencez votre parcours santé avec AVA Coach.',
+        type: 'welcome'
+      },
+      hydration_reminder: {
+        title: '💧 Rappel Hydratation',
+        body: 'N\'oubliez pas de boire de l\'eau !',
+        type: 'health_reminder'
+      },
+      workout_reminder: {
+        title: '🏃‍♂️ Temps d\'Activité',
+        body: 'Que diriez-vous d\'un peu d\'exercice ?',
+        type: 'health_reminder'
+      },
+      achievement: {
+        title: '🏆 Nouveau Succès !',
+        body: 'Félicitations pour vos progrès !',
+        type: 'achievement'
+      },
+      subscription_upgrade: {
+        title: '⭐ Mise à niveau Premium',
+        body: 'Découvrez nos nouvelles fonctionnalités premium.',
+        type: 'premium'
+      }
+    };
     
     res.status(200).json({
       message: 'Modèles de notifications récupérés',
@@ -407,7 +416,33 @@ exports.sendTemplateNotification = async (req, res) => {
       });
     }
 
-    const templates = notificationService.getNotificationTemplates();
+    const templates = {
+      welcome: {
+        title: '🎉 Bienvenue {userName}!',
+        body: 'Commencez votre parcours santé avec AVA Coach.',
+        type: 'welcome'
+      },
+      hydration_reminder: {
+        title: '💧 Rappel Hydratation',
+        body: 'N\'oubliez pas de boire de l\'eau !',
+        type: 'health_reminder'
+      },
+      workout_reminder: {
+        title: '🏃‍♂️ Temps d\'Activité',
+        body: 'Que diriez-vous d\'un peu d\'exercice ?',
+        type: 'health_reminder'
+      },
+      achievement: {
+        title: '🏆 Nouveau Succès !',
+        body: 'Félicitations pour vos progrès !',
+        type: 'achievement'
+      },
+      subscription_upgrade: {
+        title: '⭐ Mise à niveau Premium',
+        body: 'Découvrez nos nouvelles fonctionnalités premium.',
+        type: 'premium'
+      }
+    };
     const template = templates[templateName];
 
     if (!template) {
@@ -426,19 +461,12 @@ exports.sendTemplateNotification = async (req, res) => {
       data: data.customData || {}
     };
 
-    const result = await notificationService.sendNotification(userId, notification, options);
+    const result = await firebaseService.sendNotificationToUser(userId, notification);
 
-    if (result.success) {
-      res.status(200).json({
-        message: `Notification modèle "${templateName}" envoyée avec succès`,
-        result
-      });
-    } else {
-      res.status(400).json({
-        message: 'Échec envoi notification modèle',
-        error: result.error
-      });
-    }
+    res.status(200).json({
+      message: `Notification modèle "${templateName}" envoyée avec succès`,
+      result
+    });
 
   } catch (error) {
     console.error('❌ Erreur envoi notification modèle:', error);
@@ -452,7 +480,7 @@ exports.sendTemplateNotification = async (req, res) => {
 // Obtenir le statut du service de notifications
 exports.getServiceStatus = async (_, res) => {
   try {
-    const status = notificationService.getServiceStatus();
+    const status = firebaseService.getServiceStatus();
     
     res.status(200).json({
       message: 'Statut du service de notifications',
@@ -484,7 +512,7 @@ exports.testNotification = async (req, res) => {
       }
     };
 
-    const result = await notificationService.sendNotification(userId, testNotification);
+    const result = await firebaseService.sendNotificationToUser(userId, testNotification);
 
     res.status(200).json({
       message: 'Notification de test envoyée',
