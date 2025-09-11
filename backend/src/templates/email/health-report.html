@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Votre rapport santé hebdomadaire</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8fafc; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 30px; text-align: center; }
+        .metrics { display: flex; justify-content: space-around; padding: 20px; background: #f8fafc; }
+        .metric { text-align: center; }
+        .metric-value { font-size: 24px; font-weight: bold; color: #10b981; }
+        .content { padding: 30px; }
+        .progress-bar { width: 100%; height: 10px; background: #e5e7eb; border-radius: 5px; overflow: hidden; margin: 10px 0; }
+        .progress { height: 100%; background: #10b981; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Rapport Santé Hebdomadaire</h1>
+            <p>Semaine du {{startDate}} au {{endDate}}</p>
+        </div>
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">{{steps}}</div>
+                <div>Pas moyens/jour</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">{{sleepHours}}h</div>
+                <div>Sommeil moyen</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">{{healthScore}}</div>
+                <div>Score santé</div>
+            </div>
+        </div>
+        <div class="content">
+            <h2>🎯 Vos accomplissements</h2>
+            <ul>
+                {{#achievements}}
+                <li>{{achievement}}</li>
+                {{/achievements}}
+            </ul>
+
+            <h2>💡 Recommandations personnalisées</h2>
+            <p>{{recommendations}}</p>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: {{progressPercent}}%"></div>
+            </div>
+            <p>Progression vers vos objectifs: {{progressPercent}}%</p>
+        </div>
+    </div>
+</body>
+</html>

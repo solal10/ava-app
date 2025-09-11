@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bienvenue sur AVA Coach Santé</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8fafc; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; }
+        .content { padding: 30px; }
+        .button { display: inline-block; background: #667eea; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; margin: 20px 0; }
+        .footer { background: #f8fafc; padding: 20px; text-align: center; color: #64748b; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Bienvenue sur AVA Coach Santé</h1>
+            <p>Votre parcours santé intelligent commence maintenant !</p>
+        </div>
+        <div class="content">
+            <h2>Bonjour {{userName}} !</h2>
+            <p>Nous sommes ravis de vous accueillir dans la famille AVA Coach Santé. Votre compte a été créé avec succès.</p>
+            
+            <h3>🎯 Prochaines étapes :</h3>
+            <ul>
+                <li>Configurez vos objectifs de santé</li>
+                <li>Connectez vos appareils (Garmin, Fitbit...)</li>
+                <li>Explorez les fonctionnalités IA</li>
+                <li>Planifiez vos premiers repas</li>
+            </ul>
+
+            <a href="{{appUrl}}/dashboard" class="button">Découvrir mon dashboard</a>
+
+            <p>Besoin d'aide ? Notre équipe est là pour vous accompagner !</p>
+        </div>
+        <div class="footer">
+            <p>AVA Coach Santé - Votre bien-être, notre priorité</p>
+            <p>Vous recevez cet email car vous vous êtes inscrit sur notre plateforme</p>
+        </div>
+    </div>
+</body>
+</html>

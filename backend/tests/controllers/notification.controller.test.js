@@ -5,22 +5,27 @@ const { MongoMemoryServer } = require('mongodb-memory-server');
 const notificationController = require('../../src/api/notification/notification.controller');
 const User = require('../../src/models/user.model');
 
-// Mock notification service
-jest.mock('../../src/services/notification.service', () => ({
-  notificationService: {
-    sendNotification: jest.fn(),
-    sendBulkNotifications: jest.fn(),
-    sendTopicNotification: jest.fn(),
-    registerFCMToken: jest.fn(),
-    unregisterFCMToken: jest.fn(),
-    subscribeToTopic: jest.fn(),
-    unsubscribeFromTopic: jest.fn(),
-    getNotificationTemplates: jest.fn(),
-    getServiceStatus: jest.fn()
-  }
+// Mock Firebase service
+jest.mock('../../src/services/firebase.service', () => ({
+  sendNotificationToUser: jest.fn(),
+  sendNotificationToUsers: jest.fn(),
+  sendTopicNotification: jest.fn(),
+  registerFCMToken: jest.fn(),
+  unregisterFCMToken: jest.fn(),
+  subscribeToTopic: jest.fn(),
+  unsubscribeFromTopic: jest.fn(),
+  getNotificationTemplates: jest.fn(),
+  isInitialized: true
 }));
 
-const { notificationService } = require('../../src/services/notification.service');
+// Mock User model
+jest.mock('../../src/models/user.model', () => ({
+  findById: jest.fn(),
+  findByIdAndUpdate: jest.fn()
+}));
+
+const firebaseService = require('../../src/services/firebase.service');
+const User = require('../../src/models/user.model');
 
 const app = express();
 app.use(express.json());
@@ -91,7 +96,7 @@ describe('Notification Controller', () => {
   describe('POST /send-notification', () => {
     it('devrait envoyer une notification avec succès', async () => {
       const mockResult = { success: true, messageId: 'test-message-id' };
-      notificationService.sendNotification.mockResolvedValue(mockResult);
+      firebaseService.sendNotificationToUser.mockResolvedValue(mockResult);
 
       const notificationData = {
         userId: testUserId,
@@ -109,10 +114,9 @@ describe('Notification Controller', () => {
 
       expect(response.body.message).toBe('Notification envoyée avec succès');
       expect(response.body.result).toEqual(mockResult);
-      expect(notificationService.sendNotification).toHaveBeenCalledWith(
+      expect(firebaseService.sendNotificationToUser).toHaveBeenCalledWith(
         testUserId,
-        notificationData.notification,
-        notificationData.options
+        notificationData.notification
       );
     });
 
