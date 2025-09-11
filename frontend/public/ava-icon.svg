@@ -1,0 +1,32 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle avec gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" fill="url(#grad1)"/>
+  
+  <!-- Main Icon - Health/Heart symbol -->
+  <g transform="translate(128, 128)">
+    <!-- Heart shape for health -->
+    <path d="M128 80 C128 60, 108 40, 88 40 S48 60, 48 80 C48 100, 88 140, 128 180 C168 140, 208 100, 208 80 C208 60, 188 40, 168 40 S128 60, 128 80 Z" 
+          fill="white" opacity="0.9" transform="scale(0.8)"/>
+    
+    <!-- AI Brain/Circuit -->
+    <circle cx="128" cy="70" r="25" fill="white" opacity="0.3"/>
+    <circle cx="128" cy="70" r="15" fill="white" opacity="0.6"/>
+    <circle cx="128" cy="70" r="8" fill="white"/>
+    
+    <!-- Activity waves -->
+    <path d="M50 128 L70 108 L90 148 L110 88 L130 128 L150 98 L170 138 L190 118 L210 128" 
+          stroke="white" stroke-width="6" fill="none" opacity="0.7"/>
+  </g>
+  
+  <!-- AVA text -->
+  <text x="256" y="400" text-anchor="middle" fill="white" font-family="Arial, sans-serif" 
+        font-size="48" font-weight="bold">AVA</text>
+</svg>
