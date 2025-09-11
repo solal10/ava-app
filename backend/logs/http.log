@@ -5562,3 +5562,527 @@
   message: 'PUT /preferences - 200 (4ms)',
   timestamp: '2025-09-11 20:36:59'
 }
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr8m7dedpqx',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/user/login',
+  timestamp: '2025-09-11 20:41:29'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr8mw549rdb',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/user/login',
+  timestamp: '2025-09-11 20:41:30'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr8n9uwmace',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/user/login',
+  timestamp: '2025-09-11 20:41:30'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr8nfr0j1ou',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/user/login',
+  timestamp: '2025-09-11 20:41:31'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr8o27bkdrz',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/user/login',
+  timestamp: '2025-09-11 20:41:31'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr8xvmnnia2',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/health',
+  timestamp: '2025-09-11 20:41:44'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr8xvn0hoy9',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/meal',
+  timestamp: '2025-09-11 20:41:44'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr989sbk40m',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/health',
+  timestamp: '2025-09-11 20:41:58'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr989sceo5x',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/meal',
+  timestamp: '2025-09-11 20:41:58'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr99drrxu20',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/garmin/login',
+  timestamp: '2025-09-11 20:41:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr99drrxu20',
+  statusCode: 503,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /login - 503 (1ms)',
+  timestamp: '2025-09-11 20:41:59'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 503',
+    name: 'Error',
+    stack: 'Error: HTTP 503\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at GarminController.login (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/garmin/garmin.controller.js:45:32)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/garmin/garmin.routes.js:10:53\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15',
+    context: {
+      endpoint: '/login',
+      method: 'GET',
+      statusCode: 503,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:41:59.489Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:41:59'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:41:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffrafta9k41k',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/health',
+  timestamp: '2025-09-11 20:42:54'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffraftabx11o',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'OPTIONS /api/meal',
+  timestamp: '2025-09-11 20:42:54'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:45:11'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:45:11'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:45:11'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:45:11'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:45:11'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:45:11'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:45:48'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:45:48'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:45:48'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:45:48'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:45:48'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:45:48'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:45:58'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:45:58'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:45:58'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:45:58'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:45:58'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:45:58'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:46:03'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:46:03'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:46:03'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:46:03'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:46:03'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:46:03'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:46:07'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:46:07'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:46:07'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:46:07'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:46:07'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:46:07'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffrevn0gqyif',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:46:21'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffrevn0gqyif',
+  statusCode: 200,
+  responseTime: 141,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (141ms)',
+  timestamp: '2025-09-11 20:46:21'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffrevrbo96kb',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/export',
+  timestamp: '2025-09-11 20:46:21'
+}
+{
+  service: 'ava-health-coach',
+  feature: 'gdpr_export',
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  metadata: { dataSize: 3121, recordCounts: { health: 0, meals: 0, garmin: 0 } },
+  event: 'feature_usage',
+  level: 'info',
+  message: 'Fonctionnalité utilisée',
+  timestamp: '2025-09-11 20:46:21'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffrevrbo96kb',
+  statusCode: 200,
+  responseTime: 20,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'GET /export - 200 (20ms)',
+  timestamp: '2025-09-11 20:46:21'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffrgzgecedbd',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/garmin/login',
+  timestamp: '2025-09-11 20:47:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffrgzgecedbd',
+  statusCode: 503,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /login - 503 (2ms)',
+  timestamp: '2025-09-11 20:47:59'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 503',
+    name: 'Error',
+    stack: 'Error: HTTP 503\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at GarminController.login (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/garmin/garmin.controller.js:46:32)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/garmin/garmin.routes.js:10:53\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15',
+    context: {
+      endpoint: '/login',
+      method: 'GET',
+      statusCode: 503,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:47:59.872Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:47:59'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:47:59'
+}

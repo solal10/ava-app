@@ -1294,3 +1294,77 @@
   message: 'Erreur ajout donnée fichier analytics',
   timestamp: '2025-09-11 20:34:06'
 }
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 503',
+    name: 'Error',
+    stack: 'Error: HTTP 503\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at GarminController.login (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/garmin/garmin.controller.js:45:32)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/garmin/garmin.routes.js:10:53\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15',
+    context: {
+      endpoint: '/login',
+      method: 'GET',
+      statusCode: 503,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:41:59.489Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:41:59'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:41:59'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 503',
+    name: 'Error',
+    stack: 'Error: HTTP 503\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at GarminController.login (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/garmin/garmin.controller.js:46:32)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/garmin/garmin.routes.js:10:53\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15',
+    context: {
+      endpoint: '/login',
+      method: 'GET',
+      statusCode: 503,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:47:59.872Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:47:59'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:47:59'
+}
