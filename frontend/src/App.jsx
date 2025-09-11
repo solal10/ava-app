@@ -7,15 +7,17 @@ import { SubscriptionProvider } from './contexts/SubscriptionContext';
 
 // Composants communs
 import ErrorBoundary from './components/common/ErrorBoundary';
+import SafeComponent from './components/common/SafeComponent';
+
+// Composants PWA
+import PWAInstallPrompt from './components/pwa/PWAInstallPrompt';
 
 // Composants
-import NavBar from './components/navbar/NavBar';
 import Login from './pages/Login';
 import AuthPage from './components/auth/AuthPage';
 import DashboardV2 from './components/dashboard/DashboardV2';
 import HealthTrackerAIV2 from './components/health/HealthTrackerAIV2';
 import GoalsTrackerV2 from './components/goals/GoalsTrackerV2';
-import PremiumBadge from './components/subscription/PremiumBadge';
 import { FoodAnalyzer } from './components/meal';
 import MealAnalyzerV2 from './components/meal/MealAnalyzerV2';
 import WorkoutPlannerV2 from './components/workout/WorkoutPlannerV2';
@@ -100,7 +102,13 @@ function App() {
           <Route path="/" element={
             <ProtectedRoute>
               <MainLayout user={user}>
-                <DashboardV2 />
+                <SafeComponent 
+                  componentName="Dashboard" 
+                  enableAsync={true}
+                  operationType="chargement du tableau de bord"
+                >
+                  <DashboardV2 />
+                </SafeComponent>
               </MainLayout>
             </ProtectedRoute>
           } />
@@ -108,7 +116,13 @@ function App() {
           <Route path="/workout" element={
             <ProtectedRoute>
               <MainLayout user={user}>
-                <WorkoutPlannerV2 user={user} />
+                <SafeComponent 
+                  componentName="WorkoutPlanner" 
+                  enableAsync={true}
+                  operationType="chargement des programmes d'entraînement"
+                >
+                  <WorkoutPlannerV2 user={user} />
+                </SafeComponent>
               </MainLayout>
             </ProtectedRoute>
           } />
@@ -123,7 +137,13 @@ function App() {
           <Route path="/meal-analyzer" element={
             <ProtectedRoute>
               <MainLayout user={user}>
-                <MealAnalyzerV2 user={user} />
+                <SafeComponent 
+                  componentName="MealAnalyzer" 
+                  enableAsync={true}
+                  operationType="analyse des repas"
+                >
+                  <MealAnalyzerV2 user={user} />
+                </SafeComponent>
               </MainLayout>
             </ProtectedRoute>
           } />
@@ -154,14 +174,26 @@ function App() {
           <Route path="/chat" element={
             <ProtectedRoute>
               <MainLayout user={user}>
-                <ChatIAV2 user={user} />
+                <SafeComponent 
+                  componentName="ChatIA" 
+                  enableAsync={true}
+                  operationType="chargement du chat IA"
+                >
+                  <ChatIAV2 user={user} />
+                </SafeComponent>
               </MainLayout>
             </ProtectedRoute>
           } />
           <Route path="/health" element={
             <ProtectedRoute>
               <MainLayout user={user}>
-                <HealthTrackerAIV2 user={user} />
+                <SafeComponent 
+                  componentName="HealthTracker" 
+                  enableAsync={true}
+                  operationType="chargement du suivi santé"
+                >
+                  <HealthTrackerAIV2 user={user} />
+                </SafeComponent>
               </MainLayout>
             </ProtectedRoute>
           } />
@@ -183,14 +215,26 @@ function App() {
           <Route path="/goals/tracker" element={
             <ProtectedRoute>
               <MainLayout user={user}>
-                <GoalsTrackerV2 user={user} />
+                <SafeComponent 
+                  componentName="GoalsTracker" 
+                  enableAsync={true}
+                  operationType="chargement du suivi d'objectifs"
+                >
+                  <GoalsTrackerV2 user={user} />
+                </SafeComponent>
               </MainLayout>
             </ProtectedRoute>
           } />
           <Route path="/admin/learn" element={
             <ProtectedRoute>
               <MainLayout user={user}>
-                <LearnAdminDashboardV2 />
+                <SafeComponent 
+                  componentName="AdminDashboard" 
+                  enableAsync={true}
+                  operationType="chargement du tableau de bord admin"
+                >
+                  <LearnAdminDashboardV2 />
+                </SafeComponent>
               </MainLayout>
             </ProtectedRoute>
           } />
@@ -198,6 +242,9 @@ function App() {
           {/* Redirection par défaut vers la page de connexion si pas connecté, sinon dashboard */}
           <Route path="*" element={token ? <Navigate to="/" replace /> : <Navigate to="/login" replace />} />
         </Routes>
+        
+        {/* Prompt d'installation PWA - uniquement pour les utilisateurs connectés */}
+        {token && <PWAInstallPrompt />}
       </SubscriptionProvider>
     </ErrorBoundary>
   );

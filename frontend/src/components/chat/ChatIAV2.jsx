@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { chatAPI } from '../../utils/api';
 import { useSubscription } from '../../contexts/SubscriptionContext';
 import SectionCard, { MetricCard } from '../layout/SectionCard';
+import { useApiErrorHandler } from '../../hooks/useErrorHandler';
+import { useLoading } from '../../hooks/useLoading';
+import { LoadableContent, LoadableButton } from '../common/SmartLoader';
 
 // Composant Message modernisé
 const MessageBubble = ({ message, isUser }) => {
@@ -131,10 +134,13 @@ const ChatIAV2 = ({ user }) => {
     }
   ]);
   const [inputMessage, setInputMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
   const [requestCount, setRequestCount] = useState(0);
   const [hasReachedLimit, setHasReachedLimit] = useState(false);
   const messagesEndRef = useRef(null);
+  
+  // Utiliser les nouveaux hooks de loading et d'erreur
+  const { startLoading, stopLoading, isLoadingKey } = useLoading();
+  const { handleApiError } = useApiErrorHandler('ChatIA');
 
   // Fonction pour logger les messages dans le système Learn
   function logToLearnSystem(message) {
@@ -182,7 +188,7 @@ const ChatIAV2 = ({ user }) => {
 
   const handleSendMessage = async (messageText = null) => {
     const messageToSend = messageText || inputMessage.trim();
-    if (!messageToSend || isLoading) return;
+    if (!messageToSend || isLoadingKey('chat')) return;
 
     // Vérification de la limite pour les utilisateurs non-premium
     if (!isPremium && hasReachedLimit) {
@@ -199,7 +205,7 @@ const ChatIAV2 = ({ user }) => {
 
     setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
-    setIsLoading(true);
+    startLoading('chat');
 
     // Logger le message
     logToLearnSystem(messageToSend);
@@ -226,6 +232,7 @@ const ChatIAV2 = ({ user }) => {
 
     } catch (error) {
       console.error('Erreur lors de l\'envoi du message:', error);
+      handleApiError(error, 'envoi de message');
       
       const errorMessage = {
         id: Date.now() + 1,
@@ -236,7 +243,7 @@ const ChatIAV2 = ({ user }) => {
 
       setMessages(prev => [...prev, errorMessage]);
     } finally {
-      setIsLoading(false);
+      stopLoading('chat');
     }
   };
 
@@ -325,7 +332,7 @@ const ChatIAV2 = ({ user }) => {
             ))}
             
             {/* Indicateur de chargement */}
-            {isLoading && (
+            {isLoadingKey('chat') && (
               <div className="flex justify-start mb-4">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
@@ -351,7 +358,7 @@ const ChatIAV2 = ({ user }) => {
               <h4 className="text-sm font-medium text-slate-300 mb-3">Actions rapides</h4>
               <QuickActions 
                 onQuickMessage={handleQuickMessage} 
-                disabled={isLoading || (!isPremium && hasReachedLimit)}
+                disabled={isLoadingKey('chat') || (!isPremium && hasReachedLimit)}
               />
             </div>
           )}
@@ -384,17 +391,17 @@ const ChatIAV2 = ({ user }) => {
                       ? "Limite atteinte - Passez Premium pour continuer" 
                       : "Tapez votre message..."
                   }
-                  disabled={isLoading || (!isPremium && hasReachedLimit)}
+                  disabled={isLoadingKey('chat') || (!isPremium && hasReachedLimit)}
                   className="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   rows="2"
                 />
               </div>
               <button
                 onClick={() => handleSendMessage()}
-                disabled={!inputMessage.trim() || isLoading || (!isPremium && hasReachedLimit)}
+                disabled={!inputMessage.trim() || isLoadingKey('chat') || (!isPremium && hasReachedLimit)}
                 className="bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-600 disabled:cursor-not-allowed text-white px-4 py-3 rounded-xl transition-colors flex items-center justify-center"
               >
-                {isLoading ? (
+                {isLoadingKey('chat') ? (
                   <svg className="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>

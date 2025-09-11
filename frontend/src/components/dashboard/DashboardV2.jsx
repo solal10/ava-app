@@ -4,6 +4,9 @@ import { healthAPI, mealAPI } from '../../utils/api';
 import { useSubscription } from '../../contexts/SubscriptionContext';
 import garminBridge from '../../sdk/garminBridge';
 import config from '../../config/env';
+import { useApiErrorHandler } from '../../hooks/useErrorHandler';
+import { useLoading } from '../../hooks/useLoading';
+import { LoadableContent, LoadableButton } from '../common/SmartLoader';
 
 // Composant CircularScoreGauge
 const CircularScoreGauge = ({ score, size = 120 }) => {
@@ -285,8 +288,6 @@ const DashboardV2 = () => {
   const [todayMeals, setTodayMeals] = useState([]);
   const [mealData, setMealData] = useState([]);
   const [goals, setGoals] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [aiMessage, setAIMessage] = useState('Welcome to your health dashboard');
   const [userName] = useState(() => {
     const user = JSON.parse(localStorage.getItem('user') || '{}');
@@ -296,6 +297,10 @@ const DashboardV2 = () => {
     isConnected: false, 
     loading: false 
   });
+
+  // Utiliser les nouveaux hooks de loading
+  const { isLoading, startLoading, stopLoading, isLoadingKey } = useLoading();
+  const { error: apiError, handleApiError, apiCall } = useApiErrorHandler('DashboardV2');
 
   // Vérifier le statut de connexion Garmin
   const checkGarminStatus = () => {
@@ -403,6 +408,7 @@ const DashboardV2 = () => {
   // Charger les données de santé
   const loadHealthData = async () => {
     try {
+      startLoading('health');
       console.log('🔄 Chargement des VRAIES données de santé...');
       const response = await healthAPI.getHealthData();
       
@@ -416,17 +422,20 @@ const DashboardV2 = () => {
         setHealthDataState(response);
       } else {
         console.warn('⚠️ Données de santé invalides:', response);
-        setError('Format de données de santé invalide');
+        handleApiError(new Error('Format de données de santé invalide'), 'chargement des données de santé');
       }
     } catch (err) {
       console.error('❌ Erreur lors du chargement des données de santé:', err);
-      setError('Impossible de charger les données de santé');
+      handleApiError(err, 'chargement des données de santé');
+    } finally {
+      stopLoading('health');
     }
   };
 
   // Charger les données de repas
   const loadMealData = async () => {
     try {
+      startLoading('meals');
       console.log('🔄 Chargement des VRAIS repas...');
       const response = await mealAPI.getMeals();
       
@@ -443,12 +452,12 @@ const DashboardV2 = () => {
         setTodayMeals([]);
         setMealData([]);
       }
-      setLoading(false);
     } catch (err) {
       console.error('❌ Erreur lors du chargement des repas:', err);
-      setError('Impossible de charger les données des repas');
+      handleApiError(err, 'chargement des repas');
       setTodayMeals([]);
-      setLoading(false);
+    } finally {
+      stopLoading('meals');
     }
   };
 
@@ -480,17 +489,27 @@ const DashboardV2 = () => {
     const initDashboard = async () => {
       console.log('🚀 Initialisation dashboard...');
       
-      // Vérifier le statut Garmin
-      checkGarminStatus();
+      // Démarrer le loading global
+      startLoading('dashboard');
       
-      // Charger les données en parallèle
-      await Promise.all([
-        loadHealthData(),
-        loadMealData()
-      ]);
-      
-      // Charger les objectifs par défaut si pas de données Garmin
-      loadDefaultGoals();
+      try {
+        // Vérifier le statut Garmin
+        checkGarminStatus();
+        
+        // Charger les données en parallèle avec loading states spécifiques
+        await Promise.all([
+          apiCall(() => loadHealthData(), 'health-data'),
+          apiCall(() => loadMealData(), 'meal-data')
+        ]);
+        
+        // Charger les objectifs par défaut si pas de données Garmin
+        loadDefaultGoals();
+      } catch (error) {
+        console.error('❌ Erreur initialisation dashboard:', error);
+        handleApiError(error, 'initialisation du dashboard');
+      } finally {
+        stopLoading('dashboard');
+      }
     };
 
     initDashboard();
@@ -549,27 +568,31 @@ const DashboardV2 = () => {
             </div>
             <div className="flex gap-3">
               {!garminStatus.isConnected ? (
-                <button
+                <LoadableButton
                   onClick={connectGarmin}
-                  disabled={garminStatus.loading}
-                  className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                  isLoading={garminStatus.loading}
+                  loadingText="Connecting..."
+                  variant="primary"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-medium"
                 >
-                  {garminStatus.loading ? 'Connecting...' : 'Connect Garmin'}
-                </button>
+                  Connect Garmin
+                </LoadableButton>
               ) : (
                 <>
-                  <button
+                  <LoadableButton
                     onClick={syncGarminData}
-                    className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                    variant="primary"
+                    className="bg-green-600 hover:bg-green-700 text-white font-medium"
                   >
                     🔄 Sync Data
-                  </button>
-                  <button
+                  </LoadableButton>
+                  <LoadableButton
                     onClick={disconnectGarmin}
-                    className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                    variant="danger"
+                    className="bg-red-600 hover:bg-red-700 text-white font-medium"
                   >
                     Disconnect
-                  </button>
+                  </LoadableButton>
                 </>
               )}
             </div>
@@ -581,20 +604,33 @@ const DashboardV2 = () => {
           
           {/* Left Column - Health Score */}
           <div className="lg:col-span-1 space-y-6">
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-600 text-center">
-              <h2 className="text-xl font-semibold text-slate-100 mb-4">Health Score</h2>
-              <CircularScoreGauge score={calculateHealthScore()} size={140} />
-              <p className="text-slate-400 mt-4 text-sm">
-                Based on your recent activity, sleep, and wellness metrics
-              </p>
-            </div>
+            <LoadableContent
+              isLoading={isLoadingKey('health')}
+              loaderType="metric"
+              errorMessage="Impossible de charger le score de santé"
+            >
+              <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-600 text-center">
+                <h2 className="text-xl font-semibold text-slate-100 mb-4">Health Score</h2>
+                <CircularScoreGauge score={calculateHealthScore()} size={140} />
+                <p className="text-slate-400 mt-4 text-sm">
+                  Based on your recent activity, sleep, and wellness metrics
+                </p>
+              </div>
+            </LoadableContent>
 
             <IAInsightCard insight="Great progress this week! Your sleep quality has improved by 15%. Keep maintaining your evening routine." />
           </div>
 
           {/* Middle Column - Health Chart */}
           <div className="lg:col-span-2">
-            <HealthChart data={healthData} />
+            <LoadableContent
+              isLoading={isLoadingKey('health')}
+              loaderType="card"
+              lines={6}
+              errorMessage="Impossible de charger les graphiques de santé"
+            >
+              <HealthChart data={healthData} />
+            </LoadableContent>
           </div>
 
           {/* Right Column - Quick Stats */}
@@ -654,11 +690,21 @@ const DashboardV2 = () => {
             <span className="text-slate-400 text-sm">Real-time updates from your devices</span>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {goals.map(goal => (
-              <GoalCard key={goal.id} goal={goal} />
-            ))}
-          </div>
+          <LoadableContent
+            isLoading={isLoadingKey('dashboard') || isLoadingKey('health')}
+            isEmpty={goals.length === 0 && !isLoadingKey('dashboard') && !isLoadingKey('health')}
+            loaderType="grid"
+            items={4}
+            columns={4}
+            emptyMessage="Aucun objectif disponible"
+            errorMessage="Impossible de charger les objectifs"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {goals.map(goal => (
+                <GoalCard key={goal.id} goal={goal} />
+              ))}
+            </div>
+          </LoadableContent>
         </div>
 
         {/* Meals Section */}
@@ -673,11 +719,21 @@ const DashboardV2 = () => {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {todayMeals.map(meal => (
-              <MealCard key={meal.id} meal={meal} />
-            ))}
-          </div>
+          <LoadableContent
+            isLoading={isLoadingKey('meals')}
+            isEmpty={todayMeals.length === 0 && !isLoadingKey('meals')}
+            loaderType="grid"
+            items={3}
+            columns={3}
+            emptyMessage="Aucun repas ajouté aujourd'hui"
+            errorMessage="Impossible de charger les repas"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {todayMeals.map(meal => (
+                <MealCard key={meal.id} meal={meal} />
+              ))}
+            </div>
+          </LoadableContent>
         </div>
 
       </div>
