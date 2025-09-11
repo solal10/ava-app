@@ -1,4 +1,9 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+let stripe = null;
+if (process.env.STRIPE_SECRET_KEY) {
+  stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+} else {
+  console.warn('⚠️ STRIPE_SECRET_KEY non configuré - Paiements désactivés');
+}
 const User = require('../models/user.model');
 
 // Configuration des prix par abonnement (en centimes)
@@ -29,6 +34,10 @@ class PaymentService {
   // Créer une session de paiement Stripe Checkout
   async createCheckoutSession(userId, subscriptionLevel, billingPeriod = 'monthly') {
     try {
+      if (!stripe) {
+        throw new Error('Service de paiement non configuré');
+      }
+      
       if (!SUBSCRIPTION_PRICES[subscriptionLevel]) {
         throw new Error('Niveau d\'abonnement invalide');
       }

@@ -1,5 +1,6 @@
 const User = require('../../models/user.model');
 const aiChatService = require('../../services/ai-chat.service');
+const { asyncHandler, sentryService } = require('../../middlewares/sentry.middleware');
 
 // Modèle pour l'historique des conversations (simple cache en mémoire)
 const conversationHistory = new Map();
@@ -7,8 +8,15 @@ const conversationHistory = new Map();
 // Compteur de requêtes par utilisateur (simulé - à remplacer par une base de données)
 const userRequestCounts = {};
 
-exports.askCoach = async (req, res) => {
+exports.askCoach = asyncHandler(async (req, res) => {
+  const startTime = Date.now();
+  
   try {
+    // Breadcrumb pour tracer l'utilisation de l'IA
+    sentryService.addBreadcrumb('AI chat request started', 'ai', 'info', {
+      userId: req.userId,
+      questionLength: req.body.question?.length || 0
+    });
     const { userId, subscriptionLevel, user } = req;
     const { question, context, responseType = 'health_coach' } = req.body;
 
@@ -93,14 +101,24 @@ exports.askCoach = async (req, res) => {
       timestamp: new Date().toISOString()
     });
 
+    // Métriques de performance
+    const duration = Date.now() - startTime;
+    sentryService.capturePerformanceMetric('ai_chat_duration', duration, 'ms', {
+      provider: 'anthropic', // ou le provider utilisé
+      userId: userId
+    });
+
   } catch (error) {
+    // Capturer l'erreur IA avec Sentry
+    sentryService.captureAIError(error, 'anthropic', req.userId, req.body.question);
+    
     console.error('❌ Erreur chat IA:', error);
     res.status(500).json({ 
       message: 'Erreur lors de la communication avec l\'IA', 
       error: error.message 
     });
   }
-};
+});
 
 // Obtenir l'historique de conversation d'un utilisateur
 exports.getConversationHistory = async (req, res) => {

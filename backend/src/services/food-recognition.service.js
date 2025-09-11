@@ -1,4 +1,10 @@
-const tf = require('@tensorflow/tfjs-node');
+let tf = null;
+try {
+  tf = require('@tensorflow/tfjs-node');
+} catch (error) {
+  console.warn('⚠️ TensorFlow.js non disponible:', error.message);
+  console.warn('🔧 Mode dégradé: reconnaissance alimentaire désactivée');
+}
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
@@ -17,6 +23,12 @@ class FoodRecognitionService {
   async initialize() {
     try {
       console.log('🧠 Initialisation du service de reconnaissance alimentaire...');
+      
+      if (!tf) {
+        console.warn('⚠️ TensorFlow.js non disponible - Service en mode dégradé');
+        this.isModelLoaded = false;
+        return;
+      }
       
       await this.loadModel();
       await this.loadFoodLabels();

@@ -14,14 +14,11 @@ class GarminController {
     };
 
     // Validation des variables d'environnement requises
-    if (!this.config.clientId) {
-      throw new Error('GARMIN_CLIENT_ID environment variable is required');
-    }
-    if (!this.config.clientSecret) {
-      throw new Error('GARMIN_CLIENT_SECRET environment variable is required');
-    }
-    if (!this.config.redirectUri) {
-      throw new Error('GARMIN_REDIRECT_URI or TUNNEL_URL environment variable is required');
+    this.isConfigured = !!(this.config.clientId && this.config.clientSecret && this.config.redirectUri);
+    
+    if (!this.isConfigured) {
+      console.warn('⚠️ Configuration Garmin incomplète - Service désactivé');
+      console.warn('🔧 Variables requises: GARMIN_CLIENT_ID, GARMIN_CLIENT_SECRET, GARMIN_REDIRECT_URI/TUNNEL_URL');
     }
     
     // Cache pour les code_verifier (TTL 15min)
@@ -44,6 +41,13 @@ class GarminController {
   // Méthode OAuth - Initier la connexion Garmin
   async login(req, res) {
     try {
+      if (!this.isConfigured) {
+        return res.status(503).json({
+          error: 'Service Garmin non configuré',
+          message: 'La configuration Garmin est incomplète'
+        });
+      }
+      
       const correlationId = crypto.randomBytes(4).toString('hex');
       console.log(`[${correlationId}] 🔗 GET /auth/garmin/login - Génération PKCE`);
       

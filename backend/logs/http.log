@@ -1,0 +1,458 @@
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 18:49:38'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 18:49:38'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 18:49:38'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 18:49:38'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 18:49:38'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 18:49:38'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 18:51:39'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 18:51:39'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 18:51:39'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 18:51:39'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 18:51:39'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'ava-app-test',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 18:51:39'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 18:51:40'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 18:55:48'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 18:55:48'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 18:55:48'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 18:55:48'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 18:55:48'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'ava-app-test',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 18:55:48'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 18:55:48'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 18:55:49'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 18:55:49'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 18:55:49'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 18:55:49'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'ava-app-test',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 18:55:49'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 18:58:39'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 18:58:39'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 18:58:39'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 18:58:39'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 18:58:39'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'ava-app-test',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 18:58:39'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 18:58:40'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 18:59:23'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 18:59:23'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 18:59:23'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 18:59:23'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 18:59:23'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'ava-app-test',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 18:59:23'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 18:59:23'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:12:37'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:12:38'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:12:38'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:12:38'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:12:38'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:12:38'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:15:12'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:15:12'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:15:12'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:15:12'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:15:12'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:15:12'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffo5uxo7nhkg',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /',
+  timestamp: '2025-09-11 19:15:21'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffo5uxo7nhkg',
+  statusCode: 200,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET / - 200 (2ms)',
+  timestamp: '2025-09-11 19:15:21'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffo60nxfk16m',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /health',
+  timestamp: '2025-09-11 19:15:29'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffo60nxfk16m',
+  statusCode: 200,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /health - 200 (2ms)',
+  timestamp: '2025-09-11 19:15:29'
+}

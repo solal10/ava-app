@@ -1,5 +1,5 @@
 const admin = require('firebase-admin');
-const User = require('../models/User.model');
+const User = require('../models/user.model');
 
 class FirebaseService {
     constructor() {
@@ -10,6 +10,22 @@ class FirebaseService {
 
     initializeFirebase() {
         try {
+            // Vérifier si toutes les variables Firebase sont configurées
+            const requiredVars = [
+                'FIREBASE_PROJECT_ID',
+                'FIREBASE_PRIVATE_KEY',
+                'FIREBASE_CLIENT_EMAIL'
+            ];
+            
+            const missingVars = requiredVars.filter(varName => !process.env[varName]);
+            
+            if (missingVars.length > 0) {
+                console.warn('⚠️ Configuration Firebase incomplète - Service désactivé');
+                console.warn(`🔧 Variables manquantes: ${missingVars.join(', ')}`);
+                this.initialized = false;
+                return;
+            }
+            
             const serviceAccount = {
                 type: "service_account",
                 project_id: process.env.FIREBASE_PROJECT_ID,

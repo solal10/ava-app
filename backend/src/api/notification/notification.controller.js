@@ -1,10 +1,27 @@
 // const { notificationService } = require('../../services/notification.service');
-const firebaseService = require('../../services/firebase.service');
-const User = require('../../models/User.model');
+let firebaseService = null;
+try {
+  firebaseService = require('../../services/firebase.service');
+} catch (error) {
+  console.warn('⚠️ Firebase service non disponible:', error.message);
+}
+
+let User = null;
+try {
+  User = require('../../models/user.model');
+} catch (error) {
+  console.warn('⚠️ User model non disponible:', error.message);
+}
 
 // Envoyer une notification à un utilisateur
 exports.sendNotification = async (req, res) => {
   try {
+    if (!firebaseService) {
+      return res.status(503).json({
+        message: 'Service de notification non configuré'
+      });
+    }
+    
     const { userId, notification, options = {} } = req.body;
 
     if (!userId || !notification || !notification.title || !notification.body) {
