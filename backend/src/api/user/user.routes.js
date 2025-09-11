@@ -195,6 +195,97 @@ router.get('/profile', authMiddleware, userController.getProfile);
 
 /**
  * @swagger
+ * /api/user/preferences:
+ *   put:
+ *     tags: [Users]
+ *     summary: Mettre à jour les préférences utilisateur
+ *     description: Met à jour les préférences de notifications et de coaching
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/UserPreferences'
+ *     responses:
+ *       200:
+ *         description: Préférences mises à jour avec succès
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: "Préférences mises à jour"
+ *                 preferences:
+ *                   $ref: '#/components/schemas/UserPreferences'
+ *       401:
+ *         $ref: '#/components/responses/UnauthorizedError'
+ */
+router.put('/preferences', authMiddleware, userController.updatePreferences);
+
+/**
+ * @swagger
+ * /api/user/cookie-consents:
+ *   put:
+ *     tags: [Users]
+ *     summary: Mettre à jour les consentements de cookies
+ *     description: Gère les consentements aux cookies conformément CNIL/RGPD
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - cookieConsents
+ *             properties:
+ *               cookieConsents:
+ *                 type: object
+ *                 properties:
+ *                   essential:
+ *                     type: boolean
+ *                     default: true
+ *                     description: Cookies essentiels (toujours activés)
+ *                   functional:
+ *                     type: boolean
+ *                     description: Cookies de préférences utilisateur
+ *                   analytics:
+ *                     type: boolean
+ *                     description: Cookies d'analyse d'usage anonymisée
+ *                   marketing:
+ *                     type: boolean
+ *                     description: Cookies de personnalisation marketing
+ *     responses:
+ *       200:
+ *         description: Consentements mis à jour avec succès
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: "Consentements cookies mis à jour"
+ *                 cookieConsents:
+ *                   type: object
+ *       401:
+ *         $ref: '#/components/responses/UnauthorizedError'
+ */
+router.put('/cookie-consents', authMiddleware, userController.updateCookieConsents);
+
+/**
+ * @swagger
  * /api/user/{id}:
  *   get:
  *     tags: [Users]
@@ -259,41 +350,5 @@ router.get('/profile', authMiddleware, userController.getProfile);
  */
 router.get('/:id', authMiddleware, userController.getUserById);
 router.put('/:id', authMiddleware, userController.updateUser);
-
-/**
- * @swagger
- * /api/user/preferences:
- *   put:
- *     tags: [Users]
- *     summary: Mettre à jour les préférences utilisateur
- *     description: Met à jour les préférences de notifications et de coaching
- *     security:
- *       - bearerAuth: []
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/UserPreferences'
- *     responses:
- *       200:
- *         description: Préférences mises à jour avec succès
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 success:
- *                   type: boolean
- *                   example: true
- *                 message:
- *                   type: string
- *                   example: "Préférences mises à jour"
- *                 preferences:
- *                   $ref: '#/components/schemas/UserPreferences'
- *       401:
- *         $ref: '#/components/responses/UnauthorizedError'
- */
-router.put('/preferences', authMiddleware, userController.updatePreferences);
 
 module.exports = router;

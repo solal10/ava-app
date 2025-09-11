@@ -1,7 +1,9 @@
 const jwt = require('jsonwebtoken');
 const User = require('../../models/user.model');
+const securityUtils = require('../../utils/security.utils');
+const mongoose = require('mongoose');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'secret-dev-only';
+const JWT_SECRET = securityUtils.getJWTSecret();
 
 exports.register = async (req, res) => {
   try {
@@ -303,8 +305,42 @@ exports.testLogin = async (req, res) => {
 
     const isPremium = subscriptionLevel !== 'explore';
 
+    // Générer un ObjectId valide pour le test (toujours le même pour cohérence)
+    const testUserId = new mongoose.Types.ObjectId('507f1f77bcf86cd799439011');
+
+    // Supprimer l'ancien user test s'il existe et créer le nouveau
+    await User.deleteOne({ email: 'test@example.com' });
+    
+    await User.create({
+      _id: testUserId,
+      email: 'test@example.com',
+      password: 'testpassword123', // Sera hashé automatiquement par le middleware pre-save
+      prenom: 'Utilisateur Test',
+      isPremium,
+      subscriptionLevel,
+      stats: {
+        sommeil: 70,
+        stress: 50,
+        hydratation: 60,
+        energie: 65,
+        activite: 50
+      },
+      goals: {
+        sommeil: 80,
+        stress: 30,
+        hydratation: 80,
+        energie: 80,
+        activite: 70
+      },
+      preferences: {
+        objectif: 'bien_etre',
+        etatMental: 'motive',
+        activiteRecente: 'course à pied'
+      }
+    });
+
     const token = jwt.sign(
-      { userId: 'test-user', subscriptionLevel, isPremium },
+      { userId: testUserId.toString(), subscriptionLevel, isPremium },
       JWT_SECRET,
       { expiresIn: '1d' }
     );
@@ -313,7 +349,7 @@ exports.testLogin = async (req, res) => {
       message: 'Connexion de test réussie',
       token,
       user: {
-        id: 'test-user',
+        id: testUserId.toString(),
         email: 'test@example.com',
         prenom: 'Utilisateur Test',
         isPremium,
@@ -341,5 +377,40 @@ exports.testLogin = async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ message: 'Erreur lors de la connexion de test', error: error.message });
+  }
+};
+
+exports.updateCookieConsents = async (req, res) => {
+  try {
+    const { cookieConsents } = req.body;
+    
+    if (!cookieConsents || typeof cookieConsents !== 'object') {
+      return res.status(400).json({ message: 'Consentements cookies invalides' });
+    }
+
+    const user = await User.findById(req.userId);
+    if (!user) {
+      return res.status(404).json({ message: 'Utilisateur non trouvé' });
+    }
+
+    // Mise à jour des consentements cookies
+    if (cookieConsents.essential !== undefined) user.cookieConsents.essential = cookieConsents.essential;
+    if (cookieConsents.functional !== undefined) user.cookieConsents.functional = cookieConsents.functional;
+    if (cookieConsents.analytics !== undefined) user.cookieConsents.analytics = cookieConsents.analytics;
+    if (cookieConsents.marketing !== undefined) user.cookieConsents.marketing = cookieConsents.marketing;
+    
+    // Métadonnées de consentement
+    user.cookieConsents.consentDate = new Date();
+    user.cookieConsents.ipAddress = req.ip || req.connection.remoteAddress;
+    user.cookieConsents.userAgent = req.get('User-Agent');
+
+    await user.save();
+
+    res.status(200).json({ 
+      message: 'Consentements cookies mis à jour avec succès',
+      cookieConsents: user.cookieConsents
+    });
+  } catch (error) {
+    res.status(500).json({ message: 'Erreur lors de la mise à jour des consentements cookies', error: error.message });
   }
 };

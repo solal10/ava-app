@@ -21,6 +21,8 @@ const notificationRoutes = require('./src/api/notification/notification.routes')
 const emailRoutes = require('./src/api/email/email.routes');
 const analyticsRoutes = require('./src/api/analytics/analytics.routes');
 const backupRoutes = require('./src/api/backup/backup.routes');
+const gdprRoutes = require('./src/api/gdpr/gdpr.routes');
+const legalRoutes = require('./src/api/legal/legal.routes');
 
 // Configuration
 const app = express();
@@ -78,6 +80,8 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/email', emailRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/backup', backupRoutes);
+app.use('/api/gdpr', gdprRoutes);
+app.use('/api/legal', legalRoutes);
 
 // Route pour la page de résultat OAuth
 app.get('/auth/garmin/done', (req, res) => {
