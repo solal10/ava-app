@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">5.64% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/119</span>
+                <span class='fraction'>7/124</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">2% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/46</span>
+                <span class='fraction'>1/50</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">5.69% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/118</span>
+                <span class='fraction'>7/123</span>
             </div>
         
             
@@ -404,19 +404,33 @@
 <a name='L339'></a><a href='#L339'>339</a>
 <a name='L340'></a><a href='#L340'>340</a>
 <a name='L341'></a><a href='#L341'>341</a>
-<a name='L342'></a><a href='#L342'>342</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -435,6 +449,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -745,11 +763,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const stripe = <span class="cstat-no" title="statement not covered" >require('stripe')(process.env.STRIPE_SECRET_KEY);</span>
-const User = <span class="cstat-no" title="statement not covered" >require('../models/user.model');</span>
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">let stripe = null;
+if (process.env.STRIPE_SECRET_KEY) {
+  stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+} else <span class="missing-if-branch" title="else path not taken" >E</span>{
+<span class="cstat-no" title="statement not covered" >  console.warn('⚠️ STRIPE_SECRET_KEY non configuré - Paiements désactivés');</span>
+}
+const User = require('../models/user.model');
 &nbsp;
 // Configuration des prix par abonnement (en centimes)
-const SUBSCRIPTION_PRICES = <span class="cstat-no" title="statement not covered" >{</span>
+const SUBSCRIPTION_PRICES = {
   explore: { monthly: 0, yearly: 0 }, // Gratuit
   perform: { monthly: 999, yearly: 9999 }, // 9.99€/mois, 99.99€/an
   pro: { monthly: 1999, yearly: 19999 }, // 19.99€/mois, 199.99€/an
@@ -757,7 +780,7 @@ const SUBSCRIPTION_PRICES = <span class="cstat-no" title="statement not covered"
 };
 &nbsp;
 // Métadonnées des abonnements
-const SUBSCRIPTION_METADATA = <span class="cstat-no" title="statement not covered" >{</span>
+const SUBSCRIPTION_METADATA = {
   perform: {
     name: 'AVA Perform',
     features: ['Données cardiaques', 'Chat IA illimité', 'Programme personnalisé']
@@ -776,6 +799,10 @@ class PaymentService {
   // Créer une session de paiement Stripe Checkout
 <span class="fstat-no" title="function not covered" >  as</span>ync createCheckoutSession(userId, subscriptionLevel, billingPeriod = <span class="branch-0 cbranch-no" title="branch not covered" >'monthly')</span> {
 <span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      if (!stripe) {</span>
+<span class="cstat-no" title="statement not covered" >        throw new Error('Service de paiement non configuré');</span>
+      }
+      
 <span class="cstat-no" title="statement not covered" >      if (!SUBSCRIPTION_PRICES[subscriptionLevel]) {</span>
 <span class="cstat-no" title="statement not covered" >        throw new Error('Niveau d\'abonnement invalide');</span>
       }
@@ -1086,22 +1113,14 @@ class PaymentService {
   }
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >module.exports = new PaymentService();</span></pre></td></tr></table></pre>
+module.exports = new PaymentService();</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-<<<<<<< HEAD
-                at 2025-09-10T20:39:03.290Z
-=======
-<<<<<<< HEAD
-                at 2025-09-10T20:54:28.751Z
-=======
-                at 2025-09-10T16:03:16.383Z
->>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
->>>>>>> 24f9873ce8e4ecdaa78fb975801dba8720f08d0b
+                at 2025-09-11T16:55:54.953Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

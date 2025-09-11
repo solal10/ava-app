@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -78,36 +78,36 @@
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = <span class="cstat-no" title="statement not covered" >require('express');</span>
-const router = <span class="cstat-no" title="statement not covered" >express.Router();</span>
-const healthController = <span class="cstat-no" title="statement not covered" >require('./health.controller');</span>
-const { authMiddleware } = <span class="cstat-no" title="statement not covered" >require('../../middlewares/auth.middleware');</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = require('express');
+const router = express.Router();
+const healthController = require('./health.controller');
+const { authMiddleware } = require('../../middlewares/auth.middleware');
 &nbsp;
 // Routes protégées avec userId
-<span class="cstat-no" title="statement not covered" >router.post('/add/:userId', authMiddleware, healthController.addHealthEntry);</span>
-<span class="cstat-no" title="statement not covered" >router.get('/history/:userId', authMiddleware, healthController.getHealthHistory);</span>
-<span class="cstat-no" title="statement not covered" >router.get('/latest/:userId', authMiddleware, healthController.getLatestHealth);</span>
+router.post('/add/:userId', authMiddleware, healthController.addHealthEntry);
+router.get('/history/:userId', authMiddleware, healthController.getHealthHistory);
+router.get('/latest/:userId', authMiddleware, healthController.getLatestHealth);
 &nbsp;
 // Routes dashboard (sans userId - récupéré du token JWT)
-<span class="cstat-no" title="statement not covered" >router.get('/', authMiddleware, healthController.getDashboardHealthData);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/add', authMiddleware, healthController.addUserHealthEntry);</span>
+router.get('/', authMiddleware, healthController.getDashboardHealthData);
+router.post('/add', authMiddleware, healthController.addUserHealthEntry);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >module.exports = router;</span>
+module.exports = router;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -115,15 +115,7 @@ const { authMiddleware } = <span class="cstat-no" title="statement not covered" 
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-<<<<<<< HEAD
-                at 2025-09-10T20:39:03.290Z
-=======
-<<<<<<< HEAD
-                at 2025-09-10T20:54:28.751Z
-=======
-                at 2025-09-10T16:03:16.383Z
->>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
->>>>>>> 24f9873ce8e4ecdaa78fb975801dba8720f08d0b
+                at 2025-09-11T16:55:54.953Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

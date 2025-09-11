@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">9.47% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/95</span>
+                <span class='fraction'>9/95</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">3.09% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/97</span>
+                <span class='fraction'>3/97</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">4.34% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/23</span>
+                <span class='fraction'>1/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">10.58% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/85</span>
+                <span class='fraction'>9/85</span>
             </div>
         
             
@@ -468,22 +468,22 @@
 <a name='L403'></a><a href='#L403'>403</a>
 <a name='L404'></a><a href='#L404'>404</a>
 <a name='L405'></a><a href='#L405'>405</a>
-<a name='L406'></a><a href='#L406'>406</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L406'></a><a href='#L406'>406</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -873,22 +873,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const axios = <span class="cstat-no" title="statement not covered" >require('axios');</span>
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">const axios = require('axios');
 &nbsp;
 class SpoonacularService {
-<span class="fstat-no" title="function not covered" >  co</span>nstructor() {
-<span class="cstat-no" title="statement not covered" >    this.apiKey = process.env.SPOONACULAR_API_KEY;</span>
-<span class="cstat-no" title="statement not covered" >    this.baseURL = 'https://api.spoonacular.com';</span>
-<span class="cstat-no" title="statement not covered" >    this.rateLimitDelay = 1000; </span>// 1 seconde entre les requêtes pour respecter les limites
-<span class="cstat-no" title="statement not covered" >    this.lastRequestTime = 0;</span>
+  constructor() {
+    this.apiKey = process.env.SPOONACULAR_API_KEY;
+    this.baseURL = 'https://api.spoonacular.com';
+    this.rateLimitDelay = 1000; // 1 seconde entre les requêtes pour respecter les limites
+    this.lastRequestTime = 0;
     
-<span class="cstat-no" title="statement not covered" >    if (!this.apiKey || this.apiKey === 'your_spoonacular_api_key_here') {</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!this.apiKey || this.apiKey === 'your_spoonacular_api_key_here') {
 <span class="cstat-no" title="statement not covered" >      console.warn('⚠️  SPOONACULAR_API_KEY manquante ou non configurée');</span>
 <span class="cstat-no" title="statement not covered" >      console.warn('🔑 Obtenez une clé API sur: https://spoonacular.com/food-api');</span>
 <span class="cstat-no" title="statement not covered" >      this.mockMode = true;</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      console.log('✅ Service Spoonacular initialisé avec API key');</span>
-<span class="cstat-no" title="statement not covered" >      this.mockMode = false;</span>
+      console.log('✅ Service Spoonacular initialisé avec API key');
+      this.mockMode = false;
     }
   }
 &nbsp;
@@ -1278,22 +1278,14 @@ class SpoonacularService {
   }
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >module.exports = new SpoonacularService();</span></pre></td></tr></table></pre>
+module.exports = new SpoonacularService();</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-<<<<<<< HEAD
-                at 2025-09-10T20:39:03.224Z
-=======
-<<<<<<< HEAD
-                at 2025-09-10T20:54:28.675Z
-=======
-                at 2025-09-10T16:03:16.345Z
->>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
->>>>>>> 24f9873ce8e4ecdaa78fb975801dba8720f08d0b
+                at 2025-09-11T16:55:54.857Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

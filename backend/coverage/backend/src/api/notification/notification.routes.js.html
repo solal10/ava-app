@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/20</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/20</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -90,72 +90,68 @@
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = <span class="cstat-no" title="statement not covered" >require('express');</span>
-const router = <span class="cstat-no" title="statement not covered" >express.Router();</span>
-const notificationController = <span class="cstat-no" title="statement not covered" >require('./notification.controller');</span>
-const { authMiddleware, adminMiddleware } = <span class="cstat-no" title="statement not covered" >require('../../middlewares/auth.middleware');</span>
-const { apiLimiter, generalLimiter } = <span class="cstat-no" title="statement not covered" >require('../../middlewares/security.middleware');</span>
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">const express = require('express');
+const router = express.Router();
+const notificationController = require('./notification.controller');
+const { authMiddleware, adminMiddleware } = require('../../middlewares/auth.middleware');
+const { apiLimiter, generalLimiter } = require('../../middlewares/security.middleware');
 &nbsp;
 // Routes pour les utilisateurs
-<span class="cstat-no" title="statement not covered" >router.post('/register-token', authMiddleware, generalLimiter, notificationController.registerFCMToken);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/unregister-token', authMiddleware, generalLimiter, notificationController.unregisterFCMToken);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/subscribe-topic', authMiddleware, generalLimiter, notificationController.subscribeToTopic);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/unsubscribe-topic', authMiddleware, generalLimiter, notificationController.unsubscribeFromTopic);</span>
+router.post('/register-token', authMiddleware, generalLimiter, notificationController.registerFCMToken);
+router.post('/unregister-token', authMiddleware, generalLimiter, notificationController.unregisterFCMToken);
+router.post('/subscribe-topic', authMiddleware, generalLimiter, notificationController.subscribeToTopic);
+router.post('/unsubscribe-topic', authMiddleware, generalLimiter, notificationController.unsubscribeFromTopic);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >router.get('/preferences', authMiddleware, notificationController.getNotificationPreferences);</span>
-<span class="cstat-no" title="statement not covered" >router.put('/preferences', authMiddleware, generalLimiter, notificationController.updateNotificationPreferences);</span>
-<span class="cstat-no" title="statement not covered" >router.get('/history', authMiddleware, notificationController.getNotificationHistory);</span>
-<span class="cstat-no" title="statement not covered" >router.get('/templates', authMiddleware, notificationController.getNotificationTemplates);</span>
+router.get('/preferences', authMiddleware, notificationController.getNotificationPreferences);
+router.put('/preferences', authMiddleware, generalLimiter, notificationController.updateNotificationPreferences);
+router.get('/history', authMiddleware, notificationController.getNotificationHistory);
+router.get('/templates', authMiddleware, notificationController.getNotificationTemplates);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >router.post('/test', authMiddleware, generalLimiter, notificationController.testNotification);</span>
+router.post('/test', authMiddleware, generalLimiter, notificationController.testNotification);
 &nbsp;
 // Routes administratives (nécessitent privilèges admin)
-<span class="cstat-no" title="statement not covered" >router.post('/send', [authMiddleware, adminMiddleware], apiLimiter, notificationController.sendNotification);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/send-bulk', [authMiddleware, adminMiddleware], apiLimiter, notificationController.sendBulkNotifications);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/send-topic', [authMiddleware, adminMiddleware], apiLimiter, notificationController.sendTopicNotification);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/send-template', [authMiddleware, adminMiddleware], apiLimiter, notificationController.sendTemplateNotification);</span>
+router.post('/send', [authMiddleware, adminMiddleware], apiLimiter, notificationController.sendNotification);
+router.post('/send-bulk', [authMiddleware, adminMiddleware], apiLimiter, notificationController.sendBulkNotifications);
+router.post('/send-topic', [authMiddleware, adminMiddleware], apiLimiter, notificationController.sendTopicNotification);
+router.post('/send-template', [authMiddleware, adminMiddleware], apiLimiter, notificationController.sendTemplateNotification);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >router.get('/status', [authMiddleware, adminMiddleware], notificationController.getServiceStatus);</span>
+router.get('/status', [authMiddleware, adminMiddleware], notificationController.getServiceStatus);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >module.exports = router;</span></pre></td></tr></table></pre>
+module.exports = router;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-<<<<<<< HEAD
-                at 2025-09-10T20:39:03.290Z
-=======
-                at 2025-09-10T20:54:28.751Z
->>>>>>> 24f9873ce8e4ecdaa78fb975801dba8720f08d0b
+                at 2025-09-11T16:55:54.953Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

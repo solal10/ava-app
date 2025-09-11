@@ -3,3 +3,11 @@ node_modules/
 .DS_Store
 dist/
 build/
+backend/coverage/
+*.bak
+backend/test-*.js
+frontend/cleanup-*
+frontend/*-report.md
+frontend/test-*.cjs
+frontend/*.sh
+frontend/generate-*.js

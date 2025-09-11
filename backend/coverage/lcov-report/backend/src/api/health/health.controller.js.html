@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">8.64% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/81</span>
+                <span class='fraction'>7/81</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">9.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/75</span>
+                <span class='fraction'>7/75</span>
             </div>
         
             
@@ -295,14 +295,14 @@
 <a name='L230'></a><a href='#L230'>230</a>
 <a name='L231'></a><a href='#L231'>231</a>
 <a name='L232'></a><a href='#L232'>232</a>
-<a name='L233'></a><a href='#L233'>233</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L233'></a><a href='#L233'>233</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -350,7 +350,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -391,9 +391,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -414,10 +414,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -475,7 +475,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -527,11 +527,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Health = <span class="cstat-no" title="statement not covered" >require('../../models/health.model');</span>
-const User = <span class="cstat-no" title="statement not covered" >require('../../models/user.model');</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Health = require('../../models/health.model');
+const User = require('../../models/user.model');
 &nbsp;
 // Ajouter une nouvelle entrée de santé
-<span class="cstat-no" title="statement not covered" >exports.addHealthEntry = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {</span>
+exports.addHealthEntry = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
 <span class="cstat-no" title="statement not covered" >  try {</span>
     const { userId } = <span class="cstat-no" title="statement not covered" >req.params;</span>
     const healthData = <span class="cstat-no" title="statement not covered" >req.body;</span>
@@ -582,7 +582,7 @@ const User = <span class="cstat-no" title="statement not covered" >require('../.
 };
 &nbsp;
 // Récupérer l'historique des métriques de santé d'un utilisateur
-<span class="cstat-no" title="statement not covered" >exports.getHealthHistory = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {</span>
+exports.getHealthHistory = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
 <span class="cstat-no" title="statement not covered" >  try {</span>
     const { userId } = <span class="cstat-no" title="statement not covered" >req.params;</span>
     const { limit = <span class="branch-0 cbranch-no" title="branch not covered" >30,</span> skip = <span class="branch-0 cbranch-no" title="branch not covered" >0,</span> startDate, endDate } = <span class="cstat-no" title="statement not covered" >req.query;</span>
@@ -623,7 +623,7 @@ const User = <span class="cstat-no" title="statement not covered" >require('../.
 };
 &nbsp;
 // Récupérer la dernière entrée de santé d'un utilisateur
-<span class="cstat-no" title="statement not covered" >exports.getLatestHealth = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {</span>
+exports.getLatestHealth = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
 <span class="cstat-no" title="statement not covered" >  try {</span>
     const { userId } = <span class="cstat-no" title="statement not covered" >req.params;</span>
 &nbsp;
@@ -646,7 +646,7 @@ const User = <span class="cstat-no" title="statement not covered" >require('../.
 };
 &nbsp;
 // Récupérer les données de santé pour le dashboard (format spécifique)
-<span class="cstat-no" title="statement not covered" >exports.getDashboardHealthData = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {</span>
+exports.getDashboardHealthData = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
 <span class="cstat-no" title="statement not covered" >  try {</span>
     const userId = <span class="cstat-no" title="statement not covered" >req.user.id;</span> // Récupéré depuis le token JWT
 <span class="cstat-no" title="statement not covered" >    console.log('📄 Récupération des données dashboard santé pour userId:', userId);</span>
@@ -707,7 +707,7 @@ const User = <span class="cstat-no" title="statement not covered" >require('../.
 };
 &nbsp;
 // Ajouter une entrée de santé pour l'utilisateur connecté (depuis le token)
-<span class="cstat-no" title="statement not covered" >exports.addUserHealthEntry = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {</span>
+exports.addUserHealthEntry = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
 <span class="cstat-no" title="statement not covered" >  try {</span>
     const userId = <span class="cstat-no" title="statement not covered" >req.user.id;</span> // Récupéré depuis le token JWT
     const healthData = <span class="cstat-no" title="statement not covered" >req.body;</span>
@@ -766,15 +766,7 @@ const User = <span class="cstat-no" title="statement not covered" >require('../.
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-<<<<<<< HEAD
-                at 2025-09-10T20:39:03.224Z
-=======
-<<<<<<< HEAD
-                at 2025-09-10T20:54:28.675Z
-=======
-                at 2025-09-10T16:03:16.345Z
->>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
->>>>>>> 24f9873ce8e4ecdaa78fb975801dba8720f08d0b
+                at 2025-09-11T16:55:54.857Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

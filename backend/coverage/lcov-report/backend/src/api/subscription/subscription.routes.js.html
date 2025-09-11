@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -80,40 +80,40 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = <span class="cstat-no" title="statement not covered" >require('express');</span>
-const router = <span class="cstat-no" title="statement not covered" >express.Router();</span>
-const subscriptionController = <span class="cstat-no" title="statement not covered" >require('./subscription.controller');</span>
-const { authMiddleware } = <span class="cstat-no" title="statement not covered" >require('../../middlewares/auth.middleware');</span>
-const { validateUserProfile, handleValidationErrors } = <span class="cstat-no" title="statement not covered" >require('../../middlewares/validation.middleware');</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = require('express');
+const router = express.Router();
+const subscriptionController = require('./subscription.controller');
+const { authMiddleware } = require('../../middlewares/auth.middleware');
+const { validateUserProfile, handleValidationErrors } = require('../../middlewares/validation.middleware');
 &nbsp;
 // Routes publiques (webhooks)
-<span class="cstat-no" title="statement not covered" >router.post('/webhook/stripe', express.raw({type: 'application/json'}), subscriptionController.handleStripeWebhook);</span>
+router.post('/webhook/stripe', express.raw({type: 'application/json'}), subscriptionController.handleStripeWebhook);
 &nbsp;
 // Routes protégées
-<span class="cstat-no" title="statement not covered" >router.get('/', authMiddleware, subscriptionController.getCurrentSubscription);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/create-session', authMiddleware, subscriptionController.createPaymentSession);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/cancel', authMiddleware, subscriptionController.cancelSubscription);</span>
-<span class="cstat-no" title="statement not covered" >router.get('/history', authMiddleware, subscriptionController.getPaymentHistory);</span>
-<span class="cstat-no" title="statement not covered" >router.post('/portal', authMiddleware, subscriptionController.createPortalSession);</span>
+router.get('/', authMiddleware, subscriptionController.getCurrentSubscription);
+router.post('/create-session', authMiddleware, subscriptionController.createPaymentSession);
+router.post('/cancel', authMiddleware, subscriptionController.cancelSubscription);
+router.get('/history', authMiddleware, subscriptionController.getPaymentHistory);
+router.post('/portal', authMiddleware, subscriptionController.createPortalSession);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >module.exports = router;</span>
+module.exports = router;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -121,15 +121,7 @@ const { validateUserProfile, handleValidationErrors } = <span class="cstat-no" t
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-<<<<<<< HEAD
-                at 2025-09-10T20:39:03.224Z
-=======
-<<<<<<< HEAD
-                at 2025-09-10T20:54:28.675Z
-=======
-                at 2025-09-10T16:03:16.345Z
->>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
->>>>>>> 24f9873ce8e4ecdaa78fb975801dba8720f08d0b
+                at 2025-09-11T16:55:54.857Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

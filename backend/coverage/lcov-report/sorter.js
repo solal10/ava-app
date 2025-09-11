@@ -27,10 +27,6 @@ var addSorting = (function() {
     function onFilterInput() {
         const searchValue = document.getElementById('fileSearch').value;
         const rows = document.getElementsByTagName('tbody')[0].children;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24f9873ce8e4ecdaa78fb975801dba8720f08d0b
 
         // Try to create a RegExp from the searchValue. If it fails (invalid regex),
         // it will be treated as a plain text search
@@ -41,8 +37,6 @@ var addSorting = (function() {
             searchRegex = null;
         }
 
-<<<<<<< HEAD
-=======
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
             let isMatch = false;
@@ -58,27 +52,6 @@ var addSorting = (function() {
             }
 
             row.style.display = isMatch ? '' : 'none';
-=======
->>>>>>> 24f9873ce8e4ecdaa78fb975801dba8720f08d0b
-        for (let i = 0; i < rows.length; i++) {
-            const row = rows[i];
-            let isMatch = false;
-
-            if (searchRegex) {
-                // If a valid regex was created, use it for matching
-                isMatch = searchRegex.test(row.textContent);
-            } else {
-                // Otherwise, fall back to the original plain text search
-                isMatch = row.textContent
-                    .toLowerCase()
-                    .includes(searchValue.toLowerCase());
-            }
-<<<<<<< HEAD
-
-            row.style.display = isMatch ? '' : 'none';
-=======
->>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
->>>>>>> 24f9873ce8e4ecdaa78fb975801dba8720f08d0b
         }
     }
 
