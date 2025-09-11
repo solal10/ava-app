@@ -64,4 +64,4 @@ const mealSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Meal', mealSchema);
+module.exports = mongoose.models.Meal || mongoose.model('Meal', mealSchema);

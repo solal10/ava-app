@@ -381,4 +381,4 @@ mealSchema.pre('save', function(next) {
   next();
 });
 
-module.exports = mongoose.model('NutritionPlan', nutritionPlanSchema);
+module.exports = mongoose.models.NutritionPlan || mongoose.model('NutritionPlan', nutritionPlanSchema);

@@ -1,4 +1,9 @@
 require('dotenv').config();
+
+// IMPORTANT: Sentry doit être initialisé AVANT tous les autres imports
+const sentryService = require('./src/services/sentry.service');
+sentryService.initialize();
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -14,6 +19,8 @@ const learnRoutes = require('./routes/learn.routes');
 const garminRoutes = require('./src/api/garmin/garmin.routes');
 const notificationRoutes = require('./src/api/notification/notification.routes');
 const emailRoutes = require('./src/api/email/email.routes');
+const analyticsRoutes = require('./src/api/analytics/analytics.routes');
+const backupRoutes = require('./src/api/backup/backup.routes');
 
 // Configuration
 const app = express();
@@ -26,11 +33,20 @@ const { rateLimit } = require('./src/middlewares/auth.middleware');
 const { sanitizeInput } = require('./src/middlewares/validation.middleware');
 const { helmetConfig, authLimiter, generalLimiter, securityMiddleware } = require('./src/middlewares/security.middleware');
 const { register, metricsMiddleware } = require('./src/middlewares/metrics.middleware');
+const { trackRequest, trackError } = require('./src/middlewares/analytics.middleware');
+const analyticsService = require('./src/services/analytics.service');
+
+// Middlewares Sentry (doit être en premier)
+app.use(sentryService.getRequestHandler());
+app.use(sentryService.getTracingHandler());
 
 // Middlewares de sécurité (appliqués en premier)
 app.use(helmetConfig);
 app.use(securityMiddleware);
 app.use(sanitizeInput);
+
+// Analytics et tracking middleware
+app.use(trackRequest);
 
 // Metrics middleware
 app.use(metricsMiddleware);
@@ -60,6 +76,8 @@ app.use('/api/garmin', garminRoutes);
 app.use('/auth/garmin', garminRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/email', emailRoutes);
+app.use('/api/analytics', analyticsRoutes);
+app.use('/api/backup', backupRoutes);
 
 // Route pour la page de résultat OAuth
 app.get('/auth/garmin/done', (req, res) => {
@@ -71,9 +89,34 @@ app.get('/auth/garmin/done', (req, res) => {
   res.redirect(frontendUrl);
 });
 
+// Configuration Swagger/OpenAPI
+const { swaggerDocs, swaggerUi } = require('./src/config/swagger.config');
+
+// Route pour la documentation API
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs, {
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: 'AVA Coach Santé - API Documentation',
+  swaggerOptions: {
+    persistAuthorization: true,
+    displayRequestDuration: true,
+    filter: true,
+    showExtensions: true,
+    showCommonExtensions: true
+  }
+}));
+
 // Base route pour vérifier que le serveur fonctionne
 app.get('/', (req, res) => {
-  res.json({ message: 'Bienvenue sur l\'API du Coach Santé Intelligent' });
+  res.json({ 
+    message: 'Bienvenue sur l\'API du Coach Santé Intelligent',
+    documentation: `${req.protocol}://${req.get('host')}/api-docs`,
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      metrics: '/metrics',
+      documentation: '/api-docs'
+    }
+  });
 });
 
 // Metrics endpoint for Prometheus
@@ -97,8 +140,27 @@ app.get('/health', (req, res) => {
   });
 });
 
+// Middleware d'erreurs Sentry (doit être avant le handler d'erreurs personnalisé)
+app.use(sentryService.getErrorHandler());
+
+// Middleware analytics pour les erreurs
+app.use(trackError);
+
 // Gestion des erreurs globales
 app.use((err, req, res, next) => {
+  // Log de l'erreur avec Sentry
+  sentryService.captureException(err, {
+    user: req.user ? {
+      id: req.user.id,
+      email: req.user.email
+    } : null,
+    extra: {
+      url: req.url,
+      method: req.method,
+      userAgent: req.get('User-Agent')
+    }
+  });
+  
   console.error(`❌ Erreur ${err.status || 500}:`, err.message);
   console.error(err.stack);
   
@@ -128,6 +190,7 @@ app.use('*', (req, res) => {
 const { foodRecognitionService } = require('./src/services/food-recognition.service');
 const notificationScheduler = require('./src/cron/notification-scheduler');
 const emailService = require('./src/services/email.service');
+const backupService = require('./src/services/backup.service');
 
 // Connexion à la base de données
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/ava-app';
@@ -144,6 +207,16 @@ mongoose.connect(mongoUri)
   })
   .then(() => {
     console.log('✅ Service email initialisé');
+    // Initialiser le service analytics
+    return analyticsService.initialize();
+  })
+  .then(() => {
+    console.log('✅ Service analytics initialisé');
+    // Initialiser le service de backup
+    return backupService.initialize();
+  })
+  .then(() => {
+    console.log('✅ Service de backup initialisé');
     // Démarrer le scheduler de notifications
     notificationScheduler.start();
   })
@@ -157,6 +230,8 @@ app.listen(PORT, () => {
   console.log(`🧠 TensorFlow.js: ${foodRecognitionService.isModelLoaded ? 'Activé' : 'En attente'}`);
   console.log(`🔔 Notifications: ${notificationScheduler.getStatus().isRunning ? 'Activées' : 'Désactivées'}`);
   console.log(`📧 Email: ${emailService.getStatus().isInitialized ? emailService.getStatus().provider : 'Non configuré'}`);
+  console.log(`📊 Analytics: ${analyticsService.getCurrentStats().today.activeUsers} utilisateurs actifs`);
+  console.log(`💾 Backup: ${backupService.getStatus().isRunning ? 'Planifié' : 'Inactif'}`);
 });
 
 module.exports = app;

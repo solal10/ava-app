@@ -378,4 +378,4 @@ garminDataSchema.pre('save', function(next) {
   next();
 });
 
-module.exports = mongoose.model('GarminData', garminDataSchema);
+module.exports = mongoose.models.GarminData || mongoose.model('GarminData', garminDataSchema);

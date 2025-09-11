@@ -81,4 +81,4 @@ const healthSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Health', healthSchema);
+module.exports = mongoose.models.Health || mongoose.model('Health', healthSchema);

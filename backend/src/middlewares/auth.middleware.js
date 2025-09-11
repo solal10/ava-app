@@ -118,6 +118,36 @@ exports.requireSubscription = (minLevel) => {
   };
 };
 
+// Middleware pour vérifier les privilèges administrateur
+exports.adminMiddleware = async (req, res, next) => {
+  try {
+    // Vérifier que l'utilisateur est authentifié
+    if (!req.user) {
+      return res.status(401).json({
+        message: 'Authentification requise',
+        code: 'AUTH_REQUIRED'
+      });
+    }
+
+    // Vérifier le rôle administrateur
+    if (req.user.role !== 'admin' && req.user.role !== 'super_admin') {
+      return res.status(403).json({
+        message: 'Privilèges administrateur requis',
+        code: 'ADMIN_REQUIRED',
+        userRole: req.user.role
+      });
+    }
+
+    next();
+  } catch (error) {
+    console.error('❌ Erreur middleware admin:', error);
+    res.status(500).json({
+      message: 'Erreur interne lors de la vérification des privilèges',
+      code: 'ADMIN_CHECK_ERROR'
+    });
+  }
+};
+
 // Utilitaire pour générer des tokens
 exports.generateToken = (user) => {
   return jwt.sign(

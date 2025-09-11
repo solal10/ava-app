@@ -422,4 +422,4 @@ paymentHistorySchema.pre('save', function(next) {
   next();
 });
 
-module.exports = mongoose.model('PaymentHistory', paymentHistorySchema);
+module.exports = mongoose.models.PaymentHistory || mongoose.model('PaymentHistory', paymentHistorySchema);

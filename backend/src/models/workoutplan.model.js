@@ -272,4 +272,4 @@ workoutPlanSchema.pre('save', function(next) {
   next();
 });
 
-module.exports = mongoose.model('WorkoutPlan', workoutPlanSchema);
+module.exports = mongoose.models.WorkoutPlan || mongoose.model('WorkoutPlan', workoutPlanSchema);

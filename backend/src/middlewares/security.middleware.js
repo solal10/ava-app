@@ -66,7 +66,7 @@ const securityMiddleware = (req, res, next) => {
     /'(\s*(union|select|insert|update|delete|drop|create|alter)\s+|.*'(\s*or\s*|\s*and\s*).*)/gi
   ];
 
-  const checkString = JSON.stringify(req.body) + JSON.stringify(req.query);
+  const checkString = JSON.stringify(req.body || {}) + JSON.stringify(req.query || {});
   
   for (const pattern of suspiciousPatterns) {
     if (pattern.test(checkString)) {
@@ -84,7 +84,7 @@ const securityMiddleware = (req, res, next) => {
   }
 
   // Vérifier la taille des données
-  const bodySize = JSON.stringify(req.body).length;
+  const bodySize = req.body ? JSON.stringify(req.body).length : 0;
   if (bodySize > 50 * 1024 * 1024) { // 50MB max
     return res.status(413).json({
       error: 'Données trop volumineuses',
