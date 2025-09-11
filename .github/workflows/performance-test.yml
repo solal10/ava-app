@@ -1,0 +1,142 @@
+name: Performance Testing
+
+on:
+  schedule:
+    # Run daily at 3 AM UTC
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  performance-test:
+    runs-on: ubuntu-latest
+    services:
+      mongodb:
+        image: mongo:7.0
+        env:
+          MONGO_INITDB_ROOT_USERNAME: admin
+          MONGO_INITDB_ROOT_PASSWORD: secure_password
+          MONGO_INITDB_DATABASE: ava_coach_sante_test
+        ports:
+          - 27017:27017
+        options: >-
+          --health-cmd "mongosh --eval 'db.adminCommand(\"ping\")'"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      working-directory: ./backend
+      run: npm ci
+
+    - name: Start backend server
+      working-directory: ./backend
+      run: |
+        cat > .env.test << EOF
+        NODE_ENV=test
+        PORT=5003
+        MONGODB_URI=mongodb://admin:secure_password@localhost:27017/ava_coach_sante_test?authSource=admin
+        REDIS_URL=redis://localhost:6379
+        JWT_SECRET=test-jwt-secret-key-for-ci
+        CORS_ORIGIN=http://localhost:3000
+        SPOONACULAR_API_KEY=test-key
+        OPENAI_API_KEY=test-key
+        ANTHROPIC_API_KEY=test-key
+        STRIPE_SECRET_KEY=sk_test_fake
+        STRIPE_PUBLISHABLE_KEY=pk_test_fake
+        STRIPE_WEBHOOK_SECRET=whsec_test
+        GARMIN_CLIENT_ID=test-client-id
+        GARMIN_CLIENT_SECRET=test-client-secret
+        GARMIN_CONSUMER_KEY=test-consumer-key
+        GARMIN_CONSUMER_SECRET=test-consumer-secret
+        FROM_EMAIL=test@ava-coach-sante.com
+        EMAIL_PROVIDER=test
+        EOF
+        npm start &
+        sleep 10
+      env:
+        NODE_ENV: test
+
+    - name: Install Artillery
+      run: npm install -g artillery@latest
+
+    - name: Create performance test config
+      run: |
+        cat > artillery-config.yml << EOF
+        config:
+          target: 'http://localhost:5003'
+          phases:
+            - duration: 60
+              arrivalRate: 10
+              name: "Warm up"
+            - duration: 120
+              arrivalRate: 20
+              name: "Sustained load"
+            - duration: 60
+              arrivalRate: 50
+              name: "Peak load"
+          defaults:
+            headers:
+              Content-Type: 'application/json'
+        scenarios:
+          - name: "Health Check"
+            weight: 20
+            flow:
+              - get:
+                  url: "/api/health"
+          - name: "User Registration"
+            weight: 30
+            flow:
+              - post:
+                  url: "/api/user/register"
+                  json:
+                    username: "testuser{{ \$randomString() }}"
+                    email: "test{{ \$randomString() }}@example.com"
+                    password: "password123"
+          - name: "User Login"
+            weight: 50
+            flow:
+              - post:
+                  url: "/api/user/login"
+                  json:
+                    email: "thomas@coach.com"
+                    password: "motdepasse123"
+                  capture:
+                    - json: "$.token"
+                      as: "token"
+              - get:
+                  url: "/api/health/metrics"
+                  headers:
+                    Authorization: "Bearer {{ token }}"
+        EOF
+
+    - name: Run performance tests
+      run: |
+        artillery run artillery-config.yml --output performance-report.json
+        artillery report performance-report.json --output performance-report.html
+
+    - name: Upload performance report
+      uses: actions/upload-artifact@v4
+      with:
+        name: performance-report
+        path: |
+          performance-report.json
+          performance-report.html
+
+    - name: Analyze results
+      run: |
+        echo "Performance test completed. Check artifacts for detailed report."

@@ -1,8 +1,10 @@
 import axios from 'axios';
+import config from '../config/env.js';
 
 // Création d'une instance axios avec une configuration de base
 const api = axios.create({
-  baseURL: 'http://localhost:5003/api',
+  baseURL: config.getAPIEndpoint('/api'),
+  timeout: 10000, // 10 secondes timeout
   headers: {
     'Content-Type': 'application/json',
   },
@@ -24,6 +26,16 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response,
   (error) => {
+    // Logging des erreurs
+    if (config.isDevelopment()) {
+      console.error('API Error:', {
+        message: error.message,
+        status: error.response?.status,
+        statusText: error.response?.statusText,
+        data: error.response?.data
+      });
+    }
+
     // Si erreur 401 (non autorisé) : token expiré ou invalide
     if (error.response && error.response.status === 401) {
       console.error('Session expirée ou non autorisée');
@@ -54,17 +66,31 @@ export const authAPI = {
     }
   },
   
+  register: async (userData) => {
+    try {
+      const response = await api.post('/user/register', userData);
+      // Stocker le token JWT dans localStorage
+      localStorage.setItem('auth_token', response.data.token);
+      localStorage.setItem('user', JSON.stringify(response.data.user));
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || { message: "Erreur lors de la création du compte" };
+    }
+  },
+
   testLogin: async (subscriptionLevel) => {
     try {
       // Version modifiée : ne fait pas d'appel au backend, crée directement un utilisateur et token local
       const mockToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1Njc4OTAiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2MzIxNTQxNjJ9.8h5TbQB0_xnJn8mAIBIm1UC_uqLvY4JUYg9nNGPB38c";
       
-      // Utilisateur fictif
+      // Utilisateur fictif avec accès Elite
       const mockUser = {
         id: "1234567890",
         name: "Utilisateur Test",
         email: "test@test.com",
-        isPremium: subscriptionLevel === 'perform',
+        isPremium: true,
+        subscriptionLevel: 'elite',
+        subscriptionName: 'Elite',
         stats: {
           sommeil: 7,
           hydratation: 1.5,
@@ -100,38 +126,13 @@ export const authAPI = {
 export const userAPI = {
   getStats: async () => {
     try {
+      console.log('🔄 Récupération des VRAIES stats utilisateur depuis /api/user/stats');
       const response = await api.get('/user/stats');
+      console.log('✅ Vraies stats utilisateur reçues:', response.data);
       return response.data;
     } catch (error) {
-      console.error('Erreur API stats, utilisation des données simulées:', error);
-      // Retourner des données simulées au lieu de lancer une erreur
-      return {
-        metrics: {
-          weight: 70,
-          steps: 9500,
-          calories: 2100,
-          sleep: 7.5,
-          stress: 2,
-          mood: 4,
-          hydration: 2.2
-        },
-        goals: {
-          weight: 68,
-          steps: 10000,
-          calories: 2000,
-          sleep: 8,
-          stress: 1,
-          hydration: 2.5
-        },
-        progress: {
-          weight: 95,
-          steps: 95,
-          calories: 105,
-          sleep: 94,
-          stress: 50,
-          hydration: 88
-        }
-      };
+      console.error('❌ Erreur API stats utilisateur - AUCUN FALLBACK:', error);
+      throw error.response?.data || { message: "Impossible de charger les statistiques utilisateur" };
     }
   },
   
@@ -269,6 +270,69 @@ export const subscriptionAPI = {
       throw error.response?.data || { message: "Erreur lors de la mise à jour de l'abonnement" };
     }
   },
+};
+
+// API des données de santé
+export const healthAPI = {
+  addHealthEntry: async (healthData) => {
+    try {
+      const response = await api.post('/health/add', healthData);
+      return response.data;
+    } catch (error) {
+      console.error('❌ Erreur API ajout santé:', error);
+      throw error.response?.data || { message: "Erreur lors de l'ajout des données de santé" };
+    }
+  },
+  
+  getHealthData: async () => {
+    try {
+      console.log('🔄 Récupération des VRAIES données de santé depuis /api/health');
+      const response = await api.get('/health');
+      console.log('✅ Vraies données de santé reçues:', response.data);
+      return response.data;
+    } catch (error) {
+      console.error('❌ Erreur API santé - AUCUN FALLBACK:', error);
+      throw error.response?.data || { message: "Impossible de charger les données de santé" };
+    }
+  }
+};
+
+// API des repas
+export const mealAPI = {
+  getMeals: async () => {
+    try {
+      console.log('🔄 Récupération des VRAIS repas depuis /api/meal');
+      const response = await api.get('/meal');
+      console.log('✅ Vrais repas reçus:', response.data);
+      return response.data;
+    } catch (error) {
+      console.error('❌ Erreur API repas - AUCUN FALLBACK:', error);
+      // Retourner tableau vide plutôt que données fictives
+      return [];
+    }
+  },
+  
+  getTodayMeals: async () => {
+    try {
+      console.log('🔄 Récupération des repas d\'aujourd\'hui depuis /api/meal/today');
+      const response = await api.get('/meal/today');
+      console.log('✅ Repas d\'aujourd\'hui reçus:', response.data);
+      return response.data;
+    } catch (error) {
+      console.error('❌ Erreur API repas aujourd\'hui - AUCUN FALLBACK:', error);
+      return [];
+    }
+  },
+  
+  addMeal: async (mealData) => {
+    try {
+      const response = await api.post('/meal/add', mealData);
+      return response.data;
+    } catch (error) {
+      console.error('❌ Erreur API ajout repas:', error);
+      throw error.response?.data || { message: "Erreur lors de l'ajout du repas" };
+    }
+  }
 };
 
 export default api;

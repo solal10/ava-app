@@ -1,0 +1,22 @@
+[
+  "apple", "banana", "orange", "grape", "strawberry", "pineapple", "watermelon", "mango", "kiwi", "peach",
+  "carrot", "broccoli", "spinach", "tomato", "cucumber", "onion", "pepper", "lettuce", "celery", "cabbage",
+  "chicken_breast", "chicken_thigh", "beef_steak", "ground_beef", "pork_chop", "fish_fillet", "salmon", "tuna", "shrimp", "eggs",
+  "white_bread", "whole_grain_bread", "baguette", "croissant", "bagel", "muffin", "toast", "sandwich", "wrap", "pita",
+  "white_rice", "brown_rice", "pasta", "spaghetti", "macaroni", "quinoa", "oats", "cereal", "granola", "muesli",
+  "potato", "sweet_potato", "french_fries", "mashed_potato", "baked_potato", "roasted_potato", "chips", "crackers", "pretzels", "popcorn",
+  "milk", "cheese", "cheddar", "mozzarella", "yogurt", "greek_yogurt", "butter", "cream", "ice_cream", "cottage_cheese",
+  "pizza", "burger", "hot_dog", "taco", "burrito", "quesadilla", "nachos", "sushi", "ramen", "pho",
+  "salad", "caesar_salad", "greek_salad", "coleslaw", "fruit_salad", "soup", "chicken_soup", "vegetable_soup", "minestrone", "chili",
+  "cake", "chocolate_cake", "cheesecake", "cupcake", "cookie", "brownie", "donut", "pie", "tart", "pastry",
+  "coffee", "espresso", "latte", "cappuccino", "tea", "green_tea", "black_tea", "herbal_tea", "hot_chocolate", "smoothie",
+  "water", "sparkling_water", "juice", "orange_juice", "apple_juice", "soda", "cola", "lemonade", "sports_drink", "energy_drink",
+  "nuts", "almonds", "peanuts", "walnuts", "cashews", "pistachios", "hazelnuts", "pecans", "peanut_butter", "almond_butter",
+  "avocado", "olive_oil", "coconut_oil", "vinegar", "honey", "maple_syrup", "sugar", "salt", "spices", "herbs",
+  "beans", "black_beans", "kidney_beans", "chickpeas", "lentils", "tofu", "tempeh", "hummus", "guacamole", "salsa",
+  "chocolate", "dark_chocolate", "milk_chocolate", "candy", "gummies", "marshmallow", "caramel", "fudge", "truffle", "mint",
+  "wine", "beer", "cocktail", "vodka", "whiskey", "rum", "gin", "champagne", "sake", "margarita",
+  "pancakes", "waffles", "french_toast", "omelette", "scrambled_eggs", "fried_eggs", "bacon", "sausage", "ham", "deli_meat",
+  "stir_fry", "curry", "pad_thai", "fried_rice", "lo_mein", "spring_rolls", "dumplings", "gyoza", "kimchi", "miso_soup",
+  "mixed_meal", "plate", "bowl", "breakfast", "lunch", "dinner", "snack", "appetizer", "dessert", "unknown_food"
+]

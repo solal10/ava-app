@@ -1,13 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { authAPI } from '../../utils/api';
 
 const AuthPage = ({ onLogin }) => {
+  const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [subscriptionLevel, setSubscriptionLevel] = useState('explore');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [subscriptionLevel, setSubscriptionLevel] = useState('elite');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  // Lire le paramètre URL pour déterminer l'onglet par défaut
+  useEffect(() => {
+    const tab = searchParams.get('tab');
+    if (tab === 'signup') {
+      setActiveTab('signup');
+    }
+  }, [searchParams]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
@@ -22,6 +35,22 @@ const AuthPage = ({ onLogin }) => {
     try {
       if (activeTab === 'login') {
         const response = await authAPI.login(email, password);
+        onLogin(response.user, response.token);
+      } else if (activeTab === 'signup') {
+        // Validation
+        if (password !== confirmPassword) {
+          throw new Error('Les mots de passe ne correspondent pas');
+        }
+        if (password.length < 6) {
+          throw new Error('Le mot de passe doit contenir au moins 6 caractères');
+        }
+        
+        const response = await authAPI.register({
+          email,
+          password,
+          prenom: firstName, // Adapter au modèle backend
+          subscriptionLevel
+        });
         onLogin(response.user, response.token);
       } else if (activeTab === 'test') {
         const response = await authAPI.testLogin(subscriptionLevel);
@@ -142,6 +171,16 @@ const AuthPage = ({ onLogin }) => {
             </button>
             <button
               className={`flex-1 py-4 px-6 text-center ${
+                activeTab === 'signup'
+                  ? 'border-b-2 border-primary font-medium'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+              onClick={() => handleTabChange('signup')}
+            >
+              Créer un compte
+            </button>
+            <button
+              className={`flex-1 py-4 px-6 text-center ${
                 activeTab === 'test'
                   ? 'border-b-2 border-primary font-medium'
                   : 'text-gray-500 hover:text-gray-700'
@@ -186,6 +225,69 @@ const AuthPage = ({ onLogin }) => {
                     />
                   </div>
                 </>
+              ) : activeTab === 'signup' ? (
+                <>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label htmlFor="firstName" className="block text-gray-700 mb-2">Prénom</label>
+                      <input
+                        id="firstName"
+                        type="text"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        className="input"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="lastName" className="block text-gray-700 mb-2">Nom</label>
+                      <input
+                        id="lastName"
+                        type="text"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
+                        className="input"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="signup-email" className="block text-gray-700 mb-2">Email</label>
+                    <input
+                      id="signup-email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="input"
+                      required
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="signup-password" className="block text-gray-700 mb-2">Mot de passe</label>
+                    <input
+                      id="signup-password"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="input"
+                      placeholder="Au moins 6 caractères"
+                      required
+                    />
+                  </div>
+                  <div className="mb-6">
+                    <label htmlFor="confirm-password" className="block text-gray-700 mb-2">Confirmer le mot de passe</label>
+                    <input
+                      id="confirm-password"
+                      type="password"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      className="input"
+                      required
+                    />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-4">Choisissez votre abonnement</h3>
+                  {renderSubscriptionDetails()}
+                </>
               ) : (
                 <>
                   <h3 className="text-lg font-semibold mb-4">Sélectionnez un niveau d'abonnement</h3>
@@ -211,6 +313,8 @@ const AuthPage = ({ onLogin }) => {
                     </span>
                   ) : activeTab === 'login' ? (
                     'Se connecter'
+                  ) : activeTab === 'signup' ? (
+                    'Créer mon compte'
                   ) : (
                     'Commencer le test'
                   )}

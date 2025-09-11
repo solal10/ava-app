@@ -30,7 +30,7 @@ const MainLayout = ({ children, user }) => {
             </div>
           </div>
 
-          {/* Avatar utilisateur */}
+          {/* Avatar utilisateur et déconnexion */}
           <div className="flex items-center gap-3">
             {user?.isPremium && (
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-2 py-1 rounded-full text-xs font-bold">
@@ -47,6 +47,21 @@ const MainLayout = ({ children, user }) => {
                 {user?.prenom || 'Utilisateur'}
               </span>
             </div>
+            
+            {/* Bouton de déconnexion */}
+            <button
+              onClick={() => {
+                localStorage.removeItem('auth_token');
+                localStorage.removeItem('user');
+                window.location.href = '/auth';
+              }}
+              className="p-2 rounded-lg hover:bg-slate-700 transition-colors text-slate-400 hover:text-slate-200"
+              title="Se déconnecter"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>

@@ -212,7 +212,7 @@ const Login = () => {
       <div className="mt-6 text-center text-sm text-gray-600">
         <p>Pas encore de compte ? 
           <button 
-            onClick={() => navigate('/register')}
+            onClick={() => navigate('/auth?tab=signup')}
             className="text-blue-600 hover:text-blue-800 font-medium ml-1"
           >
             S'inscrire

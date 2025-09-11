@@ -5,24 +5,27 @@ import { authAPI } from './utils/api';
 // Contexte d'abonnement
 import { SubscriptionProvider } from './contexts/SubscriptionContext';
 
+// Composants communs
+import ErrorBoundary from './components/common/ErrorBoundary';
+
 // Composants
 import NavBar from './components/navbar/NavBar';
 import Login from './pages/Login';
 import AuthPage from './components/auth/AuthPage';
-import Dashboard from './components/dashboard/Dashboard';
 import DashboardV2 from './components/dashboard/DashboardV2';
 import HealthTrackerAIV2 from './components/health/HealthTrackerAIV2';
 import GoalsTrackerV2 from './components/goals/GoalsTrackerV2';
 import PremiumBadge from './components/subscription/PremiumBadge';
 import { FoodAnalyzer } from './components/meal';
 import MealAnalyzerV2 from './components/meal/MealAnalyzerV2';
-import MealAnalyzerMock from './components/meal/MealAnalyzerMock';
 import WorkoutPlannerV2 from './components/workout/WorkoutPlannerV2';
 import LearnAdminDashboardV2 from './components/admin/LearnAdminDashboardV2';
 import MainLayout from './components/layout/MainLayout';
 import ChatIAV2 from './components/chat/ChatIAV2';
 import SmartAdvice from './components/advice/SmartAdvice';
 import SubscriptionPage from './components/subscription/SubscriptionPage';
+import GarminCallback from './components/GarminCallback';
+import { GarminAuthDone } from './pages/GarminAuthDone';
 
 function App() {
   // État d'authentification réel
@@ -82,11 +85,16 @@ function App() {
   };
 
   return (
-    <SubscriptionProvider isPremium={user?.isPremium || false}>
-      <Routes>
+    <ErrorBoundary>
+      <SubscriptionProvider isPremium={user?.isPremium || false}>
+        <Routes>
           {/* Routes publiques d'authentification */}
           <Route path="/login" element={token ? <Navigate to="/" replace /> : <Login />} />
           <Route path="/auth" element={token ? <Navigate to="/" replace /> : <AuthPage onLogin={handleLogin} />} />
+          
+          {/* Routes OAuth Garmin */}
+          <Route path="/auth/garmin/rappel" element={<GarminCallback />} />
+          <Route path="/auth/garmin/done" element={<GarminAuthDone />} />
 
           {/* Routes protégées nécessitant une authentification */}
           <Route path="/" element={
@@ -189,8 +197,9 @@ function App() {
 
           {/* Redirection par défaut vers la page de connexion si pas connecté, sinon dashboard */}
           <Route path="*" element={token ? <Navigate to="/" replace /> : <Navigate to="/login" replace />} />
-      </Routes>
-    </SubscriptionProvider>
+        </Routes>
+      </SubscriptionProvider>
+    </ErrorBoundary>
   );
 }
 
