@@ -1,0 +1,1296 @@
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:46:22.288Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:46:22'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:46:22'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/consent',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:48:22.834Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:48:22'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:48:22'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:48:30.616Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:48:30'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:48:30'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:50:40.101Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:50:40'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:50:40'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/data-processing',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:50:51.333Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:50:51'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:50:51'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:57:24.418Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:57:24'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:57:24'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:59:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/data-processing',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:57:37.178Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:57:37'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:57:37'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:59:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/data-processing',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:00:08.464Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:00:24.287Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:00:24'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:00:24'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:05:27.338Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:05:27.350Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/consent',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:05:27.362Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:11:37.035Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:11:37.074Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:11:43.800Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:11:43'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:11:43'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:13:46.276Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:13:46'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:13:46'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.exportUserData (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/gdpr/gdpr.controller.js:193:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 500,
+      userId: '68c311fb8a353fc2729d5aa0'
+    },
+    timestamp: '2025-09-11T18:16:28.004Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:16:28'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:16:28'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updateUser (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:208:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '68c312048a353fc2729d5aa8'
+    },
+    timestamp: '2025-09-11T18:16:36.868Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.exportUserData (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/gdpr/gdpr.controller.js:193:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 500,
+      userId: '68c3124ab3f548f7735f3c83'
+    },
+    timestamp: '2025-09-11T18:17:46.702Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:17:46'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:17:46'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updateUser (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:208:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '68c312ccda84b5f4cb3590fa'
+    },
+    timestamp: '2025-09-11T18:19:56.194Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updateUser (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:208:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '68c31302da84b5f4cb359100'
+    },
+    timestamp: '2025-09-11T18:20:51.033Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:20:51'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:20:51'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updatePreferences (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:293:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/preferences',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '68c313db4b3fe013e9a3f51f'
+    },
+    timestamp: '2025-09-11T18:24:27.929Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 429',
+    name: 'Error',
+    stack: 'Error: HTTP 429\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at Object.handler (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:758:45)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:896:16\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:782:5',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 429,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:39.469Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 429',
+    name: 'Error',
+    stack: 'Error: HTTP 429\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at ServerResponse.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:162:21)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:79:25)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at Object.handler (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:758:45)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:896:16\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:782:5',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 429,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:39.470Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/preferences',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:39.527Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 429',
+    name: 'Error',
+    stack: 'Error: HTTP 429\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at Object.handler (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:758:45)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:896:16\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:782:5',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 429,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:50.178Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 429',
+    name: 'Error',
+    stack: 'Error: HTTP 429\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at ServerResponse.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:162:21)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:79:25)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at Object.handler (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:758:45)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:896:16\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:782:5',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 429,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:50.179Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:50.231Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/preferences',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:50.242Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:97:28)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:25:12.161Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:25:12'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:25:12'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:75:30)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:27:42.250Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:27:42'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:27:42'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.testLogin (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:379:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/test-login',
+      method: 'POST',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:28:37.942Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:28:37'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:28:37'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.testLogin (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:379:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/test-login',
+      method: 'POST',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:28:50.904Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:28:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:28:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.testLogin (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:378:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/test-login',
+      method: 'POST',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:29:19.484Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:29:19'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:29:19'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.testLogin (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:378:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/test-login',
+      method: 'POST',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:30:22.100Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:30:22'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:30:22'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 404',
+    name: 'Error',
+    stack: 'Error: HTTP 404\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/server.js:186:19\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at trim_prefix (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:328:13)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:286:9\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:376:14)\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:421:3)',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 404,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:32:44.754Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:32:44'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:32:44'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updatePreferences (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:294:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/preferences',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '507f1f77bcf86cd799439011'
+    },
+    timestamp: '2025-09-11T18:34:06.088Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:34:06'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:34:06'
+}

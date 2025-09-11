@@ -456,3 +456,5109 @@
   message: 'GET /health - 200 (2ms)',
   timestamp: '2025-09-11 19:15:29'
 }
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:30:55'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:30:56'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:30:56'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:30:56'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:30:56'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:30:56'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:32:28'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:32:28'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:32:28'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:32:28'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:32:28'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:32:28'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:32:42'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:32:42'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:32:42'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:32:42'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:32:42'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:32:42'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:33:07'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:33:07'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:33:07'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:33:07'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:33:07'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:33:07'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:33:19'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:33:19'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:33:19'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:33:19'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:33:19'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:33:19'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:33:26'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:33:26'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:33:26'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:33:26'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:33:26'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:33:26'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:34:45'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:34:45'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:34:45'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:34:45'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:34:45'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:34:45'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:36:20'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:36:20'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:36:20'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:36:20'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:36:20'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:36:20'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:40:12'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:40:12'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:40:12'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:40:12'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:40:12'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:40:12'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:42:52'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:42:52'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:42:52'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:42:52'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:42:52'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:42:52'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffp9qdotjmyo',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/export',
+  timestamp: '2025-09-11 19:46:22'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffp9qdotjmyo',
+  statusCode: 401,
+  responseTime: 3,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /export - 401 (3ms)',
+  timestamp: '2025-09-11 19:46:22'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:46:22.288Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:46:22'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:46:22'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpcbe8jin6y',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/consent',
+  timestamp: '2025-09-11 19:48:22'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpcbe8jin6y',
+  statusCode: 401,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /consent - 401 (2ms)',
+  timestamp: '2025-09-11 19:48:22'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/consent',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:48:22.834Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:48:22'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:48:22'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpchefvvcdg',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 19:48:30'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpchefvvcdg',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /cookie-consents - 401 (1ms)',
+  timestamp: '2025-09-11 19:48:30'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:48:30.616Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:48:30'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:48:30'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpes4z91wx1',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 19:50:17'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpes4z91wx1',
+  statusCode: 200,
+  responseTime: 12,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (12ms)',
+  timestamp: '2025-09-11 19:50:17'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpf9b7abkg4',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 19:50:40'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpf9b7abkg4',
+  statusCode: 401,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /cookie-consents - 401 (2ms)',
+  timestamp: '2025-09-11 19:50:40'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:50:40.101Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:50:40'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:50:40'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpfhz8txsjm',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/data-processing',
+  timestamp: '2025-09-11 19:50:51'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpfhz8txsjm',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /data-processing - 401 (1ms)',
+  timestamp: '2025-09-11 19:50:51'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/data-processing',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:50:51.333Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:50:51'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:50:51'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpfw38vunw7',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api-docs',
+  timestamp: '2025-09-11 19:51:09'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpg4a7jn4lr',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api-docs/',
+  timestamp: '2025-09-11 19:51:20'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpg4a7jn4lr',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET / - 200 (1ms)',
+  timestamp: '2025-09-11 19:51:20'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:54:18'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:54:18'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:54:18'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:54:18'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:54:18'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:54:18'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:54:28'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:54:28'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:54:28'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:54:28'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:54:28'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:54:28'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:54:45'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:54:45'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:54:46'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:54:46'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:54:46'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:54:46'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:54:55'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:54:55'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:54:55'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:54:55'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:54:55'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:54:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpkv3l9y7t4',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 19:55:01'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpkv3l9y7t4',
+  statusCode: 200,
+  responseTime: 5,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (5ms)',
+  timestamp: '2025-09-11 19:55:01'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpl31n594uk',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/privacy',
+  timestamp: '2025-09-11 19:55:11'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpl31n594uk',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /privacy - 200 (1ms)',
+  timestamp: '2025-09-11 19:55:11'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpnmr51klrf',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 19:57:10'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpnmr51klrf',
+  statusCode: 200,
+  responseTime: 11,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (11ms)',
+  timestamp: '2025-09-11 19:57:10'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpnxa8uelw7',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 19:57:24'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpnxa8uelw7',
+  statusCode: 401,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /cookie-consents - 401 (2ms)',
+  timestamp: '2025-09-11 19:57:24'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:57:24.418Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:57:24'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:57:24'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpo74d4e4z4',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 19:57:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpo74d4e4z4',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (1ms)',
+  timestamp: '2025-09-11 19:57:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpo74pmhu78',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/data-processing',
+  timestamp: '2025-09-11 19:57:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpo74pmhu78',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /data-processing - 401 (1ms)',
+  timestamp: '2025-09-11 19:57:37'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:59:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/data-processing',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T17:57:37.178Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 19:57:37'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 19:57:37'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 19:59:38'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 19:59:38'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 19:59:38'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 19:59:38'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 19:59:38'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 19:59:38'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprfu9pmwfc',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprfu9pmwfc',
+  statusCode: 200,
+  responseTime: 5,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (5ms)',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprfuqkjzcp',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/privacy',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprfuqkjzcp',
+  statusCode: 200,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /privacy - 200 (2ms)',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprfv3k2y8w',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/data-processing',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprfv3k2y8w',
+  statusCode: 401,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /data-processing - 401 (0ms)',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:59:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/data-processing',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:00:08.464Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:00:08'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprkda9sos7',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:00:14'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprkda9sos7',
+  statusCode: 200,
+  responseTime: 10,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (10ms)',
+  timestamp: '2025-09-11 20:00:14'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprs2lylbir',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 20:00:24'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprs2lylbir',
+  statusCode: 401,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /cookie-consents - 401 (2ms)',
+  timestamp: '2025-09-11 20:00:24'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:00:24.287Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:00:24'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:00:24'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprwtcxp96i',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api-docs/',
+  timestamp: '2025-09-11 20:00:30'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffprwtcxp96i',
+  statusCode: 200,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET / - 200 (2ms)',
+  timestamp: '2025-09-11 20:00:30'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy1ythglw4',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:05:17'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy1ythglw4',
+  statusCode: 200,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (2ms)',
+  timestamp: '2025-09-11 20:05:17'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9uyz86ae',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9uyz86ae',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (1ms)',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9w4c78kt',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9w4c78kt',
+  statusCode: 200,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (0ms)',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9wfp3r19',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/privacy',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9wfp3r19',
+  statusCode: 200,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /privacy - 200 (0ms)',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9wp3fcba',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/export',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9wp3fcba',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /export - 401 (1ms)',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:05:27.338Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9x1rllhg',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9x1rllhg',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /cookie-consents - 401 (1ms)',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:05:27.350Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9xdwiqp5',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/consent',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpy9xdwiqp5',
+  statusCode: 401,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /consent - 401 (0ms)',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/consent',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:05:27.362Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:05:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhgr37a3r',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhgr37a3r',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (1ms)',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhh2r1ryf',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhh2r1ryf',
+  statusCode: 200,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (0ms)',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhhc6altm',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/privacy',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhhc6altm',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /privacy - 200 (1ms)',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhhnu2xf6',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/privacy',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhhnu2xf6',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /privacy - 200 (1ms)',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhhyj1pym',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api-docs/',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffpyhhyj1pym',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET / - 200 (1ms)',
+  timestamp: '2025-09-11 20:05:37'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:07:09'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:07:09'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:07:09'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:07:09'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:07:09'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:07:09'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1aa3yod3y',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /health',
+  timestamp: '2025-09-11 20:07:47'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1aa3yod3y',
+  statusCode: 200,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /health - 200 (2ms)',
+  timestamp: '2025-09-11 20:07:47'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1redwvqc7',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 20:08:09'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1redwvqc7',
+  statusCode: 200,
+  responseTime: 3,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (3ms)',
+  timestamp: '2025-09-11 20:08:09'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1rercxrsa',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/privacy',
+  timestamp: '2025-09-11 20:08:09'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1rercxrsa',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /privacy - 200 (1ms)',
+  timestamp: '2025-09-11 20:08:09'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1rf31lxm8',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api-docs/',
+  timestamp: '2025-09-11 20:08:09'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1rf31lxm8',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET / - 200 (1ms)',
+  timestamp: '2025-09-11 20:08:10'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1rfhvbwtl',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /',
+  timestamp: '2025-09-11 20:08:10'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq1rfhvbwtl',
+  statusCode: 200,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET / - 200 (0ms)',
+  timestamp: '2025-09-11 20:08:10'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq213vuwfth',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 20:08:22'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq213vuwfth',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (1ms)',
+  timestamp: '2025-09-11 20:08:22'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq214yo6on1',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/privacy',
+  timestamp: '2025-09-11 20:08:22'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq214yo6on1',
+  statusCode: 200,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /privacy - 200 (0ms)',
+  timestamp: '2025-09-11 20:08:22'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq5xnffg6e0',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:11:24'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq5xnffg6e0',
+  statusCode: 201,
+  responseTime: 141,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (141ms)',
+  timestamp: '2025-09-11 20:11:24'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq674t5p8bk',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:11:36'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq674t5p8bk',
+  statusCode: 200,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (2ms)',
+  timestamp: '2025-09-11 20:11:36'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6761uqxor',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6761uqxor',
+  statusCode: 401,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /cookie-consents - 401 (2ms)',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:11:37.035Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq67753bzer',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/user/profile',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq67753bzer',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /profile - 401 (1ms)',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:11:37.074Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:11:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6cd0prmw1',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:11:43'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6cd0prmw1',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (1ms)',
+  timestamp: '2025-09-11 20:11:43'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6cdzf62sz',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/user/profile',
+  timestamp: '2025-09-11 20:11:43'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6cdzf62sz',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /profile - 401 (1ms)',
+  timestamp: '2025-09-11 20:11:43'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:11:43.800Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:11:43'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:11:43'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lj4ep1rv',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lj4ep1rv',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (1ms)',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lje104el',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/terms',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lje104el',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /terms - 200 (1ms)',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6ljqme3za',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/privacy',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6ljqme3za',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /privacy - 200 (1ms)',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lk17gchz',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/legal/privacy',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lk17gchz',
+  statusCode: 200,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /privacy - 200 (0ms)',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lkcwz5my',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api-docs/',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lkcwz5my',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET / - 200 (1ms)',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lkngxbr7',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api-docs/',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lkngxbr7',
+  statusCode: 200,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET / - 200 (0ms)',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lkxvn5gm',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /health',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6lkxvn5gm',
+  statusCode: 200,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /health - 200 (0ms)',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6ll77462k',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /health',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq6ll77462k',
+  statusCode: 200,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /health - 200 (0ms)',
+  timestamp: '2025-09-11 20:11:55'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq8s5b52igr',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:13:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq8s5b52igr',
+  statusCode: 201,
+  responseTime: 111,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (111ms)',
+  timestamp: '2025-09-11 20:13:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq8yrjtbig8',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:13:46'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq8yrjtbig8',
+  statusCode: 201,
+  responseTime: 111,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (111ms)',
+  timestamp: '2025-09-11 20:13:46'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq8yw329j5y',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/export',
+  timestamp: '2025-09-11 20:13:46'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffq8yw329j5y',
+  statusCode: 401,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /export - 401 (0ms)',
+  timestamp: '2025-09-11 20:13:46'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:13:46.276Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:13:46'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:13:46'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:15:03'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:15:03'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:15:03'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:15:03'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:15:03'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:15:03'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:15:35'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:15:35'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:15:35'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:15:35'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:15:35'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:15:35'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqc3mb9nnlb',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:16:12'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqc3mb9nnlb',
+  statusCode: 201,
+  responseTime: 140,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (140ms)',
+  timestamp: '2025-09-11 20:16:12'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcfjcumk02',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:16:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcfjcumk02',
+  statusCode: 201,
+  responseTime: 112,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (112ms)',
+  timestamp: '2025-09-11 20:16:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcfnyokev7',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/export',
+  timestamp: '2025-09-11 20:16:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcfnyokev7',
+  statusCode: 500,
+  responseTime: 22,
+  userId: new ObjectId("68c311fb8a353fc2729d5aa0"),
+  level: 'http',
+  message: 'GET /export - 500 (22ms)',
+  timestamp: '2025-09-11 20:16:28'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.exportUserData (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/gdpr/gdpr.controller.js:193:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 500,
+      userId: '68c311fb8a353fc2729d5aa0'
+    },
+    timestamp: '2025-09-11T18:16:28.004Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:16:28'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:16:28'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcmdnni25h',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcmdnni25h',
+  statusCode: 201,
+  responseTime: 110,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (110ms)',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcmi82l2h2',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/consent',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcmi82l2h2',
+  statusCode: 200,
+  responseTime: 4,
+  userId: new ObjectId("68c312048a353fc2729d5aa8"),
+  level: 'http',
+  message: 'GET /consent - 200 (4ms)',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcmiom1as0',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqcmiom1as0',
+  statusCode: 500,
+  responseTime: 4,
+  userId: new ObjectId("68c312048a353fc2729d5aa8"),
+  level: 'http',
+  message: 'PUT /cookie-consents - 500 (4ms)',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updateUser (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:208:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '68c312048a353fc2729d5aa8'
+    },
+    timestamp: '2025-09-11T18:16:36.868Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:16:36'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:17:19'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:17:19'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:17:19'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:17:19'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:17:19'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:17:19'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:17:30'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:17:30'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:17:30'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:17:30'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:17:30'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:17:30'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqe48m5x9en',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:17:46'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqe48m5x9en',
+  statusCode: 201,
+  responseTime: 139,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (139ms)',
+  timestamp: '2025-09-11 20:17:46'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqe4e2da1l1',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/export',
+  timestamp: '2025-09-11 20:17:46'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqe4e2da1l1',
+  statusCode: 500,
+  responseTime: 19,
+  userId: new ObjectId("68c3124ab3f548f7735f3c83"),
+  level: 'http',
+  message: 'GET /export - 500 (19ms)',
+  timestamp: '2025-09-11 20:17:46'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.exportUserData (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/gdpr/gdpr.controller.js:193:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/export',
+      method: 'GET',
+      statusCode: 500,
+      userId: '68c3124ab3f548f7735f3c83'
+    },
+    timestamp: '2025-09-11T18:17:46.702Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:17:46'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:17:46'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:18:29'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:18:29'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:18:29'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:18:29'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:18:29'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:18:29'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:18:53'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:18:53'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:18:53'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:18:53'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:18:53'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:18:53'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:19:02'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:19:02'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:19:02'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:19:02'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:19:02'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:19:02'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqg6ugvmvue',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:19:23'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqg6ugvmvue',
+  statusCode: 201,
+  responseTime: 148,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (148ms)',
+  timestamp: '2025-09-11 20:19:23'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqgjexg9v89',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:19:39'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqgjexg9v89',
+  statusCode: 201,
+  responseTime: 110,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (110ms)',
+  timestamp: '2025-09-11 20:19:39'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqgw6e1beyt',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqgw6e1beyt',
+  statusCode: 201,
+  responseTime: 109,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (109ms)',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqgwb05g8x4',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/consent',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqgwb05g8x4',
+  statusCode: 200,
+  responseTime: 6,
+  userId: new ObjectId("68c312ccda84b5f4cb3590fa"),
+  level: 'http',
+  message: 'GET /consent - 200 (6ms)',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqgwbiburgb',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqgwbiburgb',
+  statusCode: 500,
+  responseTime: 4,
+  userId: new ObjectId("68c312ccda84b5f4cb3590fa"),
+  level: 'http',
+  message: 'PUT /cookie-consents - 500 (4ms)',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updateUser (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:208:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '68c312ccda84b5f4cb3590fa'
+    },
+    timestamp: '2025-09-11T18:19:56.194Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:19:56'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqi2iau3yks',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:20:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqi2iau3yks',
+  statusCode: 201,
+  responseTime: 111,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (111ms)',
+  timestamp: '2025-09-11 20:20:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqi2mueroir',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 20:20:51'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqi2mueroir',
+  statusCode: 500,
+  responseTime: 3,
+  userId: new ObjectId("68c31302da84b5f4cb359100"),
+  level: 'http',
+  message: 'PUT /cookie-consents - 500 (3ms)',
+  timestamp: '2025-09-11 20:20:51'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updateUser (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:208:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/cookie-consents',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '68c31302da84b5f4cb359100'
+    },
+    timestamp: '2025-09-11T18:20:51.033Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:20:51'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:20:51'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:22:15'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:22:15'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:22:15'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:22:15'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:22:15'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:22:15'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqkzcdinkgg',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:23:06'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqkzcdinkgg',
+  statusCode: 201,
+  responseTime: 145,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (145ms)',
+  timestamp: '2025-09-11 20:23:06'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqlmqhhgzh5',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:23:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqlmqhhgzh5',
+  statusCode: 201,
+  responseTime: 115,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (115ms)',
+  timestamp: '2025-09-11 20:23:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqlmv97qotx',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 20:23:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqlmv97qotx',
+  statusCode: 200,
+  responseTime: 11,
+  userId: new ObjectId("68c313a94b3fe013e9a3f50c"),
+  level: 'http',
+  message: 'PUT /cookie-consents - 200 (11ms)',
+  timestamp: '2025-09-11 20:23:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqm76svcjoq',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:24:03'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqm76svcjoq',
+  statusCode: 201,
+  responseTime: 110,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (110ms)',
+  timestamp: '2025-09-11 20:24:03'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqm7ba70mif',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/export',
+  timestamp: '2025-09-11 20:24:03'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqm7ba70mif',
+  statusCode: 200,
+  responseTime: 17,
+  userId: new ObjectId("68c313c34b3fe013e9a3f512"),
+  level: 'http',
+  message: 'GET /export - 200 (17ms)',
+  timestamp: '2025-09-11 20:24:03'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmh1x84sx6',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:24:16'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmh1x84sx6',
+  statusCode: 201,
+  responseTime: 110,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (110ms)',
+  timestamp: '2025-09-11 20:24:16'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmh6gzoypn',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/user/profile',
+  timestamp: '2025-09-11 20:24:16'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmh6gzoypn',
+  statusCode: 200,
+  responseTime: 4,
+  userId: new ObjectId("68c313d04b3fe013e9a3f51a"),
+  level: 'http',
+  message: 'GET /profile - 200 (4ms)',
+  timestamp: '2025-09-11 20:24:16'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmpuo3be6a',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmpuo3be6a',
+  statusCode: 201,
+  responseTime: 111,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (111ms)',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmpz8ydux1',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/consent',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmpz8ydux1',
+  statusCode: 200,
+  responseTime: 4,
+  userId: new ObjectId("68c313db4b3fe013e9a3f51f"),
+  level: 'http',
+  message: 'GET /consent - 200 (4ms)',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmpzox8ifz',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/preferences',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmpzox8ifz',
+  statusCode: 500,
+  responseTime: 4,
+  userId: new ObjectId("68c313db4b3fe013e9a3f51f"),
+  level: 'http',
+  message: 'PUT /preferences - 500 (4ms)',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updatePreferences (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:293:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/preferences',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '68c313db4b3fe013e9a3f51f'
+    },
+    timestamp: '2025-09-11T18:24:27.929Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:27'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmywcvbzvk',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmywcvbzvk',
+  statusCode: 429,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST / - 429 (1ms)',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 429',
+    name: 'Error',
+    stack: 'Error: HTTP 429\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at Object.handler (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:758:45)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:896:16\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:782:5',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 429,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:39.469Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmywcvbzvk',
+  statusCode: 429,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST / - 429 (1ms)',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 429',
+    name: 'Error',
+    stack: 'Error: HTTP 429\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at ServerResponse.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:162:21)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:79:25)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at Object.handler (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:758:45)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:896:16\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:782:5',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 429,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:39.470Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmyxy6hhpi',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/preferences',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqmyxy6hhpi',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /preferences - 401 (1ms)',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/preferences',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:39.527Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:39'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqn75ujjjko',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqn75ujjjko',
+  statusCode: 429,
+  responseTime: 0,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST / - 429 (0ms)',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 429',
+    name: 'Error',
+    stack: 'Error: HTTP 429\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at Object.handler (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:758:45)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:896:16\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:782:5',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 429,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:50.178Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqn75ujjjko',
+  statusCode: 429,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST / - 429 (1ms)',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 429',
+    name: 'Error',
+    stack: 'Error: HTTP 429\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at ServerResponse.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:162:21)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:79:25)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at Object.handler (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:758:45)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:896:16\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express-rate-limit/dist/index.cjs:782:5',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 429,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:50.179Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqn77a8m7qy',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/user/profile',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqn77a8m7qy',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /profile - 401 (1ms)',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:50.231Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqn77lvoen1',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/preferences',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqn77lvoen1',
+  statusCode: 401,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /preferences - 401 (1ms)',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:90:30)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:346:12)',
+    context: {
+      endpoint: '/preferences',
+      method: 'PUT',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:24:50.242Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:24:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqno3binnkn',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:25:12'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqno3binnkn',
+  statusCode: 200,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (1ms)',
+  timestamp: '2025-09-11 20:25:12'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqno4gbjusw',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/user/profile',
+  timestamp: '2025-09-11 20:25:12'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqno4gbjusw',
+  statusCode: 500,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /profile - 500 (1ms)',
+  timestamp: '2025-09-11 20:25:12'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:97:28)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:25:12.161Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:25:12'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:25:12'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:25:52'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:25:52'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:25:52'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:25:52'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:25:52'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:25:52'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:25:57'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:25:57'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:25:57'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:25:57'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:25:57'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:25:57'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:26:02'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:26:02'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:26:02'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:26:02'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:26:02'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:26:02'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqq0v773v7m',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:27:01'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqq0v773v7m',
+  statusCode: 200,
+  responseTime: 14,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (14ms)',
+  timestamp: '2025-09-11 20:27:02'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqqvwbxt84o',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:27:42'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqqvwbxt84o',
+  statusCode: 200,
+  responseTime: 2,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (2ms)',
+  timestamp: '2025-09-11 20:27:42'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqqvxge7m5z',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/user/profile',
+  timestamp: '2025-09-11 20:27:42'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqqvxge7m5z',
+  statusCode: 401,
+  responseTime: 6,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /profile - 401 (6ms)',
+  timestamp: '2025-09-11 20:27:42'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 401',
+    name: 'Error',
+    stack: 'Error: HTTP 401\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.authMiddleware (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/auth.middleware.js:75:30)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/profile',
+      method: 'GET',
+      statusCode: 401,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:27:42.250Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:27:42'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:27:42'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:28:04'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:28:04'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:28:04'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:28:04'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:28:04'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:28:04'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqs2vvlco4p',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:28:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqs2vvlco4p',
+  statusCode: 500,
+  responseTime: 26,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 500 (26ms)',
+  timestamp: '2025-09-11 20:28:37'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.testLogin (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:379:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/test-login',
+      method: 'POST',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:28:37.942Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:28:37'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:28:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqscwjr3f40',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:28:50'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqscwjr3f40',
+  statusCode: 500,
+  responseTime: 4,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 500 (4ms)',
+  timestamp: '2025-09-11 20:28:50'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.testLogin (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:379:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/test-login',
+      method: 'POST',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:28:50.904Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:28:50'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:28:50'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:29:08'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:29:08'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:29:08'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:29:08'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:29:08'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:29:08'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqsyxylmfxe',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:29:19'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqsyxylmfxe',
+  statusCode: 500,
+  responseTime: 22,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 500 (22ms)',
+  timestamp: '2025-09-11 20:29:19'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.testLogin (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:378:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/test-login',
+      method: 'POST',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:29:19.484Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:29:19'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:29:19'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqub9sx5mss',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:30:22'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqub9sx5mss',
+  statusCode: 500,
+  responseTime: 4,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 500 (4ms)',
+  timestamp: '2025-09-11 20:30:22'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.testLogin (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:378:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/test-login',
+      method: 'POST',
+      statusCode: 500,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:30:22.100Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:30:22'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:30:22'
+}
+{
+  service: 'ava-health-coach',
+  level: 'info',
+  message: 'Analytics service initialisé',
+  timestamp: '2025-09-11 20:30:39'
+}
+{
+  service: 'ava-health-coach',
+  version: 'mongodump version: 100.12.2\n' +
+    'git version: f76a3ae4029780f61c49cbd39b7336f8d9c30ed0\n' +
+    'Go version: go1.23.8\n' +
+    '   os: darwin\n' +
+    '   arch: arm64\n' +
+    '   compiler: gc',
+  level: 'info',
+  message: 'mongodump disponible',
+  timestamp: '2025-09-11 20:30:39'
+}
+{
+  service: 'ava-health-coach',
+  time: '02:00',
+  level: 'info',
+  message: 'Sauvegarde quotidienne programmée',
+  timestamp: '2025-09-11 20:30:39'
+}
+{
+  service: 'ava-health-coach',
+  time: '03:00',
+  day: 'sunday',
+  level: 'info',
+  message: 'Sauvegarde hebdomadaire programmée',
+  timestamp: '2025-09-11 20:30:39'
+}
+{
+  service: 'ava-health-coach',
+  time: '04:00',
+  day: 1,
+  level: 'info',
+  message: 'Sauvegarde mensuelle programmée',
+  timestamp: '2025-09-11 20:30:39'
+}
+{
+  service: 'ava-health-coach',
+  backupDir: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/backups',
+  dbName: 'coach_sante_db',
+  scheduledJobs: 3,
+  level: 'info',
+  message: 'Service backup initialisé',
+  timestamp: '2025-09-11 20:30:39'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffquyt10dwzk',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:30:52'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffquyt10dwzk',
+  statusCode: 200,
+  responseTime: 139,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (139ms)',
+  timestamp: '2025-09-11 20:30:52'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqv77jrr803',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:31:03'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqv77jrr803',
+  statusCode: 200,
+  responseTime: 112,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (112ms)',
+  timestamp: '2025-09-11 20:31:03'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqv7b51i053',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/user/profile',
+  timestamp: '2025-09-11 20:31:03'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqv7b51i053',
+  statusCode: 200,
+  responseTime: 7,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'GET /profile - 200 (7ms)',
+  timestamp: '2025-09-11 20:31:03'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqwnz3sq3br',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:32:11'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqwnz3sq3br',
+  statusCode: 200,
+  responseTime: 110,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (110ms)',
+  timestamp: '2025-09-11 20:32:11'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqx4ogsiqs1',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 20:32:33'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqx4ogsiqs1',
+  statusCode: 200,
+  responseTime: 7,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'PUT /cookie-consents - 200 (7ms)',
+  timestamp: '2025-09-11 20:32:33'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqxdcgff2af',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/gdpr/export',
+  timestamp: '2025-09-11 20:32:44'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqxdcgff2af',
+  statusCode: 404,
+  responseTime: 1,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST / - 404 (1ms)',
+  timestamp: '2025-09-11 20:32:44'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 404',
+    name: 'Error',
+    stack: 'Error: HTTP 404\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/server.js:186:19\n' +
+      '    at Layer.handle [as handle_request] (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at trim_prefix (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:328:13)\n' +
+      '    at /Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:286:9\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:365:14)\n' +
+      '    at param (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:376:14)\n' +
+      '    at router.process_params (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/router/index.js:421:3)',
+    context: {
+      endpoint: '/',
+      method: 'POST',
+      statusCode: 404,
+      userId: undefined
+    },
+    timestamp: '2025-09-11T18:32:44.754Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:32:44'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:32:44'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqy2at6b25l',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/export',
+  timestamp: '2025-09-11 20:33:17'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqy2at6b25l',
+  statusCode: 200,
+  responseTime: 15,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'GET /export - 200 (15ms)',
+  timestamp: '2025-09-11 20:33:17'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqy8jbkvj43',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/consent',
+  timestamp: '2025-09-11 20:33:25'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqy8jbkvj43',
+  statusCode: 200,
+  responseTime: 3,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'GET /consent - 200 (3ms)',
+  timestamp: '2025-09-11 20:33:25'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqyj2zbosv2',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/user/profile',
+  timestamp: '2025-09-11 20:33:38'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqyj2zbosv2',
+  statusCode: 200,
+  responseTime: 3,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'GET /profile - 200 (3ms)',
+  timestamp: '2025-09-11 20:33:38'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqz43nraaj1',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/preferences',
+  timestamp: '2025-09-11 20:34:06'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqz43nraaj1',
+  statusCode: 500,
+  responseTime: 5,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'PUT /preferences - 500 (5ms)',
+  timestamp: '2025-09-11 20:34:06'
+}
+{
+  service: 'ava-health-coach',
+  error: {
+    message: 'HTTP 500',
+    name: 'Error',
+    stack: 'Error: HTTP 500\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/analytics.middleware.js:71:35)\n' +
+      '    at res.send (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/middlewares/metrics.middleware.js:109:25)\n' +
+      '    at ServerResponse.json (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/node_modules/express/lib/response.js:278:15)\n' +
+      '    at exports.updatePreferences (/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/src/api/user/user.controller.js:294:21)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+    context: {
+      endpoint: '/preferences',
+      method: 'PUT',
+      statusCode: 500,
+      userId: '507f1f77bcf86cd799439011'
+    },
+    timestamp: '2025-09-11T18:34:06.088Z'
+  },
+  event: 'error_tracked',
+  level: 'error',
+  message: 'Erreur trackée dans analytics',
+  timestamp: '2025-09-11 20:34:06'
+}
+{
+  service: 'ava-health-coach',
+  file: '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json',
+  error: "ENOENT: no such file or directory, open '/Users/JARVIS/Desktop/AVA GIT VO/ava-app/backend/analytics/errors.json'",
+  level: 'error',
+  message: 'Erreur ajout donnée fichier analytics',
+  timestamp: '2025-09-11 20:34:06'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqzsjc2mgpz',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/preferences',
+  timestamp: '2025-09-11 20:34:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffqzsjc2mgpz',
+  statusCode: 200,
+  responseTime: 6,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'PUT /preferences - 200 (6ms)',
+  timestamp: '2025-09-11 20:34:37'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0arwh2itl',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/user/507f1f77bcf86cd799439011',
+  timestamp: '2025-09-11 20:35:01'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0arwh2itl',
+  statusCode: 200,
+  responseTime: 22,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'GET /507f1f77bcf86cd799439011 - 200 (22ms)',
+  timestamp: '2025-09-11 20:35:01'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0astgdg88',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/data-processing',
+  timestamp: '2025-09-11 20:35:01'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0astgdg88',
+  statusCode: 200,
+  responseTime: 3,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'GET /data-processing - 200 (3ms)',
+  timestamp: '2025-09-11 20:35:01'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0at9e2jx4',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/507f1f77bcf86cd799439011',
+  timestamp: '2025-09-11 20:35:01'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0at9e2jx4',
+  statusCode: 200,
+  responseTime: 4,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'PUT /507f1f77bcf86cd799439011 - 200 (4ms)',
+  timestamp: '2025-09-11 20:35:01'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0tqtsvdzv',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/register',
+  timestamp: '2025-09-11 20:35:25'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0tqtsvdzv',
+  statusCode: 201,
+  responseTime: 110,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /register - 201 (110ms)',
+  timestamp: '2025-09-11 20:35:26'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0tu7a7hs5',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/login',
+  timestamp: '2025-09-11 20:35:26'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr0tu7a7hs5',
+  statusCode: 200,
+  responseTime: 108,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /login - 200 (108ms)',
+  timestamp: '2025-09-11 20:35:26'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr2tzpsiqvo',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /api/user/test-login',
+  timestamp: '2025-09-11 20:36:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr2tzpsiqvo',
+  statusCode: 200,
+  responseTime: 110,
+  userId: 'anonymous',
+  level: 'http',
+  message: 'POST /test-login - 200 (110ms)',
+  timestamp: '2025-09-11 20:36:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr2u33wp4bb',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/cookie-consents',
+  timestamp: '2025-09-11 20:36:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr2u33wp4bb',
+  statusCode: 200,
+  responseTime: 4,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'PUT /cookie-consents - 200 (4ms)',
+  timestamp: '2025-09-11 20:36:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr2u3i2twq0',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'GET /api/gdpr/export',
+  timestamp: '2025-09-11 20:36:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr2u3i2twq0',
+  statusCode: 200,
+  responseTime: 6,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'GET /export - 200 (6ms)',
+  timestamp: '2025-09-11 20:36:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr2u45n16tq',
+  userAgent: 'curl/8.7.1',
+  ip: '::1',
+  userId: 'anonymous',
+  level: 'http',
+  message: 'PUT /api/user/preferences',
+  timestamp: '2025-09-11 20:36:59'
+}
+{
+  service: 'ava-health-coach',
+  requestId: 'mffr2u45n16tq',
+  statusCode: 200,
+  responseTime: 4,
+  userId: new ObjectId("507f1f77bcf86cd799439011"),
+  level: 'http',
+  message: 'PUT /preferences - 200 (4ms)',
+  timestamp: '2025-09-11 20:36:59'
+}

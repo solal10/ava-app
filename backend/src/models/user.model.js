@@ -131,6 +131,92 @@ const userSchema = new mongoose.Schema({
     enum: ['health_tips', 'workout_reminders', 'nutrition_alerts', 'achievements', 'premium_features']
   }],
   
+  // Consentements GDPR pour la conformité
+  gdprConsents: {
+    essential: {
+      authentication: {
+        type: Boolean,
+        default: true
+      },
+      dataProcessing: {
+        type: Boolean,
+        default: true
+      }
+    },
+    analytics: {
+      usage: {
+        type: Boolean,
+        default: false
+      },
+      performance: {
+        type: Boolean,
+        default: false
+      }
+    },
+    marketing: {
+      emails: {
+        type: Boolean,
+        default: false
+      },
+      personalization: {
+        type: Boolean,
+        default: false
+      }
+    },
+    thirdParty: {
+      garmin: {
+        type: Boolean,
+        default: false
+      },
+      spoonacular: {
+        type: Boolean,
+        default: false
+      }
+    }
+  },
+  
+  gdprConsentsUpdatedAt: {
+    type: Date,
+    default: Date.now
+  },
+  
+  // Historique des exports de données (pour audit GDPR)
+  dataExports: [{
+    exportedAt: {
+      type: Date,
+      default: Date.now
+    },
+    ipAddress: String,
+    userAgent: String,
+    fileSize: Number
+  }],
+
+  // Consentements pour les cookies (conformité CNIL/RGPD)
+  cookieConsents: {
+    essential: {
+      type: Boolean,
+      default: true
+    },
+    functional: {
+      type: Boolean,
+      default: false
+    },
+    analytics: {
+      type: Boolean,
+      default: false
+    },
+    marketing: {
+      type: Boolean,
+      default: false
+    },
+    consentDate: {
+      type: Date,
+      default: Date.now
+    },
+    ipAddress: String,
+    userAgent: String
+  },
+
   notificationPreferences: {
     enabled: {
       type: Boolean,
