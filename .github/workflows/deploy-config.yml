@@ -1,0 +1,63 @@
+# Deployment Configuration Template
+# This file provides examples for deployment configurations
+
+environments:
+  staging:
+    url: https://staging.ava-coach-sante.com
+    variables:
+      NODE_ENV: staging
+      CORS_ORIGIN: https://staging.ava-coach-sante.com
+      MONGODB_URI: # Set in GitHub secrets as STAGING_MONGODB_URI
+      REDIS_URL: # Set in GitHub secrets as STAGING_REDIS_URL
+      JWT_SECRET: # Set in GitHub secrets as STAGING_JWT_SECRET
+    
+  production:
+    url: https://ava-coach-sante.com
+    variables:
+      NODE_ENV: production
+      CORS_ORIGIN: https://ava-coach-sante.com
+      MONGODB_URI: # Set in GitHub secrets as PRODUCTION_MONGODB_URI
+      REDIS_URL: # Set in GitHub secrets as PRODUCTION_REDIS_URL
+      JWT_SECRET: # Set in GitHub secrets as PRODUCTION_JWT_SECRET
+
+# Required GitHub Secrets:
+# - DOCKER_USERNAME: Docker Hub username
+# - DOCKER_PASSWORD: Docker Hub password or access token
+# 
+# Environment-specific secrets:
+# - STAGING_MONGODB_URI: MongoDB connection string for staging
+# - STAGING_REDIS_URL: Redis connection URL for staging
+# - STAGING_JWT_SECRET: JWT secret for staging
+# - PRODUCTION_MONGODB_URI: MongoDB connection string for production
+# - PRODUCTION_REDIS_URL: Redis connection URL for production
+# - PRODUCTION_JWT_SECRET: JWT secret for production
+# 
+# API Keys (same for all environments or separate per environment):
+# - SPOONACULAR_API_KEY: Spoonacular nutrition API key
+# - OPENAI_API_KEY: OpenAI API key (optional)
+# - ANTHROPIC_API_KEY: Anthropic API key (optional)
+# - STRIPE_SECRET_KEY: Stripe payment processing key
+# - STRIPE_PUBLISHABLE_KEY: Stripe public key
+# - STRIPE_WEBHOOK_SECRET: Stripe webhook verification secret
+# - GARMIN_CLIENT_ID: Garmin Connect IQ client ID
+# - GARMIN_CLIENT_SECRET: Garmin Connect IQ client secret
+# - GARMIN_CONSUMER_KEY: Garmin API consumer key
+# - GARMIN_CONSUMER_SECRET: Garmin API consumer secret
+# 
+# Email Configuration:
+# - FROM_EMAIL: Default sender email address
+# - EMAIL_PROVIDER: Email service provider (sendgrid, ses, gmail)
+# - SENDGRID_API_KEY: SendGrid API key (if using SendGrid)
+# - AWS_ACCESS_KEY_ID: AWS access key (if using SES)
+# - AWS_SECRET_ACCESS_KEY: AWS secret key (if using SES)
+# - AWS_REGION: AWS region for SES
+# - GMAIL_USER: Gmail user for SMTP (if using Gmail)
+# - GMAIL_APP_PASSWORD: Gmail app password (if using Gmail)
+# 
+# Firebase (for push notifications):
+# - FIREBASE_PROJECT_ID: Firebase project ID
+# - FIREBASE_PRIVATE_KEY_ID: Firebase private key ID
+# - FIREBASE_PRIVATE_KEY: Firebase private key (base64 encoded)
+# - FIREBASE_CLIENT_EMAIL: Firebase client email
+# - FIREBASE_CLIENT_ID: Firebase client ID
+# - FIREBASE_CLIENT_CERT_URL: Firebase client certificate URL
