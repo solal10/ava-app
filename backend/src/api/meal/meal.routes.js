@@ -25,7 +25,6 @@ router.get('/:userId', authMiddleware, validatePagination, handleValidationError
 router.get('/:userId/recent', authMiddleware, mealController.getRecentMeals);
 router.delete('/:id', authMiddleware, mealController.deleteMeal);
 
-<<<<<<< HEAD
 // Routes pour les plans nutritionnels
 router.post('/nutrition-plans', authMiddleware, mealController.createNutritionPlan);
 router.get('/nutrition-plans', authMiddleware, mealController.getNutritionPlans);
@@ -34,6 +33,4 @@ router.get('/nutrition-plans', authMiddleware, mealController.getNutritionPlans)
 router.post('/workout-plans', authMiddleware, mealController.createWorkoutPlan);
 router.get('/workout-plans', authMiddleware, mealController.getWorkoutPlans);
 
-=======
->>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
 module.exports = router;

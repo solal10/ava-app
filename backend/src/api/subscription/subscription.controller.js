@@ -1,8 +1,5 @@
 const User = require('../../models/user.model');
-<<<<<<< HEAD
 const PaymentHistory = require('../../models/paymenthistory.model');
-=======
->>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
 const paymentService = require('../../services/payment.service');
 
 // Récupérer les informations d'abonnement de l'utilisateur
@@ -168,39 +165,6 @@ function getFeaturesByLevel(level) {
   return baseFeatures;
 }
 
-<<<<<<< HEAD
-// Récupérer l'historique des paiements de l'utilisateur
-exports.getPaymentHistory = async (req, res) => {
-  try {
-    const { userId } = req;
-    const { limit = 20, offset = 0 } = req.query;
-
-    const payments = await PaymentHistory.find({ userId })
-      .sort({ createdAt: -1 })
-      .skip(parseInt(offset))
-      .limit(parseInt(limit));
-
-    const totalPayments = await PaymentHistory.countDocuments({ userId });
-
-    res.status(200).json({
-      message: 'Historique des paiements récupéré avec succès',
-      payments,
-      pagination: {
-        total: totalPayments,
-        offset: parseInt(offset),
-        limit: parseInt(limit),
-        hasMore: parseInt(offset) + parseInt(limit) < totalPayments
-      }
-    });
-  } catch (error) {
-    console.error('❌ Erreur récupération historique paiements:', error);
-    res.status(500).json({
-      message: 'Erreur lors de la récupération de l\'historique des paiements',
-      error: error.message
-    });
-  }
-};
-
 // Enregistrer un paiement dans l'historique
 exports.recordPayment = async (userId, paymentData) => {
   try {
@@ -219,8 +183,6 @@ exports.recordPayment = async (userId, paymentData) => {
   }
 };
 
-=======
->>>>>>> 5592fc713bb370061e61278d69a4f336199f21d2
 // Simuler une date de renouvellement (30 jours à partir d'aujourd'hui)
 function getNextRenewalDate() {
   const date = new Date();
