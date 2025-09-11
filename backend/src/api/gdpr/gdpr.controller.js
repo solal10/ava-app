@@ -167,8 +167,8 @@ Cet export est généré automatiquement et contient toutes les données que nou
 
     // Tracker l'export pour analytics (méthode compatible)
     try {
-      if (analyticsService && typeof analyticsService.trackEvent === 'function') {
-        await analyticsService.trackEvent(userId, 'gdpr_export', {
+      if (analyticsService && typeof analyticsService.trackFeature === 'function') {
+        await analyticsService.trackFeature('gdpr_export', userId, {
           dataSize: buffer.length,
           recordCounts: {
             health: healthData.length,
@@ -243,8 +243,8 @@ exports.deleteUserData = async (req, res) => {
 
     // Statistiques anonymisées (si autorisé)
     if (keepAnonymizedStats) {
-      if (analyticsService && typeof analyticsService.trackEvent === 'function') {
-        await analyticsService.trackEvent(null, 'gdpr_deletion', {
+      if (analyticsService && typeof analyticsService.trackFeature === 'function') {
+        await analyticsService.trackFeature('gdpr_deletion', null, {
         reason: reason,
         recordsDeleted: {
           health: healthCount,
@@ -394,8 +394,8 @@ exports.updateConsents = async (req, res) => {
     }
 
     // Tracker les changements de consentement
-    if (analyticsService && typeof analyticsService.trackEvent === 'function') {
-      await analyticsService.trackEvent(userId, 'gdpr_consent_update', {
+    if (analyticsService && typeof analyticsService.trackFeature === 'function') {
+      await analyticsService.trackFeature('gdpr_consent_update', userId, {
         consentChanges: consents,
         timestamp: new Date().toISOString()
       });

@@ -7,7 +7,8 @@ class GarminController {
     this.config = {
       clientId: process.env.GARMIN_CLIENT_ID,
       clientSecret: process.env.GARMIN_CLIENT_SECRET,
-      redirectUri: process.env.GARMIN_REDIRECT_URI || `${process.env.TUNNEL_URL}/auth/garmin/rappel`,
+      redirectUri: process.env.GARMIN_REDIRECT_URI || 
+                   (process.env.TUNNEL_URL ? `${process.env.TUNNEL_URL}/auth/garmin/rappel` : 'http://localhost:5003/auth/garmin/rappel'),
       authUrl: 'https://connect.garmin.com/oauth2Confirm',
       tokenUrl: 'https://diauth.garmin.com/di-oauth2-service/oauth/token',
       scopes: process.env.GARMIN_SCOPES || 'activity_api,health_api'
